@@ -1,8 +1,28 @@
 @import "tailwindcss";
 
+/* TT Ramillas Trl – add your font file to public/fonts/ (e.g. TTRamillasTrl.woff2) */
+@font-face {
+  font-family: "TT Ramillas Trl";
+  src: url("/fonts/TTRamillasTrl.woff2") format("woff2"),
+    url("/fonts/TTRamillasTrl.woff") format("woff");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Futura Bk BT – add your font file to public/fonts/ (e.g. FuturaBkBT.woff2) */
+@font-face {
+  font-family: "Futura Bk BT";
+  src: url("/fonts/FuturaBkBT.woff2") format("woff2"),
+    url("/fonts/FuturaBkBT.woff") format("woff");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-ramillas: "TT Ramillas Trl", Georgia, "Times New Roman", serif;
+  --font-futura: "Futura Bk BT", "Futura", "Century Gothic", sans-serif;
 }
 
 @theme inline {
@@ -10,6 +30,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-ramillas);
+  --font-futura: var(--font-futura);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +41,83 @@
   }
 }
 
+/* ─── Smooth Scrolling ─────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Respect reduced motion ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* TT Ramillas Trl applied site-wide – all sections inherit this font */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ramillas), Georgia, serif;
+  /* Prevent layout shift from scrollbar */
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  /* GPU-accelerated rendering hint for animated elements */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Futura Bk BT for paragraphs and h2–h6; h1 keeps TT Ramillas (body) */
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-futura);
+}
+
+/* ─── Skeleton Loader ──────────────────────────────────────────────────────── */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+      #e0d8cc 25%,
+      #f0ebe3 50%,
+      #e0d8cc 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+/* ─── Page transition wrapper ──────────────────────────────────────────────── */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease, transform 400ms ease;
 }
