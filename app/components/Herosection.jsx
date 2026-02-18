@@ -143,7 +143,7 @@ export default function Herosection() {
 
         {/* ── HEADER ──────────────────────────────────────────────────────── */}
         <motion.header
-          className="w-full shrink-0"
+          className="w-full shrink-0 bg-transparent"
           initial="hidden"
           animate="visible"
           variants={headerVariants}
@@ -437,7 +437,7 @@ export default function Herosection() {
               className="flex flex-1 flex-col justify-center px-10 gap-6"
               variants={menuContainerVariants}
             >
-               {navLinks.map((label, i) => (
+              {navLinks.map((label, i) => (
                 <motion.a
                   key={label}
                   href="#"
@@ -450,23 +450,23 @@ export default function Herosection() {
                   {label}
                 </motion.a>
               ))}
-              
-              <motion.div 
-                 custom={navLinks.length} 
-                 variants={menuItemVariants}
-                 className="mt-8 flex flex-col gap-4 border-t border-white/20 pt-8"
+
+              <motion.div
+                custom={navLinks.length}
+                variants={menuItemVariants}
+                className="mt-8 flex flex-col gap-4 border-t border-white/20 pt-8"
               >
-                 <a href="#reservation" className="text-sm font-medium uppercase tracking-[0.2em] text-white/80" style={{ fontFamily: "var(--font-futura)" }}>
-                    Book A Table
-                 </a>
-                 <a href="#order" className="text-sm font-medium uppercase tracking-[0.2em] text-white/80" style={{ fontFamily: "var(--font-futura)" }}>
-                    Order Online
-                 </a>
+                <a href="#reservation" className="text-sm font-medium uppercase tracking-[0.2em] text-white/80" style={{ fontFamily: "var(--font-futura)" }}>
+                  Book A Table
+                </a>
+                <a href="#order" className="text-sm font-medium uppercase tracking-[0.2em] text-white/80" style={{ fontFamily: "var(--font-futura)" }}>
+                  Order Online
+                </a>
               </motion.div>
             </motion.div>
 
-             {/* Background Element Decor */}
-             <div className="absolute bottom-0 right-0 h-64 w-64 translate-x-1/3 translate-y-1/3 rounded-full bg-[#D4AF37]/10 blur-[100px]" />
+            {/* Background Element Decor */}
+            <div className="absolute bottom-0 right-0 h-64 w-64 translate-x-1/3 translate-y-1/3 rounded-full bg-[#D4AF37]/10 blur-[100px]" />
           </motion.div>
         )}
       </AnimatePresence>
