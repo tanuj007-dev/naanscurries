@@ -251,8 +251,8 @@ export default function Herosection() {
           >
             {/* Top row: "FLAVORS" */}
             <motion.h1
-              className="text-[48px] font-normal uppercase ml-0 md:ml-12 leading-none text-[#FFF7ED] drop-shadow-sm
-                         xs:text-[48px] sm:text-[60px] md:text-[85px] lg:text-[115px]"
+              className="text-[36px] font-normal uppercase ml-0 md:ml-12 leading-none text-[#FFF7ED] drop-shadow-sm
+                         sm:text-[60px] md:text-[85px] lg:text-[115px]"
               variants={headlineWord}
               style={{
                 fontFamily: "var(--font-ramillas)",
@@ -276,8 +276,8 @@ export default function Herosection() {
 
               {/* Center giant text */}
               <motion.h1
-                className="text-[48px] font-normal uppercase leading-none text-[#FFF7ED] drop-shadow-sm
-                           xs:text-[48px] sm:text-[60px] md:text-[85px] lg:text-[115px]"
+                className="text-[36px] font-normal uppercase leading-none text-[#FFF7ED] drop-shadow-sm
+                           sm:text-[60px] md:text-[85px] lg:text-[115px]"
                 variants={headlineWord}
                 style={{
                   fontFamily: "var(--font-ramillas)",
