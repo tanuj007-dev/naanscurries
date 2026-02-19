@@ -55,7 +55,7 @@ export default function AuthResturant() {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center md:justify-start">
           {/* Double-border button frame */}
           <div className="inline-block rounded-md border border-[#2d2d2d] p-1">
             <Link
@@ -74,7 +74,7 @@ export default function AuthResturant() {
             alt="Tripadvisor Travellers' Choice and Certificate of Excellence awards"
             width={640}
             height={120}
-            className="h-auto w-auto max-w-full object-contain object-left md:max-w-[80%]"
+            className="h-auto w-full object-contain object-left md:w-auto md:max-w-[80%]"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>

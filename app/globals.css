@@ -62,12 +62,13 @@ html {
 }
 
 /* TT Ramillas Trl applied site-wide – all sections inherit this font */
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-ramillas), Georgia, serif;
-  /* Prevent layout shift from scrollbar */
-  overflow-x: hidden;
 }
 
 *,

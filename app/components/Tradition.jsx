@@ -54,7 +54,7 @@ export default function Tradition() {
             </div>
 
             {/* Top-Left Overlap (Curry Spoon) */}
-            <div className="absolute -left-6 -top-12 h-32 w-32 overflow-hidden rounded-lg shadow-lg md:-left-12 md:-top-16 md:h-40 md:w-40 lg:h-48 lg:w-48">
+            <div className="absolute -left-2 -top-10 h-28 w-28 overflow-hidden rounded-lg shadow-lg md:-left-12 md:-top-16 md:h-40 md:w-40 lg:h-48 lg:w-48">
               <Image
                 src={imgCurrySpoon}
                 alt="Curry served in a bowl"
@@ -65,7 +65,7 @@ export default function Tradition() {
             </div>
 
             {/* Bottom-Right Overlap (Curry Bowl) */}
-            <div className="absolute -bottom-12 -right-6 h-32 w-32 overflow-hidden rounded-lg shadow-lg md:-bottom-16 md:-right-12 md:h-40 md:w-40 lg:h-48 lg:w-48">
+            <div className="absolute -bottom-10 -right-2 h-28 w-28 overflow-hidden rounded-lg shadow-lg md:-bottom-16 md:-right-12 md:h-40 md:w-40 lg:h-48 lg:w-48">
               <Image
                 src={imgCurryBowl}
                 alt="Traditional curry in copper bowl"
