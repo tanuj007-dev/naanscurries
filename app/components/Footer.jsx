@@ -39,13 +39,13 @@ export default function Footer() {
 
               {/* Social Icons */}
               <div className="mt-8 flex gap-5">
-                <SocialLink href="https://facebook.com" ariaLabel="Facebook">
+                <SocialLink href="" ariaLabel="Facebook">
                   <FacebookIcon />
                 </SocialLink>
-                <SocialLink href="https://tripadvisor.com" ariaLabel="TripAdvisor">
+                <SocialLink href="" ariaLabel="TripAdvisor">
                   <TripAdvisorIcon />
                 </SocialLink>
-                <SocialLink href="https://instagram.com" ariaLabel="Instagram">
+                <SocialLink href="" ariaLabel="Instagram">
                   <InstagramIcon />
                 </SocialLink>
               </div>
