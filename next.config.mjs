@@ -1,7 +1,15 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.js');
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // ─── Image Optimization ────────────────────────────────────────────────────
   images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+    ],
     // Modern formats: AVIF first (best compression), WebP fallback
     formats: ["image/avif", "image/webp"],
     // Responsive breakpoints aligned with Tailwind defaults
@@ -26,4 +34,5 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
+

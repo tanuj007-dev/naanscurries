@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import { memo } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import imgCurry from "./assets/04b48f2acb6666394f6f4e71af236802867f3c88.jpg";
 
-const locations = [
+const locationData = [
   {
     name: "MOMENTUM, LINDORA, SANTA ANA, SAN JOSE, COSTA RICA",
     phones: "+506 2282 0001, +506 2282 5470",
@@ -52,6 +53,8 @@ const PhoneIcon = memo(function PhoneIcon() {
 });
 
 export default function OurLocations() {
+  const t = useTranslations("OurLocations");
+  const locations = locationData;
   return (
     <section className="w-full bg-[#FFF7ED]">
       <div className="mx-auto grid max-w-8xl grid-cols-1 lg:grid-cols-[1fr_1fr]">
@@ -65,18 +68,17 @@ export default function OurLocations() {
             className="text-3xl font-normal uppercase leading-tight text-[#2a2a2a] md:text-4xl lg:text-5xl"
             style={{ fontFamily: "var(--font-ramillas)" }}
           >
-            <span className="block">Our</span>
-            <span className="block">Locations</span>
+            <span className="block">{t("our")}</span>
+            <span className="block">{t("locations")}</span>
           </h2>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-[#4A4A4A]">
-            From house-special cocktails to traditional Indian lassi, every drink
-            is designed to pair perfectly with your meal.
+            {t("description")}
           </p>
           <Link
             href="#contact"
             className="mt-8 inline-block shrink-0 rounded-md border border-[#2a2a2a]/20 bg-[#333333] px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#444444] hover:scale-[1.02]"
           >
-            Contact Us
+            {t("contactUs")}
           </Link>
 
           {/* Locations list – staggered */}

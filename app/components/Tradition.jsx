@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import imgCurrySpoon from "./assets/c7bde3c22a773bb2a632d4105cf92649301acd09 (1).jpg";
@@ -9,6 +10,7 @@ import imgSpices from "./assets/60fd69bda9d9bf5ce2e3c078410a18a0781c36ef.jpg";
 import imgCurryBowl from "./assets/184feea337ba0d7e4ee23a1bf53ccd8167b3fe64.jpg";
 
 export default function Tradition() {
+  const t = useTranslations("Tradition");
   return (
     <section className="w-full bg-[#FDF4E7] px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -19,8 +21,8 @@ export default function Tradition() {
             className="text-4xl uppercase leading-tight text-[#2D2D2D] md:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-ramillas)" }}
           >
-            <span className="block">Gift a Taste</span>
-            <span className="block">of Tradition</span>
+            <span className="block">{t("giftTaste")}</span>
+            <span className="block">{t("ofTradition")}</span>
           </h2>
         </AnimateOnScroll>
 
@@ -36,7 +38,7 @@ export default function Tradition() {
               className="text-sm uppercase tracking-widest text-[#2D2D2D]/90 md:text-base lg:text-lg"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              Share The Experience
+              {t("shareExperience")}
             </span>
           </AnimateOnScroll>
 
@@ -82,23 +84,22 @@ export default function Tradition() {
               className="text-sm uppercase tracking-widest text-[#2D2D2D]/90 md:text-base lg:text-lg"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              Flavours We Remember
+              {t("flavoursRemember")}
             </span>
           </AnimateOnScroll>
 
-          {/* Mobile Text Stack (Visible only on mobile) */}
           <div className="flex w-full items-center justify-between md:hidden">
             <span
               className="text-xs uppercase tracking-wider text-[#2D2D2D]/90"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              Share The Experience
+              {t("shareExperience")}
             </span>
             <span
               className="text-xs uppercase tracking-wider text-[#2D2D2D]/90"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              Flavours We Remember
+              {t("flavoursRemember")}
             </span>
           </div>
 
@@ -110,19 +111,17 @@ export default function Tradition() {
             className="max-w-2xl text-sm leading-relaxed text-[#2D2D2D]/80 md:text-base"
             style={{ fontFamily: "var(--font-futura)" }}
           >
-            Native Chefs, Special charcoal fired &quot;Tandoors&quot; (Clay Ovens) and
-            exotic Indian ingredients, providing
+            {t("bottomDesc")}
           </p>
 
           <div className="mt-10">
-            {/* Double-border button frame */}
             <div className="inline-block rounded-md border border-[#2d2d2d] p-1">
               <Link
                 href="#order"
                 className="flex items-center justify-center rounded-sm bg-[#2d2d2d] px-10 py-3 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#3d3d3d]"
                 style={{ fontFamily: "var(--font-futura)" }}
               >
-                Order Now
+                {t("orderNow")}
               </Link>
             </div>
           </div>

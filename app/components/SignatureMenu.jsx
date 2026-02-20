@@ -1,32 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import diningImage from "./assets/0292db1ee2e191c2e4e62f9095453ae8d15c0fa7.jpg";
 import curryRiceIcon from "./assets/emojione-monotone_curry-rice.png";
 
-const menuItems = [
-  {
-    title: "Main Menu",
-    desc: "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
-  },
-  {
-    title: "Dessert Menu",
-    desc: "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
-  },
-  {
-    title: "Executive Lunch Menu",
-    desc: "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
-  },
-  {
-    title: "Chef's Tasting Menu",
-    desc: "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
-  },
+const menuKeys = [
+  { titleKey: "mainMenu", descKey: "mainMenuDesc" },
+  { titleKey: "dessertMenu", descKey: "dessertMenuDesc" },
+  { titleKey: "executiveLunch", descKey: "executiveLunchDesc" },
+  { titleKey: "chefsTasting", descKey: "chefsTastingDesc" },
 ];
 
 export default function SignatureMenu() {
+  const t = useTranslations("SignatureMenu");
   return (
     <section className="grid w-full grid-cols-1 md:grid-cols-2">
       {/* ── Left Column: Signature Menu (Orange with Dark Border) ─────────── */}
@@ -53,15 +43,14 @@ export default function SignatureMenu() {
             className="max-w-md text-4xl uppercase leading-tight text-[#2d2d2d] md:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-ramillas)" }}
           >
-            <span className="block">Signature</span>
-            <span className="block">Menu</span>
+            <span className="block">{t("signature")}</span>
+            <span className="block">{t("menu")}</span>
           </h2>
 
-          {/* Menu Items List */}
           <div className="mt-10 flex flex-col md:mt-12">
-            {menuItems.map((item, i) => (
+            {menuKeys.map((item, i) => (
               <AnimateOnScroll
-                key={item.title}
+                key={item.titleKey}
                 variant="fadeUp"
                 delay={i * 0.1}
                 duration={0.5}
@@ -71,19 +60,18 @@ export default function SignatureMenu() {
                   className="text-lg font-normal text-[#2d2d2d] md:text-xl"
                   style={{ fontFamily: "var(--font-futura)" }}
                 >
-                  {item.title}
+                  {t(item.titleKey)}
                 </h3>
                 <p
                   className="mt-2 text-sm leading-relaxed text-[#2d2d2d]/90 md:text-[15px]"
                   style={{ fontFamily: "var(--font-futura)" }}
                 >
-                  {item.desc}
+                  {t(item.descKey)}
                 </p>
               </AnimateOnScroll>
             ))}
           </div>
 
-          {/* View Full Menu Button */}
           <div className="mt-10">
             <div className="inline-flex w-full rounded-md border border-[#2d2d2d] p-1">
               <Link
@@ -91,7 +79,7 @@ export default function SignatureMenu() {
                 className="flex w-full items-center justify-center rounded-sm bg-[#2d2d2d] py-3 text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-[#3d3d3d]"
                 style={{ fontFamily: "var(--font-futura)" }}
               >
-                View Full Menu
+                {t("viewFullMenu")}
               </Link>
             </div>
           </div>
@@ -111,17 +99,14 @@ export default function SignatureMenu() {
             className="text-3xl uppercase leading-tight text-[#2d2d2d] md:text-4xl lg:text-[44px]"
             style={{ fontFamily: "var(--font-ramillas)" }}
           >
-            Exquisite Indian Wedding<br />Catering in Costa Rica
+            {t("weddingHeading")}
           </h2>
 
           <p
             className="mt-6 text-base leading-relaxed text-[#2d2d2d]/80 md:text-lg"
             style={{ fontFamily: "var(--font-futura)" }}
           >
-            Naans &amp; Curries offers authentic Indian cuisine and exceptional
-            Private Chef &amp; Events' Catering services in Costa Rica. From private
-            gatherings to destination weddings, our experienced team caters to
-            your needs.
+            {t("weddingDesc")}
           </p>
 
           <div className="mt-10">
@@ -131,7 +116,7 @@ export default function SignatureMenu() {
                 className="flex items-center justify-center rounded-sm bg-[#2d2d2d] px-8 py-3 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#3d3d3d]"
                 style={{ fontFamily: "var(--font-futura)" }}
               >
-                Contact For Wedding Catering
+                {t("contactWedding")}
               </Link>
             </div>
           </div>

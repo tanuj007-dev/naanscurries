@@ -9,46 +9,46 @@
  */
 
 import dynamic from "next/dynamic";
-import Herosection from "./components/Herosection";
-import SectionSkeleton from "./components/SectionSkeleton";
+import Herosection from "@/app/components/Herosection";
+import SectionSkeleton from "@/app/components/SectionSkeleton";
 
 // ─── Lazy-loaded below-the-fold sections ────────────────────────────────────
-const TheSpirit = dynamic(() => import("./components/TheSpirit"), {
+const TheSpirit = dynamic(() => import("@/app/components/TheSpirit"), {
   loading: () => <SectionSkeleton height="h-[620px]" />,
 });
 
-const SignatureMenu = dynamic(() => import("./components/SignatureMenu"), {
+const SignatureMenu = dynamic(() => import("@/app/components/SignatureMenu"), {
   loading: () => <SectionSkeleton height="h-[500px]" />,
 });
 
 const AuthResturant = dynamic(
-  () => import("./components/AuthResturant"),
+  () => import("@/app/components/AuthResturant"),
   { loading: () => <SectionSkeleton height="h-[560px]" /> }
 );
 
-const Catering = dynamic(() => import("./components/Catering"), {
+const Catering = dynamic(() => import("@/app/components/Catering"), {
   loading: () => <SectionSkeleton height="h-[600px]" />,
 });
 
-const Tradition = dynamic(() => import("./components/Tradition"), {
+const Tradition = dynamic(() => import("@/app/components/Tradition"), {
   loading: () => <SectionSkeleton height="h-[560px]" />,
 });
 
-const Rooted = dynamic(() => import("./components/Rooted"), {
+const Rooted = dynamic(() => import("@/app/components/Rooted"), {
   loading: () => <SectionSkeleton height="h-[700px]" />,
 });
 
-const HomeBlogs = dynamic(() => import("./components/HomeBlogs"), {
+const HomeBlogs = dynamic(() => import("@/app/components/HomeBlogs"), {
   loading: () => <SectionSkeleton height="h-[480px]" />,
 });
 
-const OurLocations = dynamic(() => import("./components/OurLocations"), {
+const OurLocations = dynamic(() => import("@/app/components/OurLocations"), {
   loading: () => <SectionSkeleton height="h-[500px]" />,
 });
 
-const Footer = dynamic(() => import("./components/Footer"), {
-  loading: () => <SectionSkeleton height="h-64" />,
-});
+
+
+// Footer is now handled globally in layout.js
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 export default function Home() {
@@ -68,7 +68,6 @@ export default function Home() {
         <HomeBlogs />
       </div>
       <OurLocations />
-      <Footer />
     </>
   );
 }

@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import AnimateOnScroll from "./AnimateOnScroll";
 import rootedBg from "./assets/35fc7f6b329a49530e87b98caae919b3dc83dba8.jpg";
 
 export default function Rooted() {
+  const t = useTranslations("Rooted");
   return (
     <section className="w-full px-4 py-6 bg-[#FDF4E7] md:px-8 md:py-10 lg:px-6 lg:py-8">
       <div className="relative mx-auto h-[500px] w-full max-w-[1440px] overflow-hidden rounded-xl md:h-[650px] lg:h-[750px]">
@@ -58,23 +60,19 @@ export default function Rooted() {
                            text-[13vw] md:text-6xl md:leading-[0.85] md:tracking-tight"
                 style={{ fontFamily: "var(--font-ramillas)" }}
               >
-                <span className="block">Rooted In</span>
-                <span className="block">Experience</span>
+                <span className="block">{t("rootedIn")}</span>
+                <span className="block">{t("experience")}</span>
               </h2>
             </AnimateOnScroll>
           </div>
 
-          {/* 2. Text Position & Alignment - Bottom Left Body */}
           <div className="flex w-full max-w-2xl flex-col items-start">
             <AnimateOnScroll variant="fadeUp" delay={0.2} duration={0.8}>
               <p
                 className="text-left text-base leading-relaxed text-[#F0EAE0] md:text-lg lg:text-xl font-light"
                 style={{ fontFamily: "var(--font-futura)" }}
               >
-                High-quality ethnic ingredients, skillful preparation by highly
-                skilled chefs from India, and the process of serving from the
-                foundation, but the experience at Naans &amp; Curries is designed to
-                extend beyond the plate.
+                {t("description")}
               </p>
             </AnimateOnScroll>
           </div>

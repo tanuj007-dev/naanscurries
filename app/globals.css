@@ -122,3 +122,25 @@ h6 {
   transform: translateY(0);
   transition: opacity 400ms ease, transform 400ms ease;
 }
+
+/* ─── Form Elements Theming ────────────────────────────────────────────────── */
+input[type="date"],
+input[type="time"] {
+  accent-color: #E89D42;
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: opacity(0.6) drop-shadow(0 0 0 #2C2C2C);
+  transition: filter 0.2s ease;
+}
+
+::-webkit-calendar-picker-indicator:hover {
+  filter: opacity(1) drop-shadow(0 0 0 #2C2C2C);
+}
+
+/* Native Picker Popover (Support varies by browser) */
+::picker(date) {
+  background-color: #E5DDD0;
+  color: #2C2C2C;
+}

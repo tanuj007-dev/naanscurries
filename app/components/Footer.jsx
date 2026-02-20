@@ -1,22 +1,23 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { memo } from "react";
+import { useTranslations } from "next-intl";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import logo from "./assets/image 1.png";
 
-const navLinks = [
-  "Home",
-  "About Us",
-  "Menu",
-  "Book A Table",
-  "Blog",
-  "Order",
+const footerNavConfig = [
+  { href: "/", labelKey: "home" },
+  { href: "#menu", labelKey: "menu" },
+  { href: "/reservation", labelKey: "bookATable" },
+  { href: "#blog", labelKey: "blog" },
+  { href: "#order", labelKey: "order" },
 ];
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer className="w-full bg-[#262626] px-6 py-12 md:px-10 md:py-16 lg:px-14 lg:py-20 text-[#e5e5e5]">
       <div className="mx-auto max-w-7xl">
@@ -52,21 +53,21 @@ export default function Footer() {
 
             {/* Copyright (Desktop Position) */}
             <div className="hidden mt-16 text-xs text-[#e5e5e5]/60 md:block" style={{ fontFamily: "var(--font-futura)" }}>
-              © Naans & Curries 2026. All rights reserved.
+              © Naans & Curries 2026. {t("rights")}.
             </div>
           </div>
 
           {/* ── Middle Column: Navigation ────────────────────────────────── */}
           <div className="flex flex-col items-start pt-2 md:pt-4">
             <nav className="flex flex-col gap-4">
-              {navLinks.map((label) => (
+              {footerNavConfig.map((item) => (
                 <Link
-                  key={label}
-                  href={`#${label.toLowerCase().replace(/\s/g, "-")}`}
+                  key={item.labelKey}
+                  href={item.href}
                   className="text-base text-[#e5e5e5] hover:text-[#DCB464] transition-colors duration-200"
                   style={{ fontFamily: "var(--font-futura)" }}
                 >
-                  {label}
+                  {t(item.labelKey)}
                 </Link>
               ))}
             </nav>
@@ -128,7 +129,7 @@ export default function Footer() {
 
           {/* Copyright (Mobile Position) */}
           <div className="mt-8 block text-xs text-[#e5e5e5]/60 md:hidden" style={{ fontFamily: "var(--font-futura)" }}>
-            © Naans & Curries 2026. All rights reserved.
+            © Naans & Curries 2026. {t("rights")}.
           </div>
 
         </div>

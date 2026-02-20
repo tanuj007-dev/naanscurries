@@ -1,37 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import imgLindora from "./assets/76c975a39abb9fcc828ffb2648c6188e5d26ea73.png";
 import imgPinares from "./assets/ea51741453ba46b48af6b340fcba353385063106.png";
 import imgLincoln from "./assets/5d59d954c42cda282cba9d813cd813f04885a686.png";
 
-const locations = [
-  {
-    image: imgLindora,
-    alt: "Catering display with silver bowls and Indian dishes – Naans & Curries Lindora",
-    title: "Naans & Curries Lindora",
-    description:
-      "At Naans & Curries Lindora You can enjoy different ambiance; private saloon for group and events dining, green lawn fresh breeze seating, or cozy and relaxed sofa seating.",
-  },
-  {
-    image: imgPinares,
-    alt: "Chef cooking in kitchen with flames – Naans & Curries Pinares",
-    title: "Naans & Curries Pinares",
-    description:
-      "At Naans & Curries Pinares You can enjoy outdoor terrace seating with view of mountains or inside cozy seating for the cold evenings.",
-  },
-  {
-    image: imgLincoln,
-    alt: "Fresh Indian bread cooking – Naans & Curries Lincoln Plaza",
-    title: "Naans & Curries Lincoln Plaza",
-    description:
-      "At Naans & Curries Lincoln Plaza Enjoy the contemporary Indian vibe. Breezy terrace or nature theme indoors, perfect for your mood.",
-  },
-];
-
 export default function Catering() {
+  const t = useTranslations("Catering");
+  const locations = [
+    { image: imgLindora, alt: t("lindoraTitle"), title: t("lindoraTitle"), description: t("lindoraDesc") },
+    { image: imgPinares, alt: t("pinaresTitle"), title: t("pinaresTitle"), description: t("pinaresDesc") },
+    { image: imgLincoln, alt: t("lincolnTitle"), title: t("lincolnTitle"), description: t("lincolnDesc") },
+  ];
   return (
     <section className="w-full bg-[#E5DDD0] px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -45,50 +28,47 @@ export default function Catering() {
               className="text-3xl uppercase leading-tight text-[#2D2D2D]"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              <span className="block text-2xl">Catering The</span>
-              <span className="block">Naans Curries Way</span>
+              <span className="block text-2xl">{t("cateringThe")}</span>
+              <span className="block">{t("naansWay")}</span>
             </h2>
             <div
               className="mt-4 flex gap-4 text-[10px] uppercase tracking-widest text-[#2D2D2D]/90 font-medium"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              <span>Exceptional Food</span>
+              <span>{t("exceptionalFood")}</span>
               <span>•</span>
-              <span>Anywhere</span>
+              <span>{t("anywhere")}</span>
             </div>
           </div>
 
           {/* Desktop Header (Row) */}
           <div className="hidden w-full max-w-5xl items-center justify-between md:flex">
 
-            {/* Left Decorator */}
             <div className="flex-1 text-right">
               <span
                 className="text-sm uppercase tracking-widest text-[#2D2D2D]/80 font-semibold"
                 style={{ fontFamily: "var(--font-ramillas)" }}
               >
-                Exceptional Food
+                {t("exceptionalFood")}
               </span>
             </div>
 
-            {/* Center Heading */}
             <div className="mx-8 flex flex-col items-center text-center lg:mx-12">
               <h2
                 className="flex flex-col items-center text-[#2D2D2D]"
                 style={{ fontFamily: "var(--font-ramillas)" }}
               >
-                <span className="text-3xl uppercase leading-none lg:text-4xl">Catering The</span>
-                <span className="mt-1 text-4xl uppercase leading-none lg:text-5xl">Naans Curries Way</span>
+                <span className="text-3xl uppercase leading-none lg:text-4xl">{t("cateringThe")}</span>
+                <span className="mt-1 text-4xl uppercase leading-none lg:text-5xl">{t("naansWay")}</span>
               </h2>
             </div>
 
-            {/* Right Decorator */}
             <div className="flex-1 text-left">
               <span
                 className="text-sm uppercase tracking-widest text-[#2D2D2D]/80 font-semibold"
                 style={{ fontFamily: "var(--font-ramillas)" }}
               >
-                Anywhere
+                {t("anywhere")}
               </span>
             </div>
           </div>

@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import restaurantImg from "./assets/dcf85e625eb89d680ed6ba526ad66fd03bc8c633.jpg";
 import tripadvisorBadges from "./assets/Frame 43 (1).png";
 
 export default function AuthResturant() {
+  const t = useTranslations("AuthResturant");
   return (
     <section className="grid w-full grid-cols-1 bg-[#FDF4E7] lg:grid-cols-2">
       {/* Left column – text, button, Tripadvisor badges */}
@@ -20,7 +22,7 @@ export default function AuthResturant() {
           className="text-3xl uppercase leading-tight text-[#2d2d2d] md:text-4xl lg:text-[44px]"
           style={{ fontFamily: "var(--font-ramillas)" }}
         >
-          Authentic Indian Restaurant in San José &amp; Tamarindo, Costa Rica
+          {t("title")}
         </h2>
 
         <div className="mt-6 flex flex-col gap-4 text-[#2d2d2d]/90">
@@ -28,42 +30,25 @@ export default function AuthResturant() {
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-futura)" }}
           >
-            Welcome to Naans &amp; Curries, the best Indian restaurant in Costa Rica,
-            offering a wide variety of traditional Indian dishes with bold flavors
-            and fresh ingredients. Located in San José and Tamarindo, we serve
-            locals and tourists looking for authentic Indian food, whether you
-            crave rich curries, tender tandoori, or satisfying vegetarian and
-            vegan options. Whether you&apos;re in the mood for spicy butter
-            chicken, paneer tikka, or garlic naan fresh from the tandoor, our
-            chefs deliver a truly flavorful experience. We also provide Indian
-            food catering services across Costa Rica, perfect for weddings,
-            corporate events, or private gatherings. Stop by our restaurants or
-            order online for quick Indian curry delivery in Costa Rica.
+            {t("p1")}
           </p>
 
           <p
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-futura)" }}
           >
-            Discover why our guests say we&apos;re the best Indian restaurant in
-            San José. High-quality ethnic ingredients, skillful preparation by
-            highly skilled chefs from India, and the process of serving from the
-            foundation, but the experience at Naans &amp; Curries is designed to
-            extend beyond the plate. The fundamental formula of the Naans &amp;
-            Curries dishes is eternal. It consistently works according to the same
-            script written centuries ago.
+            {t("p2")}
           </p>
         </div>
 
         <div className="mt-10 flex justify-center md:justify-start">
-          {/* Double-border button frame */}
           <div className="inline-block rounded-md border border-[#2d2d2d] p-1">
             <Link
               href="#curator"
               className="flex items-center justify-center rounded-sm bg-[#2d2d2d] px-8 py-3 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#3d3d3d]"
               style={{ fontFamily: "var(--font-futura)" }}
             >
-              Thoughts of the Curator
+              {t("thoughtsCurator")}
             </Link>
           </div>
         </div>

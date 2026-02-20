@@ -1,40 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import imgBlog1 from "./assets/6176b32ee97e494d40468191567022c0bf2c6e83.png";
 import imgBlog2 from "./assets/8902b192982736cc227423a7f0c1478803c911b7.png";
 
-const blogPosts = [
-  {
-    image: imgBlog1,
-    alt: "Best Indian Food in Costa Rica – vegan and vegetarian",
-    title: "Best Indian Food in Costa Rica for Vegans and Vegetarians",
-    intro:
-      "Introduction: The Rise of Indian Vegetarian & Vegan Food in Costa Rica Costa Rica's fascination with the culinary world continues ...",
-    href: "#blog-vegan",
-  },
-  {
-    image: imgBlog2,
-    alt: "From Street Food to Fine Dining – Indian culinary experiences",
-    title: "From Street Food to Fine Dining: Indian Culinary Experiences in Costa Rica",
-    intro:
-      "Introduction: The Rise of Indian Cuisine in Costa Rica The food culture of Costa Rica is evolving to be more...",
-    href: "#blog-street-food",
-  },
-  {
-    image: imgBlog1, // Using first image again for the 3rd post
-    alt: "Exploring Indian Spices - A Guide to Flavor",
-    title: "Exploring Indian Spices: A Comprehensive Guide to Flavor Profiles",
-    intro:
-      "Dive deep into the world of Indian spices. Learn how turmeric, cumin, and cardamom create the symphony of flavors that define authentic Indian cuisine...",
-    href: "#blog-spices",
-  },
+const blogConfig = [
+  { image: imgBlog1, titleKey: "blog1Title", introKey: "blog1Intro", href: "#blog-vegan" },
+  { image: imgBlog2, titleKey: "blog2Title", introKey: "blog2Intro", href: "#blog-street-food" },
+  { image: imgBlog1, titleKey: "blog3Title", introKey: "blog3Intro", href: "#blog-spices" },
 ];
 
 export default function HomeBlogs() {
+  const t = useTranslations("HomeBlogs");
+  const blogPosts = blogConfig.map((p) => ({
+    ...p,
+    alt: t(p.titleKey),
+    title: t(p.titleKey),
+    intro: t(p.introKey),
+  }));
   return (
     <section className="w-full bg-[#FFF7ED] px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -46,19 +33,18 @@ export default function HomeBlogs() {
               className="max-w-md text-4xl uppercase leading-none text-[#2d2d2d] md:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
-              <span className="block">Latest Blog</span>
-              <span className="block">Articles</span>
+              <span className="block">{t("latestBlog")}</span>
+              <span className="block">{t("articles")}</span>
             </h2>
 
             <div className="hidden md:block">
-              {/* Double-border button frame */}
               <div className="inline-block rounded-md border border-[#2d2d2d] p-1">
                 <Link
                   href="#blog"
                   className="flex items-center justify-center rounded-sm bg-[#2d2d2d] px-8 py-2.5 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#3d3d3d]"
                   style={{ fontFamily: "var(--font-futura)" }}
                 >
-                  View All
+                  {t("viewAll")}
                 </Link>
               </div>
             </div>
@@ -107,14 +93,13 @@ export default function HomeBlogs() {
                 className="mt-4 inline-flex items-center text-sm font-medium text-[#E89D42] transition-colors duration-200 hover:text-[#c48231]"
                 style={{ fontFamily: "var(--font-ramillas)" }}
               >
-                Read More
+                {t("readMore")}
                 <span className="ml-1 text-lg leading-none">→</span>
               </Link>
             </AnimateOnScroll>
           ))}
         </div>
 
-        {/* Mobile View All Button */}
         <div className="mt-10 md:hidden">
           <div className="inline-block w-full rounded-md border border-[#2d2d2d] p-1">
             <Link
@@ -122,7 +107,7 @@ export default function HomeBlogs() {
               className="flex w-full items-center justify-center rounded-sm bg-[#2d2d2d] py-3 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#3d3d3d]"
               style={{ fontFamily: "var(--font-futura)" }}
             >
-              View All
+              {t("viewAll")}
             </Link>
           </div>
         </div>
