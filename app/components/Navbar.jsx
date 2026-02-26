@@ -357,6 +357,7 @@ export default function Navbar() {
                             >
                                 CLOSE
                             </button>
+                            
                         </div>
 
                         {/* Centered menu links */}
