@@ -8,8 +8,8 @@ import AnimateOnScroll from "./AnimateOnScroll";
 import restaurantImg from "./assets/dcf85e625eb89d680ed6ba526ad66fd03bc8c633.jpg";
 import tripadvisorBadges from "./assets/Frame 43 (1).png";
 
-export default function AuthResturant() {
-  const t = useTranslations("AuthResturant");
+export default function AuthRestaurant() {
+  const t = useTranslations("AuthRestaurant");
   return (
     <section className="grid w-full grid-cols-1 bg-[#FDF4E7] lg:grid-cols-2">
       {/* Left column – text, button, Tripadvisor badges */}

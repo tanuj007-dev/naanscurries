@@ -21,8 +21,8 @@ const SignatureMenu = dynamic(() => import("@/app/components/SignatureMenu"), {
   loading: () => <SectionSkeleton height="h-[500px]" />,
 });
 
-const AuthResturant = dynamic(
-  () => import("@/app/components/AuthResturant"),
+const AuthRestaurant = dynamic(
+  () => import("@/app/components/AuthRestaurant"),
   { loading: () => <SectionSkeleton height="h-[560px]" /> }
 );
 
@@ -60,7 +60,7 @@ export default function Home() {
       {/* Below-the-fold: lazy-loaded chunks */}
       <TheSpirit />
       <SignatureMenu />
-      <AuthResturant />
+      <AuthRestaurant />
       <Catering />
       <Tradition />
       <Rooted />

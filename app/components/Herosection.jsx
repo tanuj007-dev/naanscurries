@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import heroBg from "./assets/d24d00acea2544bb511586a4c76f73b148012df9 (1).png";
 
 const socials = [
@@ -68,6 +68,7 @@ const descVariants = {
 
 export default function Herosection() {
   const t = useTranslations("Home");
+  const locale = useLocale();
   return (
     <section className="relative min-h-[85vh] md:min-h-screen w-full overflow-hidden  ">
       {/* ── Background image (LCP priority) ─────────────────────────────── */}
@@ -102,8 +103,8 @@ export default function Herosection() {
           >
             {/* Top row: "FLAVORS" */}
             <motion.h1
-              className="text-[36px] font-normal uppercase ml-0 md:ml-12 leading-none text-[#FFF7ED] drop-shadow-sm
-                         sm:text-[60px] md:text-[85px] lg:text-[115px]"
+              className={`text-[36px] font-normal uppercase leading-none text-[#FFF7ED] drop-shadow-sm
+                         sm:text-[60px] md:text-[85px] lg:text-[115px] whitespace-nowrap ${locale === "es" ? "md:ml-0" : "md:ml-12"}`}
               variants={headlineWord}
               style={{
                 fontFamily: "var(--font-ramillas)",
@@ -114,11 +115,11 @@ export default function Herosection() {
             </motion.h1>
 
             {/* Bottom row: [Best Indian Restaurant] [THAT STAY] [In Costa Rica] */}
-            <div className="flex flex-col items-center justify-center gap-1 mr-0 md:mr-18 sm:gap-2 md:flex-row md:items-center md:gap-4 lg:gap-6">
+            <div className={`flex flex-col items-center justify-center gap-1 sm:gap-2 md:flex-row md:items-center md:gap-4 lg:gap-6 ${locale === "es" ? "md:mr-0" : "md:mr-16"}`}>
 
               {/* Left wing */}
               <motion.p
-                className="hidden font-medium uppercase tracking-[0.25em] text-[#FFF7ED] md:block md:text-[13px] lg:text-[15px] lg:tracking-[0.3em]"
+                className="hidden font-medium uppercase tracking-[0.25em] text-[#FFF7ED] md:block md:text-[13px] lg:text-[15px] lg:tracking-[0.3em] whitespace-nowrap shrink-0"
                 variants={headlineWord}
                 style={{ fontFamily: "var(--font-T)", willChange: "transform, opacity" }}
               >
@@ -128,7 +129,7 @@ export default function Herosection() {
               {/* Center giant text */}
               <motion.h1
                 className="text-[36px] font-normal uppercase leading-none text-[#FFF7ED] drop-shadow-sm
-                           sm:text-[60px] md:text-[85px] lg:text-[115px]"
+                           sm:text-[60px] md:text-[85px] lg:text-[115px] whitespace-nowrap"
                 variants={headlineWord}
                 style={{
                   fontFamily: "var(--font-ramillas)",
@@ -140,7 +141,7 @@ export default function Herosection() {
 
               {/* Right wing */}
               <motion.p
-                className="hidden font-medium uppercase tracking-[0.25em] text-[#FFF7ED] md:block md:text-[13px] lg:text-[15px] lg:tracking-[0.3em]"
+                className="hidden font-medium uppercase tracking-[0.25em] text-[#FFF7ED] md:block md:text-[13px] lg:text-[15px] lg:tracking-[0.3em] whitespace-nowrap shrink-0"
                 variants={headlineWord}
                 style={{ fontFamily: "var(--font-T)", willChange: "transform, opacity" }}
               >
@@ -234,15 +235,15 @@ export default function Herosection() {
           />
         </div>
 
-        {/* Description: Right */}
+        {/* Description: Center */}
         <motion.div
-          className="hidden md:block absolute bottom-12 right-10 max-w-xs text-right lg:right-14 lg:max-w-[18rem]"
+          className="hidden md:block absolute bottom-16 left-1/2 -translate-x-1/2 max-w-2xl text-center"
           initial="hidden"
           animate="visible"
           variants={descVariants}
         >
           <p
-            className="text-[13px] leading-relaxed text-white/90 lg:text-[14px]"
+            className="text-[13px] leading-relaxed text-white/90 lg:text-[15px]"
             style={{ fontFamily: "var(--font-futura)" }}
           >
             At Naans Curries, every dish is a tribute to tradition and every
@@ -254,7 +255,18 @@ export default function Herosection() {
 
       </div>
 
-      <div />
+      {/* Scroll indicator */}
+      {/* <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
+        <div className="w-px h-12 bg-linear-to-b from-white to-transparent" />
+        <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 rotate-90 origin-left mt-8 whitespace-nowrap" style={{ fontFamily: "var(--font-futura)" }}>
+          SCROLL
+        </span>
+      </motion.div> */}
 
     </section>
   );

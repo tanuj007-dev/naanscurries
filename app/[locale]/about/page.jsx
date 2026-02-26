@@ -1,11 +1,14 @@
+"use client";
+
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 import Hero from "@/components/about/Hero";
+import AboutStats from "@/components/about/AboutStats";
+import AboutLocations from "@/components/about/AboutLocations";
+import Team from "@/components/about/Team";
 
 const AboutSection = dynamic(() => import("@/components/about/AboutSection"), {
   loading: () => <div className="min-h-[400px]" aria-hidden />,
-});
-const Stats = dynamic(() => import("@/components/about/Stats"), {
-  loading: () => <div className="h-48" aria-hidden />,
 });
 const VisionMission = dynamic(() => import("@/components/about/VisionMission"), {
   loading: () => <div className="min-h-[320px]" aria-hidden />,
@@ -17,21 +20,19 @@ const CTA = dynamic(() => import("@/components/about/CTA"), {
   loading: () => <div className="h-64" aria-hidden />,
 });
 
-export const metadata = {
-  title: "About Us – Naans & Curries",
-  description:
-    "Our story, vision, and mission. Authentic Indian cuisine and warm hospitality since the beginning.",
-};
-
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <motion.main
+      className="min-h-screen"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Hero />
+      <AboutStats />
       <AboutSection />
-      <Stats />
-      <VisionMission />
-      <Timeline />
-      <CTA />
-    </main>
+      <Team />
+      <AboutLocations />
+    </motion.main>
   );
 }

@@ -21,7 +21,8 @@ export default function TheSpirit() {
           sizes="100vw"
           quality={80}
         />
-        <div className="absolute inset-0 bg-[#1a1210]/60" aria-hidden />
+        <div className="absolute inset-0 bg-linear-to-r from-[#1a1210]/95 via-[#1a1210]/60 to-transparent" aria-hidden />
+        <div className="absolute inset-0 bg-linear-to-t from-[#1a1210]/40 to-transparent" aria-hidden />
       </div>
 
       {/* Content – left-aligned */}

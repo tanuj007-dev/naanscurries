@@ -25,7 +25,10 @@ export default function SignatureMenu() {
         duration={0.7}
         className="flex h-full flex-col bg-[#2d2d2d] p-3 md:p-4"
       >
-        <div className="relative flex h-full flex-col justify-between rounded-[4px] bg-[#C68D48] px-6 py-10 md:px-8 md:py-12 lg:px-12 lg:py-16">
+        <div className="relative flex h-full flex-col justify-between rounded-[4px] bg-[#C68D48] px-6 py-10 md:px-8 md:py-12 lg:px-12 lg:py-16 overflow-hidden">
+          {/* Subtle pattern overlay */}
+          <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none"
+            style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #000 1px, transparent 0)', backgroundSize: '24px 24px' }} />
 
           {/* Vector Icon: Absolute Top Right relative to the orange card */}
           <div className="absolute right-5 top-6 opacity-80 md:right-8 md:top-10">

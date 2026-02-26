@@ -10,21 +10,21 @@ import logo from "./assets/image 1.png";
 // Overlay menu items
 const getNavLinks = (t) => [
     { label: t('Navbar.home'), href: "/" },
-    { label: t('Navbar.menu'), href: "/#menu" },
-    { label: t('Navbar.blog'), href: "/#blog" },
+    { label: t('Navbar.menu'), href: "/menu" },
+    { label: t('Navbar.blog'), href: "/blog" },
     { label: t('Navbar.order'), href: "" },
-    { label: t('Navbar.contact'), href: "/#contact" },
-    { label: t('Navbar.about'), href: "" },
+    { label: t('Navbar.contact'), href: "/contact" },
+    { label: t('Navbar.about'), href: "/about" },
 ];
 
 const getOverlayNavLinks = (t) => [
     { label: t('Navbar.home'), href: "/" },
-    { label: t('Navbar.menu'), href: "/#menu" },
-   { label: t('Navbar.about'), href: "" },
+    { label: t('Navbar.menu'), href: "/menu" },
+    { label: t('Navbar.about'), href: "/about" },
     { label: t('Navbar.reservation'), href: "/reservation" },
     { label: t('Navbar.orderOnline'), href: "#", hasDropdown: true },
-    { label: t('Navbar.contact'), href: "/#contact" },
-    { label: t('Navbar.blog'), href: "/#blog" },
+    { label: t('Navbar.contact'), href: "/contact" },
+    { label: t('Navbar.blog'), href: "/blog" },
 ];
 
 const orderLocations = [
@@ -327,7 +327,7 @@ export default function Navbar() {
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
-                        className="fixed inset-0 z-100 flex flex-col bg-[#E4DBD1]"
+                        className="fixed inset-0 z-100 flex flex-col bg-[#E4DBD1]/40 backdrop-blur-2xl"
                         initial="closed"
                         animate="open"
                         exit="closed"
@@ -351,7 +351,7 @@ export default function Navbar() {
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="text-xs font-medium uppercase tracking-[0.2em] text-[#624630] transition-opacity hover:opacity-70 md:text-sm"
+                                className="text-xs font-medium uppercase tracking-[0.2em] text-[#FFF7ED] transition-opacity hover:opacity-70 md:text-sm"
                                 style={{ fontFamily: "var(--font-ramillas)" }}
                                 aria-label="Close menu"
                             >
@@ -376,7 +376,7 @@ export default function Navbar() {
                                             <div className="flex flex-col items-center">
                                                 <button
                                                     onClick={() => setMobileOrderOpen(!mobileOrderOpen)}
-                                                    className="flex items-center gap-3 text-2xl font-normal uppercase tracking-[0.12em] leading-relaxed text-[#624630] transition-opacity hover:opacity-80 md:text-3xl cursor-pointer"
+                                                    className="flex items-center gap-3 text-2xl font-normal uppercase tracking-[0.12em] leading-relaxed text-[#FFF7ED] transition-opacity hover:opacity-80 md:text-3xl cursor-pointer"
                                                     style={{ fontFamily: "var(--font-ramillas)" }}
                                                 >
                                                     {item.label}
@@ -396,7 +396,7 @@ export default function Navbar() {
                                                                 <Link
                                                                     key={loc.label}
                                                                     href={loc.href}
-                                                                    className="text-sm font-medium tracking-[0.15em] text-[#624630]/70 hover:text-[#E89D42] transition-colors md:text-base"
+                                                                    className="text-sm font-medium tracking-[0.15em] text-[#FFF7ED] hover:text-[#E89D42] transition-colors md:text-base"
                                                                     style={{ fontFamily: "var(--font-futura)" }}
                                                                     onClick={() => setMobileMenuOpen(false)}
                                                                 >
@@ -412,7 +412,7 @@ export default function Navbar() {
                                                 href={item.href}
                                                 className={`block text-2xl font-normal uppercase tracking-[0.12em] leading-relaxed transition-opacity hover:opacity-80 md:text-3xl ${pathname === item.href
                                                     ? "text-[#E89D42]"
-                                                    : "text-[#624630]"
+                                                    : "text-[#FFF7ED]"
                                                     }`}
                                                 style={{ fontFamily: "var(--font-ramillas)" }}
                                                 onClick={() => setMobileMenuOpen(false)}
@@ -435,7 +435,7 @@ export default function Navbar() {
                                     <div className="flex flex-col items-center">
                                         <button
                                             onClick={() => setMobileLangOpen(!mobileLangOpen)}
-                                            className="flex items-center gap-3 text-2xl font-normal uppercase tracking-[0.12em] leading-relaxed text-[#624630] transition-opacity hover:opacity-80 md:text-3xl cursor-pointer"
+                                            className="flex items-center gap-3 text-2xl font-normal uppercase tracking-[0.12em] leading-relaxed text-[#FFF7ED] transition-opacity hover:opacity-80 md:text-3xl cursor-pointer"
                                             style={{ fontFamily: "var(--font-ramillas)" }}
                                         >
                                             LANGUAGE ({currentLang})
@@ -453,14 +453,14 @@ export default function Navbar() {
                                                 >
                                                     <button
                                                         onClick={() => { router.replace(pathForLocaleSwitch, { locale: 'en' }); setMobileLangOpen(false); setMobileMenuOpen(false); }}
-                                                        className="text-sm font-medium tracking-[0.15em] text-[#624630]/70 hover:text-[#E89D42] transition-colors md:text-base"
+                                                        className="text-sm font-medium tracking-[0.15em] text-[#FFF7ED]/70 hover:text-[#E89D42] transition-colors md:text-base"
                                                         style={{ fontFamily: "var(--font-futura)" }}
                                                     >
                                                         ENGLISH
                                                     </button>
                                                     <button
                                                         onClick={() => { router.replace(pathForLocaleSwitch, { locale: 'es' }); setMobileLangOpen(false); setMobileMenuOpen(false); }}
-                                                        className="text-sm font-medium tracking-[0.15em] text-[#624630]/70 hover:text-[#E89D42] transition-colors md:text-base"
+                                                        className="text-sm font-medium tracking-[0.15em] text-[#FFF7ED]/70 hover:text-[#E89D42] transition-colors md:text-base"
                                                         style={{ fontFamily: "var(--font-futura)" }}
                                                     >
                                                         SPANISH
