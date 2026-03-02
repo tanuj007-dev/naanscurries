@@ -1,0 +1,391 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "menu": "Menu",
+    "blog": "Blog",
+    "reservation": "Reservation",
+    "orderOnline": "Order Online",
+    "contact": "Contact",
+    "order": "Order"
+  },
+  "Footer": {
+    "rights": "All Rights Reserved",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "menu": "Menu",
+    "bookATable": "Book A Table",
+    "blog": "Blog",
+    "order": "Order"
+  },
+  "Home": {
+    "flavors": "Flavors",
+    "bestIndianRestaurant": "Best Indian Restaurant",
+    "thatStay": "That Stay",
+    "inCostaRica": "In Costa Rica",
+    "heroDescription": "At Naans Curries, every dish is a tribute to tradition and every moment is crafted for today. We bring together the warmth of Indian hospitality, the richness of timeless flavors, and the pace of modern life."
+  },
+  "About": {
+    "title": "About Us",
+    "home": "Home",
+    "heroLine1": "BOLD FLAVORS,",
+    "heroLine2": "FROM OUR KITCHEN",
+    "heroLine3": "TO YOURS",
+    "heroDescription": "At Naans & Curries, we bring the richness of Indian cuisine to your table — fresh, fiery, and full of soul.",
+    "exploreMore": "Explore more",
+    "ourStory": "Our Story",
+    "ourStoryP1": "We bring authentic Indian flavors to your table. From traditional recipes passed down through generations to modern twists that surprise and delight, every dish tells a story of heritage and passion.",
+    "ourStoryP2": "Our kitchen is where spices meet warmth, and every meal is crafted with care. We believe in honest ingredients, bold flavors, and the kind of hospitality that makes you feel at home.",
+    "storyLabel": "HISTORY",
+    "storyTitle": "The Tale of The Launch of Our First Eatery",
+    "storyDesc": "Our first restaurant's history is based on passion, commitment, and common goals. It all began with a group of food enthusiasts who thought that extraordinary meals had the ability to transform people. We think that our restaurant brings flavor to life, and we treat our patrons more like honored guests than like business partners.",
+    "readStory": "READ OUR STORY",
+    "serviceLabel": "OUR SERVICE",
+    "serviceTitle": "Provide Unique Service For Your Special Day",
+    "serviceDesc": "More than simply a restaurant, Naans & Curries is a culinary haven for gourmets seeking out exceptional eating experiences. At Naans & Curries, we think that a meal should be a memorable experience, and our skilled chefs are dedicated to producing imaginative and attractive cuisine.",
+    "statsCustomers": "Satisfied Customers",
+    "statsEvents": "Event Management",
+    "statsOrders": "Successful Orders",
+    "reservationLabel": "RESERVATION",
+    "locationsSliderTitle": "Come and Visit One of Our Restaurants at Various Locations",
+    "locationsSliderDesc": "With a commitment to exceptional service and a passion for culinary excellence, our locations are designed to make your dining experience memorable.",
+    "contactUs": "CONTACT US",
+    "locationMomentum": "Momentum Lindora",
+    "locationMomentumDesc": "Experience the vibrant energy of Santa Ana at our Momentum Lindora location, where traditional spices meet modern elegance.",
+    "locationLincoln": "Lincoln Plaza",
+    "locationLincolnDesc": "Nestled in San Jose, our Lincoln Plaza branch offers a sophisticated dining escape in the heart of the city.",
+    "locationPinares": "Pinares",
+    "locationPinaresDesc": "A cozy and inviting space in San Jose perfect for family gatherings and intimate dinners.",
+    "locationEscazu": "Escazu",
+    "locationEscazuDesc": "The pinnacle of authentic Indian dining in Escazu, featuring our most signature dishes.",
+    "locationAlajuela": "Alajuela",
+    "locationAlajuelaDesc": "Bringing the soul of India to Alajuela with flavors that tell a story in every bite.",
+    "locationHeredia": "Heredia",
+    "locationHerediaDesc": "A haven for food lovers in Heredia, where tradition and innovation blend seamlessly.",
+    "locationCartago": "Cartago",
+    "locationCartagoDesc": "Discover the heritage of spice in Cartago at our welcoming and family-friendly restaurant.",
+    "teamHeading": "Exceptionally skilled world-class designers and visualizers.",
+    "teamDesc1": "We are passionate about our work and its positive impact on our clients. With over 12 years of experience, we consistently deliver exceptional dining solutions.",
+    "teamDesc2": "We aim to create practical culinary experiences tailored to projects of all sizes, meeting unique requirements. Our designs are crafted to perfectly align with your audience.",
+    "teamMember1": "Lucas Hayes",
+    "teamRole1": "Founder",
+    "teamMember2": "Sarah Jenkins",
+    "teamRole2": "Executive Chef",
+    "teamMember3": "David Miller",
+    "teamRole3": "General Manager",
+    "yearsExperience": "Years of Experience",
+    "signatureDishes": "Signature Dishes",
+    "happyGuests": "Happy Guests",
+    "locations": "Locations",
+    "visionMission": "Vision & Mission",
+    "ourVision": "Our Vision",
+    "ourVisionDesc": "To be the most loved Indian restaurant in the region, where every guest leaves with a memorable experience and a desire to return.",
+    "ourMission": "Our Mission",
+    "ourMissionDesc": "To serve authentic, high-quality Indian cuisine in a warm and welcoming environment, honoring tradition while embracing innovation.",
+    "ourValues": "Our Values",
+    "ourValuesDesc": "Integrity in ingredients, respect for tradition, and a commitment to hospitality that makes everyone feel like family.",
+    "timelineTitle": "Our Story",
+    "timeline2009Title": "The Beginning",
+    "timeline2009Desc": "We opened our first kitchen with a small menu and big dreams.",
+    "timeline2012Title": "First Expansion",
+    "timeline2012Desc": "Moved to a larger space and introduced our signature tasting menu.",
+    "timeline2016Title": "Second Location",
+    "timeline2016Desc": "Brought Naans & Curries to a new neighborhood.",
+    "timeline2020Title": "Resilience",
+    "timeline2020Desc": "Adapted with takeaway and delivery while keeping quality high.",
+    "timeline2024Title": "Today",
+    "timeline2024Desc": "Three locations, countless memories, and the same passion for flavor.",
+    "ctaHeading": "Experience the difference",
+    "ctaDescription": "Join us for a meal that feels like home, with flavors that take you places.",
+    "bookATable": "Book a table"
+  },
+  "TheSpirit": {
+    "title1": "The Spirit of",
+    "title2": "Indian Dining",
+    "description": "Good food, good service, a very pleasant dining experience.",
+    "reservation": "Reservation"
+  },
+  "SignatureMenu": {
+    "signature": "Signature",
+    "menu": "Menu",
+    "mainMenu": "Main Menu",
+    "mainMenuDesc": "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
+    "dessertMenu": "Dessert Menu",
+    "dessertMenuDesc": "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
+    "executiveLunch": "Executive Lunch Menu",
+    "executiveLunchDesc": "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
+    "chefsTasting": "Chef's Tasting Menu",
+    "chefsTastingDesc": "A sampler platter perfect for sharing, featuring a mix of vegetable and meat samosas, aloo pakora, chicken pakora, cheese pakora, bhujia, and papadam.",
+    "viewFullMenu": "View Full Menu",
+    "weddingHeading": "Exquisite Indian Wedding Catering in Costa Rica",
+    "weddingDesc": "Naans & Curries offers authentic Indian cuisine and exceptional Private Chef & Events' Catering services in Costa Rica. From private gatherings to destination weddings, our experienced team caters to your needs.",
+    "contactWedding": "Contact For Wedding Catering"
+  },
+  "AuthRestaurant": {
+    "title": "Authentic Indian Restaurant in San José & Tamarindo, Costa Rica",
+    "p1": "Welcome to Naans & Curries, the best Indian restaurant in Costa Rica, offering a wide variety of traditional Indian dishes with bold flavors and fresh ingredients. Located in San José and Tamarindo, we serve locals and tourists looking for authentic Indian food, whether you crave rich curries, tender tandoori, or satisfying vegetarian and vegan options. Whether you're in the mood for spicy butter chicken, paneer tikka, or garlic naan fresh from the tandoor, our chefs deliver a truly flavorful experience. We also provide Indian food catering services across Costa Rica, perfect for weddings, corporate events, or private gatherings. Stop by our restaurants or order online for quick Indian curry delivery in Costa Rica.",
+    "p2": "Discover why our guests say we're the best Indian restaurant in San José. High-quality ethnic ingredients, skillful preparation by highly skilled chefs from India, and the process of serving from the foundation, but the experience at Naans & Curries is designed to extend beyond the plate. The fundamental formula of the Naans & Curries dishes is eternal. It consistently works according to the same script written centuries ago.",
+    "thoughtsCurator": "Thoughts of the Curator"
+  },
+  "Catering": {
+    "cateringThe": "Catering The",
+    "naansWay": "Naans Curries Way",
+    "exceptionalFood": "Exceptional Food",
+    "anywhere": "Anywhere",
+    "lindoraTitle": "Naans & Curries Lindora",
+    "lindoraDesc": "At Naans & Curries Lindora You can enjoy different ambiance; private saloon for group and events dining, green lawn fresh breeze seating, or cozy and relaxed sofa seating.",
+    "pinaresTitle": "Naans & Curries Pinares",
+    "pinaresDesc": "At Naans & Curries Pinares You can enjoy outdoor terrace seating with view of mountains or inside cozy seating for the cold evenings.",
+    "lincolnTitle": "Naans & Curries Lincoln Plaza",
+    "lincolnDesc": "At Naans & Curries Lincoln Plaza Enjoy the contemporary Indian vibe. Breezy terrace or nature theme indoors, perfect for your mood."
+  },
+  "Tradition": {
+    "giftTaste": "Gift a Taste",
+    "ofTradition": "of Tradition",
+    "shareExperience": "Share The Experience",
+    "flavoursRemember": "Flavours We Remember",
+    "bottomDesc": "Native Chefs, Special charcoal fired \"Tandoors\" (Clay Ovens) and exotic Indian ingredients, providing",
+    "orderNow": "Order Now"
+  },
+  "Rooted": {
+    "rootedIn": "Rooted In",
+    "experience": "Experience",
+    "description": "High-quality ethnic ingredients, skillful preparation by highly skilled chefs from India, and the process of serving from the foundation, but the experience at Naans & Curries is designed to extend beyond the plate."
+  },
+  "HomeBlogs": {
+    "latestBlog": "Latest Blog",
+    "articles": "Articles",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "blog1Title": "Best Indian Food in Costa Rica for Vegans and Vegetarians",
+    "blog1Intro": "Introduction: The Rise of Indian Vegetarian & Vegan Food in Costa Rica Costa Rica's fascination with the culinary world continues ...",
+    "blog2Title": "From Street Food to Fine Dining: Indian Culinary Experiences in Costa Rica",
+    "blog2Intro": "Introduction: The Rise of Indian Cuisine in Costa Rica The food culture of Costa Rica is evolving to be more...",
+    "blog3Title": "Exploring Indian Spices: A Comprehensive Guide to Flavor Profiles",
+    "blog3Intro": "Dive deep into the world of Indian spices. Learn how turmeric, cumin, and cardamom create the symphony of flavors that define authentic Indian cuisine..."
+  },
+  "OurLocations": {
+    "our": "Our",
+    "locations": "Locations",
+    "description": "From house-special cocktails to traditional Indian lassi, every drink is designed to pair perfectly with your meal.",
+    "contactUs": "Contact Us"
+  },
+  "Reservation": {
+    "reserveATable": "Reserve A Table",
+    "reservationForm": "Reservation Form",
+    "reservation": "Reservation",
+    "selectLocation": "Select Location",
+    "locations": [
+      "Naans & Curries, Lindora Plaza",
+      "Naans & Curries, Lincoln Plaza",
+      "Naans & Curries, Pinares",
+      "Naans & Curries, Escazu",
+      "Naans & Curries, Alajuela",
+      "Naans & Curries, Heredia",
+      "Naans & Curries, Cartago"
+    ],
+    "name": "Name",
+    "email": "Email",
+    "mobileNumber": "Mobile Number",
+    "noOfGuests": "No. of Guests",
+    "date": "Date",
+    "time": "Time",
+    "specialInstructions": "Special Instructions",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "phoneNumber": "Phone Number",
+    "specialRequest": "Special Request",
+    "person": "Person",
+    "persons": "Persons",
+    "other": "Other",
+    "reserveTable": "Reserve Table",
+    "thankYou": "Thank You!",
+    "successMessage": "Your table has been requested. We'll be in touch soon!",
+    "locationLabel": "Location",
+    "lindoraPlaza": "Lindora Plaza",
+    "cityCenter": "City Center",
+    "addressLindora": "Restaurant St, Delicious City, CR.",
+    "addressCityCenter": "500, Gastronomy St, San José, CR.",
+    "getDirection": "Get Direction",
+    "policyText": "Restaurant will be open for all days, Sunday night will be closed. All booking payment is secured with credit card, no charges will be apply for online booking, no refundable.",
+    "bookingRequest": "Booking request",
+    "bookingRequestOr": "or fill out the order form"
+  },
+  "Blogs": {
+    "ourBlogs": "Our Blogs",
+    "latestInsights": "Latest Insights",
+    "toolbar": {
+      "type": "Type",
+      "category": "Category",
+      "sortBy": "Sort By",
+      "showing": "Showing {count} entries"
+    },
+    "featuredLarge": {
+      "category": "RESTAURANT",
+      "date": "March 09, 2025",
+      "title": "The Journey of a Tomato: From Farm to Naans & Curries’ Plate",
+      "description": "Discover how our farm-to-table approach ensures that every tomato in our kitchen is bursting with flavor and tradition."
+    },
+    "featuredSmall": {
+      "category": "RESTAURANT",
+      "date": "March 09, 2025",
+      "title": "Tradition Meets Innovation in Naans & Curries’ Kitchen",
+      "description": "Exploring the delicate balance between ancient recipes and modern culinary techniques."
+    },
+    "gridItems": [
+      {
+        "category": "RESTAURANT",
+        "date": "March 09, 2025",
+        "title": "Taste of Tradition: The Story Behind Our Signature Dish."
+      },
+      {
+        "category": "FOODS",
+        "date": "March 09, 2025",
+        "title": "Savoring the Seasons: Fresh Flavors on Every Plate"
+      },
+      {
+        "category": "CUISINE",
+        "date": "March 09, 2025",
+        "title": "Why Seasonal Dining Matters for Flavor and Sustainability"
+      },
+      {
+        "category": "RESTAURANT",
+        "date": "March 09, 2025",
+        "title": "Fresh from the Earth: How We Source Our Ingredients"
+      },
+      {
+        "category": "FOODS",
+        "date": "March 09, 2025",
+        "title": "Inside Ambrosia's Culinary Philosophy"
+      },
+      {
+        "category": "CUISINE",
+        "date": "March 09, 2025",
+        "title": "Behind the Plate: Stories of Passion and Perfection"
+      },
+      {
+        "category": "CUISINE",
+        "date": "March 09, 2025",
+        "title": "Heritage Blends with Modernity in Elysium's Forge."
+      },
+      {
+        "category": "CUISINE",
+        "date": "March 09, 2025",
+        "title": "Celebrating Heritage: Timeless Recipes Reimagined"
+      },
+      {
+        "category": "CUISINE",
+        "date": "March 09, 2025",
+        "title": "A Feast for the Senses: Dining Beyond Taste"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "heroLine1": "WE’D LOVE TO",
+    "heroLine2": "HEAR FROM YOU",
+    "home": "Home",
+    "formTitle": "Whether you're booking a table, planning an event, or just have a question — our team is here to help.",
+    "formSubtitle": "Get In Touch",
+    "namePlaceholder": "Type your name",
+    "phonePlaceholder": "Phone number",
+    "emailPlaceholder": "Your email address",
+    "messagePlaceholder": "Your message",
+    "sendButton": "SEND MESSAGE",
+    "officeLocation": "Our Locations",
+    "getDirections": "GET DIRECTIONS",
+    "locations": [
+      {
+        "name": "MOMENTUM, LINDORA, SANTA ANA, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0001, +506 2282 5470",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "LINCOLN PLAZA, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0002",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "PINARES, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0003",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "ESCAZU, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0004",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "ALAJUELA, COSTA RICA",
+        "phone": "+506 2282 0005",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "HEREDIA, COSTA RICA",
+        "phone": "+506 2282 0006",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "CARTAGO, COSTA RICA",
+        "phone": "+506 2282 0007",
+        "email": "info@naansandcurries.com"
+      }
+    ]
+  },
+  "Menu": {
+    "heroTitle": "Our Menu",
+    "heroDescription": "The food at Naans & Curries best describes itself in one word: diversity. Foodies will have no shortage of options, from our authentic traditional recipes to contemporary twists and delectable fare.",
+    "introTitle": "Read Our Delicious Menu",
+    "introDescription": "We've meticulously created each flavor on our menu to entice your palate and leave you wanting more. Each meal is a work of art, combining the love of our talented chefs with the freshest ingredients.",
+    "breakfastTitle": "Breakfast Menu",
+    "breakfastDesc": "Treat yourself to the perfect start to your day with our Breakfast Menu.",
+    "mainCourseTitle": "Main Course Menu",
+    "mainCourseDesc": "Enjoy the pinnacle of culinary excellence with our Main Course Menu.",
+    "drinkTitle": "Drink Menu",
+    "drinkDesc": "Quench your thirst and lift your spirits with our Drinks Menu. From refreshing classic dishes to signature concoctions.",
+    "dessertTitle": "Desserts Menu",
+    "dessertDesc": "Experience a sweet ending with our Ultimate Dessert. Each creation is a harmonious blend of decadence and artistry.",
+    "items": {
+      "applePancakes": "Apple Pancakes",
+      "applePancakesDesc": "The cake is served with sweet maple compote, corn cinnamon butter for greasing, and chicken sausage.",
+      "greekYogurt": "Greek Yogurt Bowl",
+      "greekYogurtDesc": "Greek yogurt, honey, mixed berries, granola.",
+      "classicBreakfast": "Classic Breakfast",
+      "classicBreakfastDesc": "Two eggs (any style), bacon or sausage, hash browns, toast.",
+      "avocadoToast": "Avocado Toast",
+      "avocadoToastDesc": "Sourdough bread, smashed avocado, cherry tomatoes, red onion, feta cheese, balsamic glaze.",
+      "pancakesWaffles": "Pancakes and Waffles",
+      "pancakesWafflesDesc": "Pasta style marinara pan sautéed and hot cheese.",
+      "chickenTeriyaki": "Chicken Teriyaki",
+      "chickenTeriyakiDesc": "Chicken grilled and coated with soy sauce and flavored with sake, mirin, or sugar.",
+      "tandooriChicken": "Tandori Chicken",
+      "tandooriChickenDesc": "Marinated in yogurt and spices and baked in a tandoor.",
+      "classicMenu": "Classic Menu",
+      "classicMenuDesc": "Two eggs (any style), bacon or sausage, hash browns, toast.",
+      "chickenShawarma": "Chicken Shawarma Wrap",
+      "chickenShawarmaDesc": "Grilled chicken shawarma, hummus, mixed greens, tomatoes, and tahini sauce. Wrapped in a warm pita.",
+      "mediterraneanOmelet": "Mediterranean Omelet",
+      "mediterraneanOmeletDesc": "Three egg omelet, with spinach, tomatoes, onions, and feta cheese, served with a side of home fries.",
+      "tropicalSunset": "Tropical Sunset Splash",
+      "tropicalSunsetDesc": "Exotic fruit medley in a vibrant, thirst-quenching concoction.",
+      "berryBurst": "Berry Burst Smoothie Bliss",
+      "berryBurstDesc": "Antioxidant-packed berries blended into a silky-smooth smoothie.",
+      "springSide": "Spring Side Smash",
+      "springSideDesc": "Whiskey vodka, fresh seasonal berries, fresh squeezed lemon juice, honey syrup & fresh mint.",
+      "mangoLassi": "Mango Lassi",
+      "mangoLassiDesc": "Traditional yogurt-based drink blended with sweet mango pulp.",
+      "masalaChai": "Masala Chai",
+      "masalaChaiDesc": "Aromatic spiced tea brewed with milk and a secret blend of herbs.",
+      "chocolateCake": "Decadent Chocolate Cake",
+      "chocolateCakeDesc": "Rich indulgence with layers of velvety chocolate goodness.",
+      "vanillaIceCream": "Vanilla Ice Cream",
+      "vanillaIceCreamDesc": "Bourbon with a variety of flavor choice.",
+      "strawberryMuffins": "Strawberry Muffins",
+      "strawberryMuffinsDesc": "The perfect balance between soft, moist muffins and the sweetness of fresh, sweet strawberries.",
+      "gulabJamun": "Gulab Jamun",
+      "gulabJamunDesc": "Soft, spongy milk solids soaked in cardamom-infused sugar syrup.",
+      "mangoCheesecake": "Mango Cheesecake",
+      "mangoCheesecakeDesc": "Creamy cheesecake with a vibrant fresh mango puree swirl."
+    }
+  }
+}

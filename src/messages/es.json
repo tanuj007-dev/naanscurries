@@ -1,0 +1,391 @@
+{
+  "Navbar": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "menu": "Menú",
+    "blog": "Blog",
+    "reservation": "Reservación",
+    "orderOnline": "Pedir en Línea",
+    "contact": "Contacto",
+    "order": "Pedido"
+  },
+  "Footer": {
+    "rights": "Todos los derechos reservados",
+    "home": "Inicio",
+    "aboutUs": "Nosotros",
+    "menu": "Menú",
+    "bookATable": "Reservar Mesa",
+    "blog": "Blog",
+    "order": "Pedido"
+  },
+  "Home": {
+    "flavors": "Sabores Que",
+    "bestIndianRestaurant": "Mejor Restaurante Indio",
+    "thatStay": "Permanecen",
+    "inCostaRica": "En Costa Rica",
+    "heroDescription": "En Naans Curries, cada plato es un tributo a la tradición y cada momento está creado para hoy. Reunimos la calidez de la hospitalidad india, la riqueza de sabores atemporales y el ritmo de la vida moderna."
+  },
+  "About": {
+    "title": "Nosotros",
+    "home": "Inicio",
+    "heroLine1": "SABORES INTENSOS,",
+    "heroLine2": "DE NUESTRA COCINA",
+    "heroLine3": "A LA TUYA",
+    "heroDescription": "En Naans & Curries llevamos la riqueza de la cocina india a tu mesa — fresca, ardiente y llena de alma.",
+    "exploreMore": "Explorar más",
+    "ourStory": "Nuestra Historia",
+    "ourStoryP1": "Llevamos auténticos sabores indios a su mesa. Desde recetas tradicionales transmitidas de generación en generación hasta toques modernos que sorprenden y deleitan, cada plato cuenta una historia de herencia y pasión.",
+    "ourStoryP2": "Nuestra cocina es donde las especias se encuentran con la calidez, y cada comida se elabora con cuidado. Creemos en ingredientes honestos, sabores audaces y el tipo de hospitalidad que te hace sentir como en casa.",
+    "storyLabel": "HISTORIA",
+    "storyTitle": "La historia del lanzamiento de nuestro primer restaurante",
+    "storyDesc": "La historia de nuestro primer restaurante se basa en la pasión, el compromiso y los objetivos comunes. Todo comenzó con un grupo de entusiastas de la comida que pensaron que las comidas extraordinarias tenían la capacidad de transformar a las personas. Creemos que nuestro restaurante da vida al sabor y tratamos a nuestros clientes más como invitados de honor que como socios comerciales.",
+    "readStory": "LEER NUESTRA HISTORIA",
+    "serviceLabel": "NUESTRO SERVICIO",
+    "serviceTitle": "Brindamos un servicio único para su día especial",
+    "serviceDesc": "Más que un simple restaurante, Naans & Curries es un refugio culinario para gourmets que buscan experiencias gastronómicas excepcionales. En Naans & Curries, creemos que una comida debe ser una experiencia memorable, y nuestros chefs expertos se dedican a producir una cocina imaginativa y atractiva.",
+    "statsCustomers": "Clientes Satisfechos",
+    "statsEvents": "Gestión de Eventos",
+    "statsOrders": "Pedidos Exitosos",
+    "reservationLabel": "RESERVACIÓN",
+    "locationsSliderTitle": "Ven y visita uno de nuestros restaurantes en varias ubicaciones",
+    "locationsSliderDesc": "Con un compromiso con un servicio excepcional y una pasión por la excelencia culinaria, nuestras ubicaciones están diseñadas para hacer que su experiencia gastronómica sea memorable.",
+    "contactUs": "CONTACTARNOS",
+    "locationMomentum": "Momentum Lindora",
+    "locationMomentumDesc": "Viva la vibrante energía de Santa Ana en nuestra ubicación de Momentum Lindora, donde las especias tradicionales se unen a la elegancia moderna.",
+    "locationLincoln": "Lincoln Plaza",
+    "locationLincolnDesc": "Ubicada en San José, nuestra sucursal de Lincoln Plaza ofrece una sofisticada escapada gastronómica en el corazón de la ciudad.",
+    "locationPinares": "Pinares",
+    "locationPinaresDesc": "Un espacio acogedor e invitado en San José perfecto para reuniones familiares y cenas íntimas.",
+    "locationEscazu": "Escazú",
+    "locationEscazuDesc": "El pináculo de la auténtica comida india en Escazú, con nuestros platos más emblemáticos.",
+    "locationAlajuela": "Alajuela",
+    "locationAlajuelaDesc": "Llevando el alma de la India a Alajuela con sabores que cuentan una historia en cada bocado.",
+    "locationHeredia": "Heredia",
+    "locationHerediaDesc": "Un refugio para los amantes de la comida en Heredia, donde la tradición y la innovación se mezclan a la perfección.",
+    "locationCartago": "Cartago",
+    "locationCartagoDesc": "Descubra la herencia de las especias en Cartago en nuestro restaurante acogedor y ideal para familias.",
+    "teamHeading": "Diseñadores y visualizadores excepcionalmente hábiles de clase mundial.",
+    "teamDesc1": "Nos apasiona nuestro trabajo y su impacto positivo en nuestros clientes. Con más de 12 años de experiencia, ofrecemos constantemente soluciones gastronómicas excepcionales.",
+    "teamDesc2": "Nuestro objetivo es crear experiencias culinarias prácticas adaptadas a proyectos de todos los tamaños, cumpliendo con requisitos únicos. Nuestros diseños están diseñados para alinearse con su audiencia.",
+    "teamMember1": "Lucas Hayes",
+    "teamRole1": "Fundador",
+    "teamMember2": "Sarah Jenkins",
+    "teamRole2": "Chef Principal",
+    "teamMember3": "David Miller",
+    "teamRole3": "Gerente General",
+    "yearsExperience": "Años de Experiencia",
+    "signatureDishes": "Platos Signature",
+    "happyGuests": "Comensales Felices",
+    "locations": "Sucursales",
+    "visionMission": "Visión y Misión",
+    "ourVision": "Nuestra Visión",
+    "ourVisionDesc": "Ser el restaurante indio más querido de la región, donde cada comensal se va con una experiencia memorable y ganas de volver.",
+    "ourMission": "Nuestra Misión",
+    "ourMissionDesc": "Servir cocina india auténtica y de alta calidad en un ambiente cálido y acogedor, honrando la tradición y abrazando la innovación.",
+    "ourValues": "Nuestros Valores",
+    "ourValuesDesc": "Integridad en los ingredientes, respeto por la tradición y un compromiso con la hospitalidad que hace que todos se sientan como familia.",
+    "timelineTitle": "Nuestra Historia",
+    "timeline2009Title": "El Comienzo",
+    "timeline2009Desc": "Abrimos nuestra primera cocina con un menú pequeño y grandes sueños.",
+    "timeline2012Title": "Primera Expansión",
+    "timeline2012Desc": "Nos mudamos a un espacio más grande e introdujimos nuestro menú de degustación signature.",
+    "timeline2016Title": "Segunda Sucursal",
+    "timeline2016Desc": "Llevamos Naans & Curries a un nuevo barrio.",
+    "timeline2020Title": "Resiliencia",
+    "timeline2020Desc": "Nos adaptamos con takeaway y delivery manteniendo la calidad.",
+    "timeline2024Title": "Hoy",
+    "timeline2024Desc": "Tres sucursales, incontables recuerdos y la misma pasión por el sabor.",
+    "ctaHeading": "Vive la diferencia",
+    "ctaDescription": "Únete a nosotros para una comida que se siente como en casa, con sabores que te llevan a otros lugares.",
+    "bookATable": "Reservar mesa"
+  },
+  "TheSpirit": {
+    "title1": "El Espíritu de",
+    "title2": "Comida India",
+    "description": "Buena comida, buen servicio, una experiencia de dining muy agradable.",
+    "reservation": "Reservación"
+  },
+  "SignatureMenu": {
+    "signature": "Signature",
+    "menu": "Menú",
+    "mainMenu": "Menú Principal",
+    "mainMenuDesc": "Una bandeja de degustación ideal para compartir, con samosas de verduras y carne, aloo pakora, chicken pakora, cheese pakora, bhujia y papadam.",
+    "dessertMenu": "Menú de Postres",
+    "dessertMenuDesc": "Una bandeja de degustación ideal para compartir, con samosas de verduras y carne, aloo pakora, chicken pakora, cheese pakora, bhujia y papadam.",
+    "executiveLunch": "Menú Ejecutivo de Almuerzo",
+    "executiveLunchDesc": "Una bandeja de degustación ideal para compartir, con samosas de verduras y carne, aloo pakora, chicken pakora, cheese pakora, bhujia y papadam.",
+    "chefsTasting": "Menú de Degustación del Chef",
+    "chefsTastingDesc": "Una bandeja de degustación ideal para compartir, con samosas de verduras y carne, aloo pakora, chicken pakora, cheese pakora, bhujia y papadam.",
+    "viewFullMenu": "Ver Menú Completo",
+    "weddingHeading": "Exquisito Catering de Bodas Indias en Costa Rica",
+    "weddingDesc": "Naans & Curries ofrece cocina india auténtica y servicios excepcionales de Chef Privado y Catering para Eventos en Costa Rica. Desde reuniones privadas hasta bodas destino, nuestro equipo experimentado atiende sus necesidades.",
+    "contactWedding": "Contactar para Catering de Bodas"
+  },
+  "AuthRestaurant": {
+    "title": "Auténtico Restaurante Indio en San José y Tamarindo, Costa Rica",
+    "p1": "Bienvenido a Naans & Curries, el mejor restaurante indio en Costa Rica, con una amplia variedad de platos tradicionales indios de sabores intensos e ingredientes frescos. Ubicados en San José y Tamarindo, servimos a locales y turistas en busca de comida india auténtica: curries ricos, tandoori tierno u opciones vegetarianas y veganas. Ya sea butter chicken picante, paneer tikka o naan al ajo recién salido del tandoor, nuestros chefs ofrecen una experiencia llena de sabor. También ofrecemos catering de comida india en Costa Rica para bodas, eventos corporativos o reuniones privadas. Visítenos o pida en línea para delivery de curry indio en Costa Rica.",
+    "p2": "Descubra por qué nuestros comensales dicen que somos el mejor restaurante indio en San José. Ingredientes étnicos de alta calidad, preparación experta por chefs de la India y un servicio que va desde los cimientos; la experiencia en Naans & Curries está diseñada para ir más allá del plato. La fórmula de nuestros platos es eterna y sigue el mismo guion escrito hace siglos.",
+    "thoughtsCurator": "Pensamientos del Curador"
+  },
+  "Catering": {
+    "cateringThe": "Catering al",
+    "naansWay": "Estilo Naans Curries",
+    "exceptionalFood": "Comida Excepcional",
+    "anywhere": "Donde Sea",
+    "lindoraTitle": "Naans & Curries Lindora",
+    "lindoraDesc": "En Naans & Curries Lindora puede disfrutar de distintos ambientes: salón privado para grupos y eventos, jardín al aire libre o cómodos sofás.",
+    "pinaresTitle": "Naans & Curries Pinares",
+    "pinaresDesc": "En Naans & Curries Pinares puede disfrutar de terraza con vista a las montañas o ambiente acogedor en el interior.",
+    "lincolnTitle": "Naans & Curries Lincoln Plaza",
+    "lincolnDesc": "En Naans & Curries Lincoln Plaza disfrute del ambiente indio contemporáneo. Terraza al aire libre o interior con temática natural."
+  },
+  "Tradition": {
+    "giftTaste": "Regala un Sabor",
+    "ofTradition": "of Tradición",
+    "shareExperience": "Comparte la Experiencia",
+    "flavoursRemember": "Sabores que Recordamos",
+    "bottomDesc": "Chefs nativos, \"Tandoors\" (hornos de barro) a carbón e ingredientes indios exóticos, ofreciendo",
+    "orderNow": "Ordenar Ahora"
+  },
+  "Rooted": {
+    "rootedIn": "Arraigados en",
+    "experience": "Experiencia",
+    "description": "Ingredientes étnicos de alta calidad, preparación experta por chefs de la India y un servicio desde los cimientos; la experiencia en Naans & Curries está diseñada para ir más allá del plato."
+  },
+  "HomeBlogs": {
+    "latestBlog": "Últimos",
+    "articles": "Artículos del Blog",
+    "viewAll": "Ver Todo",
+    "readMore": "Leer Más",
+    "blog1Title": "Mejor Comida India en Costa Rica para Veganos y Vegetarianos",
+    "blog1Intro": "Introducción: El auge de la comida vegetariana y vegana india en Costa Rica. La fascinación de Costa Rica por el mundo culinario continúa ...",
+    "blog2Title": "De Comida Callejera a Fine Dining: Experiencias Culinarias Indias en Costa Rica",
+    "blog2Intro": "Introducción: El auge de la cocina india en Costa Rica. La cultura gastronómica de Costa Rica está evolucionando para ser más...",
+    "blog3Title": "Explorando las Especias Indias: Guía de Perfiles de Sabor",
+    "blog3Intro": "Adéntrese en el mundo de las especias indias. Aprenda cómo la cúrcuma, el comino y el cardamomo crean la sinfonía de sabores que define la cocina india auténtica..."
+  },
+  "OurLocations": {
+    "our": "Nuestras",
+    "locations": "Ubicaciones",
+    "description": "Desde cócteles de la casa hasta lassi indio tradicional, cada bebida está diseñada para acompañar perfectamente su comida.",
+    "contactUs": "Contáctenos"
+  },
+  "Reservation": {
+    "reserveATable": "Reservar Mesa",
+    "reservationForm": "Formulario de Reserva",
+    "reservation": "Reservación",
+    "selectLocation": "Seleccionar Sucursal",
+    "locations": [
+      "Naans & Curries, Lindora Plaza",
+      "Naans & Curries, Lincoln Plaza",
+      "Naans & Curries, Pinares",
+      "Naans & Curries, Escazú",
+      "Naans & Curries, Alajuela",
+      "Naans & Curries, Heredia",
+      "Naans & Curries, Cartago"
+    ],
+    "name": "Nombre",
+    "email": "Correo",
+    "mobileNumber": "Teléfono",
+    "noOfGuests": "Nº de Comensales",
+    "date": "Fecha",
+    "time": "Hora",
+    "specialInstructions": "Instrucciones Especiales",
+    "yourName": "Su Nombre",
+    "yourEmail": "Su Correo",
+    "phoneNumber": "Número de Teléfono",
+    "specialRequest": "Pedido Especial",
+    "person": "Persona",
+    "persons": "Personas",
+    "other": "Otro",
+    "reserveTable": "Reservar Mesa",
+    "thankYou": "¡Gracias!",
+    "successMessage": "Su mesa ha sido solicitada. ¡Nos pondremos en contacto pronto!",
+    "locationLabel": "Ubicación",
+    "lindoraPlaza": "Lindora Plaza",
+    "cityCenter": "City Center",
+    "addressLindora": "Restaurant St, Delicious City, CR.",
+    "addressCityCenter": "500, Gastronomy St, San José, CR.",
+    "getDirection": "Cómo Llegar",
+    "policyText": "El restaurante abrirá todos los días; domingos por la noche cerrado. El pago de la reserva está asegurado con tarjeta de crédito. No se aplican cargos por reserva en línea. No reembolsable.",
+    "bookingRequest": "Solicitud de reserva",
+    "bookingRequestOr": "o complete el formulario"
+  },
+  "Blogs": {
+    "ourBlogs": "Nuestros Blogs",
+    "latestInsights": "Últimas Ideas",
+    "toolbar": {
+      "type": "Tipo",
+      "category": "Categoría",
+      "sortBy": "Ordenar por",
+      "showing": "Mostrando {count} entradas"
+    },
+    "featuredLarge": {
+      "category": "RESTAURANTE",
+      "date": "Marzo 09, 2025",
+      "title": "El Viaje de un Tomate: De la Granja al Plato de Naans & Curries",
+      "description": "Descubra cómo nuestro enfoque de la granja a la mesa garantiza que cada tomate en nuestra cocina esté lleno de sabor y tradición."
+    },
+    "featuredSmall": {
+      "category": "RESTAURANTE",
+      "date": "Marzo 09, 2025",
+      "title": "La Tradición se Une a la Innovación en la Cocina de Naans & Curries",
+      "description": "Explorando el delicado equilibrio entre las recetas milenarias y las técnicas culinarias modernas."
+    },
+    "gridItems": [
+      {
+        "category": "RESTAURANTE",
+        "date": "Marzo 09, 2025",
+        "title": "Sabor de Tradición: La Historia Detrás de Nuestro Plato Signature."
+      },
+      {
+        "category": "ALIMENTOS",
+        "date": "Marzo 09, 2025",
+        "title": "Saboreando las Estaciones: Sabores Frescos en Cada Plato"
+      },
+      {
+        "category": "COCINA",
+        "date": "Marzo 09, 2025",
+        "title": "Por Qué Importa el Dining Estacional para el Sabor y la Sostenibilidad"
+      },
+      {
+        "category": "RESTAURANTE",
+        "date": "Marzo 09, 2025",
+        "title": "Fresco de la Tierra: Cómo Obtenemos Nuestros Ingredientes"
+      },
+      {
+        "category": "ALIMENTOS",
+        "date": "Marzo 09, 2025",
+        "title": "Dentro de la Filosofía Culinaria de Naans & Curries"
+      },
+      {
+        "category": "COCINA",
+        "date": "Marzo 09, 2025",
+        "title": "Detrás del Plato: Historias de Pasión y Perfección"
+      },
+      {
+        "category": "COCINA",
+        "date": "Marzo 09, 2025",
+        "title": "La Herencia se Mezcla con la Modernidad en Naans & Curries."
+      },
+      {
+        "category": "COCINA",
+        "date": "Marzo 09, 2025",
+        "title": "Celebrando la Herencia: Recetas Atemporales Reinterpretadas"
+      },
+      {
+        "category": "COCINA",
+        "date": "Marzo 09, 2025",
+        "title": "Un Banquete para los Sentidos: Dining Más Allá del Sabor"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Contacto",
+    "heroLine1": "NOS ENCANTARÍA",
+    "heroLine2": "SABER DE USTED",
+    "home": "Inicio",
+    "formSubtitle": "Ponerse en contacto",
+    "formTitle": "COMPLETE EL FORMULARIO",
+    "namePlaceholder": "Escriba su nombre",
+    "phonePlaceholder": "Número de teléfono",
+    "emailPlaceholder": "Su correo electrónico",
+    "messagePlaceholder": "Su mensaje",
+    "sendButton": "ENVIAR MENSAJE",
+    "officeLocation": "UBICACIÓN DE OFICINAS",
+    "getDirections": "CÓMO LLEGAR",
+    "locations": [
+      {
+        "name": "MOMENTUM, LINDORA, SANTA ANA, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0001, +506 2282 5470",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "LINCOLN PLAZA, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0002",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "PINARES, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0003",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "ESCAZU, SAN JOSE, COSTA RICA",
+        "phone": "+506 2282 0004",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "ALAJUELA, COSTA RICA",
+        "phone": "+506 2282 0005",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "HEREDIA, COSTA RICA",
+        "phone": "+506 2282 0006",
+        "email": "info@naansandcurries.com"
+      },
+      {
+        "name": "CARTAGO, COSTA RICA",
+        "phone": "+506 2282 0007",
+        "email": "info@naansandcurries.com"
+      }
+    ]
+  },
+  "Menu": {
+    "heroTitle": "Nuestro Menú",
+    "heroDescription": "La comida en Naans & Curries se describe mejor con una palabra: diversidad. Los amantes de la comida no tendrán escasez de opciones, desde nuestras recetas tradicionales auténticas hasta giros contemporáneos y platos deliciosos.",
+    "introTitle": "Lea Nuestro Delicioso Menú",
+    "introDescription": "Hemos creado meticulosamente cada sabor en nuestro menú para tentar su paladar y dejarlo con ganas de más. Cada comida es una obra de arte, combinando el amor de nuestros talentosos chefs con los ingredientes más frescos.",
+    "breakfastTitle": "Menú de Desayuno",
+    "breakfastDesc": "Dese un capricho con el comienzo perfecto para su día con nuestro Menú de Desayuno.",
+    "mainCourseTitle": "Menú de Platos Fuertes",
+    "mainCourseDesc": "Disfrute de la máxima excelencia culinaria con nuestro Menú de Platos Fuertes.",
+    "drinkTitle": "Menú de Bebidas",
+    "drinkDesc": "Calme su sed y eleve su ánimo con nuestro Menú de Bebidas. Desde refrescantes platos clásicos hasta brebajes exclusivos.",
+    "dessertTitle": "Menú de Postres",
+    "dessertDesc": "Experimente un final dulce con nuestro Postre Definitivo. Cada creación es una mezcla armoniosa de decadencia y arte.",
+    "items": {
+      "applePancakes": "Panqueques de Manzana",
+      "applePancakesDesc": "El pastel se sirve con compota de arce dulce, mantequilla de maíz y canela para engrasar, y salchicha de pollo.",
+      "greekYogurt": "Tazón de Yogur Griego",
+      "greekYogurtDesc": "Yogur griego, miel, bayas mixtas, granola.",
+      "classicBreakfast": "Desayuno Clásico",
+      "classicBreakfastDesc": "Dos huevos (a cualquier estilo), tocino o salchicha, papas hash brown, pan tostado.",
+      "avocadoToast": "Tostada de Aguacate",
+      "avocadoToastDesc": "Pan de masa madre, aguacate triturado, tomates cherry, cebolla roja, queso feta, glaseado balsámico.",
+      "pancakesWaffles": "Panqueques y Waffles",
+      "pancakesWafflesDesc": "Pan estilo marinara salteado en sartén y queso caliente.",
+      "chickenTeriyaki": "Pollo Teriyaki",
+      "chickenTeriyakiDesc": "Pollo a la parrilla y bañado con salsa de soja y aromatizado con sake, mirin o azúcar.",
+      "tandooriChicken": "Pollo Tandoori",
+      "tandooriChickenDesc": "Marinado en yogur y especias y horneado en un tandoor.",
+      "classicMenu": "Menú Clásico",
+      "classicMenuDesc": "Dos huevos (a cualquier estilo), tocino o salchicha, papas hash brown, pan tostado.",
+      "chickenShawarma": "Wrap de Shawarma de Pollo",
+      "chickenShawarmaDesc": "Shawarma de pollo a la parrilla, hummus, verduras mixtas, tomates y salsa de tahini. Envuelto en un pita caliente.",
+      "mediterraneanOmelet": "Omelet Mediterráneo",
+      "mediterraneanOmeletDesc": "Tortilla de tres huevos, con espinacas, tomates, cebollas y queso feta, servida con una guarnición de papas fritas caseras.",
+      "tropicalSunset": "Tropical Sunset Splash",
+      "tropicalSunsetDesc": "Macedonia de frutas exóticas en un brebaje vibrante y refrescante.",
+      "berryBurst": "Berry Burst Smoothie Bliss",
+      "berryBurstDesc": "Bayas cargadas de antioxidantes mezcladas en un batido suave como la seda.",
+      "springSide": "Spring Side Smash",
+      "springSideDesc": "Whisky vodka, bayas de temporada frescas, jugo de limón recién exprimido, jarabe de miel y menta fresca.",
+      "mangoLassi": "Mango Lassi",
+      "mangoLassiDesc": "Bebida tradicional a base de yogur mezclada con pulpa de mango dulce.",
+      "masalaChai": "Masala Chai",
+      "masalaChaiDesc": "Té especiado aromático elaborado con leche y una mezcla secreta de hierbas.",
+      "chocolateCake": "Pastel de Chocolate Decadente",
+      "chocolateCakeDesc": "Rica indulgencia con capas de bondad de chocolate aterciopelado.",
+      "vanillaIceCream": "Helado de Vainilla",
+      "vanillaIceCreamDesc": "Bourbon con una variedad de opciones de sabor.",
+      "strawberryMuffins": "Muffins de Fresa",
+      "strawberryMuffinsDesc": "El equilibrio perfecto entre muffins suaves y húmedos y el dulzor de las fresas frescas y dulces.",
+      "mangoCheesecake": "Cheesecake de Mango",
+      "mangoCheesecakeDesc": "Cheesecake cremoso con un vibrante remolino de puré de mango fresco.",
+      "gulabJamun": "Gulab Jamun",
+      "gulabJamunDesc": "Sólidos lácteos suaves y esponjosos empapados en almíbar de azúcar con infusión de cardamomo."
+    }
+  }
+}

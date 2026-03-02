@@ -1,0 +1,62 @@
+"use client";
+
+import Image from "@/src/compat/next-image";
+import { useTranslations } from "@/src/compat/next-intl";
+import { Link } from "@/src/compat/navigation";
+import AnimateOnScroll from "./AnimateOnScroll";
+
+import spiritBg from "./assets/e9bd551d7f6c0e4ee8f75946f827d4dd13d04138.jpg";
+
+export default function TheSpirit() {
+  const t = useTranslations("TheSpirit");
+  return (
+    <section className="relative min-h-[450px] w-full overflow-hidden border-[8px] border-[#FFF1DF] bg-black md:min-h-[500px] lg:min-h-[550px]">
+      {/* Background image */}
+      <div className="absolute inset-0 rounded-lg">
+        <Image
+          src={spiritBg}
+          alt="Indian dining â€“ traditional dishes and thali"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          quality={80}
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-[#1a1210]/95 via-[#1a1210]/60 to-transparent" aria-hidden />
+        <div className="absolute inset-0 bg-linear-to-t from-[#1a1210]/40 to-transparent" aria-hidden />
+      </div>
+
+      {/* Content â€“ left-aligned */}
+      <div className="relative z-10 mx-auto flex max-w-8xl flex-col justify-center px-8 py-16 md:px-12 md:py-20 lg:px-16">
+        <AnimateOnScroll variant="slideLeft" duration={0.7}>
+          <h2
+            className="max-w-3xl text-3xl font-normal uppercase leading-tight text-[#FFF7ED] md:text-4xl lg:text-[72px]"
+            style={{ fontFamily: "var(--font-ramillas)" }}
+          >
+            <span className="block">{t("title1")}</span>
+            <span className="block">{t("title2")}</span>
+          </h2>
+        </AnimateOnScroll>
+
+        <AnimateOnScroll variant="fadeUp" delay={0.15} duration={0.6}>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-[#FFF7ED]/95 md:text-lg">
+            {t("description")}
+          </p>
+        </AnimateOnScroll>
+
+        <AnimateOnScroll variant="fadeUp" delay={0.3} duration={0.6}>
+          <div className="mt-8">
+            <div className="inline-flex rounded-xl border border-[#E89D42] p-1.5 transition-transform duration-300 hover:scale-[1.02]">
+              <Link
+                href="/reservation"
+                className="inline-flex items-center justify-center rounded-lg bg-[#E89D42] px-8 py-3 text-lg font-medium text-[#1c1c1c] transition-opacity duration-200 hover:opacity-90"
+                style={{ fontFamily: "var(--font-futura)" }}
+              >
+                {t("reservation")}
+              </Link>
+            </div>
+          </div>
+        </AnimateOnScroll>
+      </div>
+    </section>
+  );
+}
