@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "@/src/compat/next-image";
-import { motion } from "framer-motion";
 import { useTranslations } from "@/src/compat/next-intl";
+import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 import img1 from "./assets/69314e3ecbf9420b489d87e8_Rectangle 1531.png";
 import img2 from "./assets/69314f29abd5b5a172edf491_Rectangle 1529 (1).png";
@@ -13,6 +13,7 @@ export default function BlogFeatured() {
     const cards = [
         {
             id: "large",
+            slug: 0,
             image: img1,
             category: t("featuredLarge.category"),
             date: t("featuredLarge.date"),
@@ -21,6 +22,7 @@ export default function BlogFeatured() {
         },
         {
             id: "small",
+            slug: 1,
             image: img2,
             category: t("featuredSmall.category"),
             date: t("featuredSmall.date"),
@@ -35,13 +37,12 @@ export default function BlogFeatured() {
                 {cards.map((card, idx) => (
                     <div key={card.id} className={`${idx === 0 ? 'md:pr-8 lg:pr-10' : 'md:pl-8 lg:pl-10'} py-16 md:py-24`}>
                         <AnimateOnScroll variant="reveal" delay={idx * 0.1}>
-                            <div className="group relative aspect-16/10 md:aspect-4/3 overflow-hidden cursor-pointer">
+                            <Link href={`/blog/${card.slug}`} className="block group relative aspect-8/5 md:aspect-4/3 overflow-hidden rounded-lg cursor-pointer">
                                 {/* Image Background */}
                                 <Image
                                     src={card.image}
                                     alt={card.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
 
                                 {/* Dark Gradient Overlay */}
@@ -66,7 +67,7 @@ export default function BlogFeatured() {
                                         {card.title}
                                     </h2>
                                 </div>
-                            </div>
+                            </Link>
                         </AnimateOnScroll>
                     </div>
                 ))}

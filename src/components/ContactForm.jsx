@@ -1,10 +1,28 @@
 "use client";
 
+import { useState } from "react";
 import Image from "@/src/compat/next-image";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/src/compat/next-intl";
 import AnimateOnScroll from "./AnimateOnScroll";
+import ReactCountryFlag from "react-country-flag";
+import { ChevronDown } from "lucide-react";
 import chefImg from "./assets/6814ab7c116be14a9b9f6e80_5e203041ac405c8fe66abe099ac1f5b1_single-img-13.avif";
+
+const phoneCountries = [
+    { name: "Costa Rica", code: "+506", iso: "CR" },
+    { name: "United States", code: "+1", iso: "US" },
+    { name: "Canada", code: "+1", iso: "CA" },
+    { name: "United Kingdom", code: "+44", iso: "GB" },
+    { name: "India", code: "+91", iso: "IN" },
+    { name: "Australia", code: "+61", iso: "AU" },
+    { name: "Germany", code: "+49", iso: "DE" },
+    { name: "France", code: "+33", iso: "FR" },
+    { name: "Spain", code: "+34", iso: "ES" },
+    { name: "Mexico", code: "+52", iso: "MX" },
+    { name: "Panama", code: "+507", iso: "PA" },
+    { name: "Colombia", code: "+57", iso: "CO" },
+].sort((a, b) => a.name.localeCompare(b.name));
 
 // â”€â”€â”€ Sub-Components â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function FieldWrapper({ label, children }) {
@@ -35,7 +53,68 @@ function GoldDivider() {
 const inputClasses =
     "w-full rounded-none border border-[#2C2C2C]/30 bg-[#FAF7F2] px-4 py-3 text-[14px] text-[#2C2C2C] outline-none transition-all duration-300 font-futura placeholder:text-[#2C2C2C]/40 focus:border-[#2C2C2C]";
 
-// â”€â”€â”€ Main Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function ContactPhoneInput({ placeholder }) {
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [selectedCountry, setSelectedCountry] = useState(phoneCountries.find((c) => c.iso === "CR") || phoneCountries[0]);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const handlePhoneChange = (e) => {
+        setPhoneNumber(e.target.value.replace(/\D/g, ""));
+    };
+
+    return (
+        <div className="relative">
+            <div className="flex w-full border border-[#2C2C2C]/30 bg-[#FAF7F2] transition-all duration-300 focus-within:border-[#2C2C2C]">
+                <button
+                    type="button"
+                    onClick={() => setDropdownOpen((o) => !o)}
+                    className="flex items-center gap-1.5 border-r border-[#2C2C2C]/10 pl-3 pr-2 py-3 hover:bg-[#2C2C2C]/5 transition-colors"
+                    style={{ fontFamily: "var(--font-futura)" }}
+                >
+                    <ReactCountryFlag countryCode={selectedCountry.iso} svg style={{ width: "22px", height: "16px" }} title={selectedCountry.name} />
+                    <ChevronDown size={14} className={`text-[#2C2C2C]/60 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+                <span className="flex items-center pl-2 text-[14px] text-[#2C2C2C]/80 pointer-events-none" style={{ fontFamily: "var(--font-futura)" }}>
+                    {selectedCountry.code}
+                </span>
+                <input
+                    type="tel"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={phoneNumber}
+                    onChange={handlePhoneChange}
+                    placeholder={placeholder}
+                    className="flex-1 min-w-0 rounded-none bg-transparent px-3 py-3 text-[14px] text-[#2C2C2C] outline-none font-futura placeholder:text-[#2C2C2C]/40"
+                />
+            </div>
+            {dropdownOpen && (
+                <>
+                    <div className="fixed inset-0 z-10" onClick={() => setDropdownOpen(false)} aria-hidden />
+                    <div className="absolute left-0 top-full z-20 mt-1 max-h-56 w-64 overflow-y-auto border border-[#2C2C2C]/15 bg-[#FAF7F2] shadow-lg">
+                        {phoneCountries.map((c) => (
+                            <button
+                                key={c.iso}
+                                type="button"
+                                onClick={() => {
+                                    setSelectedCountry(c);
+                                    setDropdownOpen(false);
+                                }}
+                                className="flex w-full items-center gap-3 px-3 py-2.5 text-left hover:bg-[#2C2C2C]/5 transition-colors"
+                            >
+                                <ReactCountryFlag countryCode={c.iso} svg style={{ width: "20px", height: "14px" }} />
+                                <span className="text-[13px] text-[#2C2C2C]" style={{ fontFamily: "var(--font-futura)" }}>{c.name}</span>
+                                <span className="ml-auto text-[12px] text-[#2C2C2C]/60">{c.code}</span>
+                            </button>
+                        ))}
+                    </div>
+                </>
+            )}
+            <input type="hidden" name="phone" value={`${selectedCountry.code}${phoneNumber}`} readOnly />
+        </div>
+    );
+}
+
+// Main Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function ContactForm() {
     const t = useTranslations("Contact");
 
@@ -44,16 +123,17 @@ export default function ContactForm() {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-stretch">
 
-                    {/* Left Side: Image */}
-                    <div className="lg:col-span-5 h-[400px] lg:h-auto relative overflow-hidden">
-                        <AnimateOnScroll variant="reveal" className="h-full">
-                            <Image
-                                src={chefImg}
-                                alt="Our Chef"
-                                fill
-                                className="object-cover"
-                            />
-                        </AnimateOnScroll>
+                    {/* Left Side: Image – height matches right column, image fills with object-cover */}
+                    <div className="lg:col-span-5 min-h-[400px] lg:min-h-0 relative overflow-hidden">
+                        <div className="absolute inset-0">
+                            <AnimateOnScroll variant="reveal" className="h-full w-full">
+                                <Image
+                                    src={chefImg}
+                                    alt="Our Chef"
+                                    className="h-full w-full object-cover object-center"
+                                />
+                            </AnimateOnScroll>
+                        </div>
                     </div>
 
                     {/* Right Side: Form Content */}
@@ -79,11 +159,7 @@ export default function ContactForm() {
                                         />
                                     </FieldWrapper>
                                     <FieldWrapper label={t("phonePlaceholder")}>
-                                        <input
-                                            type="tel"
-                                            placeholder={t("phonePlaceholder")}
-                                            className={inputClasses}
-                                        />
+                                        <ContactPhoneInput placeholder={t("phonePlaceholder")} />
                                     </FieldWrapper>
                                 </div>
 

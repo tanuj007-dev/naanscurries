@@ -3,7 +3,7 @@
 import Image from "@/src/compat/next-image";
 import { useTranslations } from "@/src/compat/next-intl";
 import { motion } from "framer-motion";
-import { Facebook } from "lucide-react";
+ 
 import AnimateOnScroll from "@/src/components/AnimateOnScroll";
 
 // Team member images
@@ -93,11 +93,7 @@ export default function Team() {
                                                 {member.role}
                                             </p>
                                         </div>
-                                        {member.showSocial && (
-                                            <div className="h-10 w-10 bg-[#FF8B53] rounded-full flex items-center justify-center text-black">
-                                                <Facebook size={18} fill="currentColor" stroke="none" />
-                                            </div>
-                                        )}
+                                        
                                     </div>
                                 </div>
 
@@ -112,11 +108,7 @@ export default function Team() {
                                         </p>
                                     </div>
                                 )}
-                                {member.showSocial && (
-                                    <div className="absolute bottom-10 right-8 md:right-10 h-10 w-10 bg-[#FF8B53] rounded-full flex items-center justify-center text-black group-hover:opacity-0 transition-opacity duration-300">
-                                        <Facebook size={18} fill="currentColor" stroke="none" />
-                                    </div>
-                                )}
+                                
                             </div>
                         </AnimateOnScroll>
                     ))}

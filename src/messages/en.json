@@ -123,8 +123,9 @@
   },
   "AuthRestaurant": {
     "title": "Authentic Indian Restaurant in San José & Tamarindo, Costa Rica",
-    "p1": "Welcome to Naans & Curries, the best Indian restaurant in Costa Rica, offering a wide variety of traditional Indian dishes with bold flavors and fresh ingredients. Located in San José and Tamarindo, we serve locals and tourists looking for authentic Indian food, whether you crave rich curries, tender tandoori, or satisfying vegetarian and vegan options. Whether you're in the mood for spicy butter chicken, paneer tikka, or garlic naan fresh from the tandoor, our chefs deliver a truly flavorful experience. We also provide Indian food catering services across Costa Rica, perfect for weddings, corporate events, or private gatherings. Stop by our restaurants or order online for quick Indian curry delivery in Costa Rica.",
-    "p2": "Discover why our guests say we're the best Indian restaurant in San José. High-quality ethnic ingredients, skillful preparation by highly skilled chefs from India, and the process of serving from the foundation, but the experience at Naans & Curries is designed to extend beyond the plate. The fundamental formula of the Naans & Curries dishes is eternal. It consistently works according to the same script written centuries ago.",
+    "p1": "Welcome to Naans & Curries, the best Indian restaurant in Costa Rica, offering a wide variety of traditional Indian dishes with bold flavors and fresh ingredients. Located in San José and Tamarindo, we serve locals and tourists looking for authentic Indian food, whether you crave rich curries, tender tandoori, or satisfying vegetarian and vegan options. Whether you're in the mood for spicy butter chicken, paneer tikka, or garlic naan fresh from the tandoor, our chefs deliver a truly flavorful experience.",
+    "p2": "We also provide Indian food catering services across Costa Rica, perfect for weddings, corporate events, or private gatherings. Stop by our restaurants or order online for quick Indian curry delivery in Costa Rica.",
+    "p3": "Discover why our guests say we're the best Indian restaurant in San José. High-quality ethnic ingredients, skillful preparation by highly skilled chefs from India, and the process of serving from the foundation, but the experience at Naans & Curries is designed to extend beyond the plate. The fundamental formula of the Naans & Curries dishes is eternal. It consistently works according to the same script written centuries ago.",
     "thoughtsCurator": "Thoughts of the Curator"
   },
   "Catering": {
@@ -137,7 +138,15 @@
     "pinaresTitle": "Naans & Curries Pinares",
     "pinaresDesc": "At Naans & Curries Pinares You can enjoy outdoor terrace seating with view of mountains or inside cozy seating for the cold evenings.",
     "lincolnTitle": "Naans & Curries Lincoln Plaza",
-    "lincolnDesc": "At Naans & Curries Lincoln Plaza Enjoy the contemporary Indian vibe. Breezy terrace or nature theme indoors, perfect for your mood."
+    "lincolnDesc": "At Naans & Curries Lincoln Plaza Enjoy the contemporary Indian vibe. Breezy terrace or nature theme indoors, perfect for your mood.",
+    "nunciaturaTitle": "Naans & Curries Nunciatura",
+    "nunciaturaDesc": "At Naans & Curries Nunciatura enjoy a refined setting ideal for business lunches and special occasions in the heart of San José.",
+    "tamarindoTitle": "Naans & Curries Tamarindo",
+    "tamarindoDesc": "At Naans & Curries Tamarindo experience beachside Indian cuisine with ocean breezes and a relaxed coastal vibe.",
+    "cocoTitle": "Naans & Curries Playas del Coco",
+    "cocoDesc": "At Naans & Curries Playas del Coco savor authentic flavors steps from the beach in a welcoming, family-friendly atmosphere.",
+    "jacoTitle": "Naans & Curries Jacó",
+    "jacoDesc": "At Naans & Curries Jacó enjoy vibrant Indian flavors in a laid-back surf-town setting, perfect for post-beach dining."
   },
   "Tradition": {
     "giftTaste": "Gift a Taste",
@@ -218,7 +227,16 @@
       "type": "Type",
       "category": "Category",
       "sortBy": "Sort By",
-      "showing": "Showing {count} entries"
+      "showing": "Showing {count} entries",
+      "allTypes": "All",
+      "typeArticle": "Article",
+      "allCategories": "All",
+      "sortNewest": "Newest first",
+      "sortOldest": "Oldest first",
+      "sortTitleAZ": "Title A–Z",
+      "sortTitleZA": "Title Z–A",
+      "searchPlaceholder": "Search posts…",
+      "noResults": "No posts match your filters."
     },
     "featuredLarge": {
       "category": "RESTAURANT",
@@ -278,7 +296,18 @@
         "date": "March 09, 2025",
         "title": "A Feast for the Senses: Dining Beyond Taste"
       }
-    ]
+    ],
+    "relatedTitle": "More Related Insights",
+    "detail": {
+      "backToHome": "Home",
+      "share": "SHARE",
+      "paragraph1": "Color isn't just something people see — it invokes reactions in people. The key duty in architecture is to improve living conditions and comfort through spaces. When used effectively, colors can become powerful tools at an architect's disposal. They offer a form of non-verbal communication that tells people in a space how to feel and conveys something about what the space is used for.",
+      "paragraph2": "At Naans & Curries, we believe every dish tells a story. Our kitchen blends tradition with innovation, bringing you flavors that have traveled across generations. From the warmth of our tandoor to the careful balance of spices, each plate is crafted to create a memorable experience.",
+      "subheading1": "How Colors Influence People's Emotions in Space",
+      "subheading2": "Our Featured Cuisine",
+      "subheading3": "Our Main Cuisine",
+      "paragraph3": "The same philosophy applies to our dining space. The ambiance, the aromas, and the presentation work together to create an experience that goes beyond taste. We invite you to explore our menu and discover the stories behind each recipe."
+    }
   },
   "Contact": {
     "title": "Contact Us",

@@ -7,6 +7,7 @@ import SectionSkeleton from '@/src/components/SectionSkeleton';
 const Home = lazy(() => import('@/src/[locale]/page'));
 const About = lazy(() => import('@/src/[locale]/about/page'));
 const Blog = lazy(() => import('@/src/[locale]/blog/page'));
+const BlogDetail = lazy(() => import('@/src/components/BlogDetailPage'));
 const Contact = lazy(() => import('@/src/[locale]/contact/page'));
 const Menu = lazy(() => import('@/src/[locale]/menu/page'));
 const Reservation = lazy(() => import('@/src/[locale]/reservation/page'));
@@ -29,6 +30,11 @@ const App = () => {
                 <Route path="blog" element={
                     <Suspense fallback={<SectionSkeleton height="h-screen" />}>
                         <Blog />
+                    </Suspense>
+                } />
+                <Route path="blog/:slug" element={
+                    <Suspense fallback={<SectionSkeleton height="h-screen" />}>
+                        <BlogDetail />
                     </Suspense>
                 } />
                 <Route path="contact" element={

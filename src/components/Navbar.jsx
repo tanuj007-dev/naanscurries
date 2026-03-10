@@ -6,13 +6,13 @@ import { useTranslations, useLocale } from "@/src/compat/next-intl";
 import { Link, useRouter, usePathname } from "@/src/compat/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "./assets/image 1.png";
+import logoBlog from "./assets/Untitled design (29).png";
 
 // Overlay menu items
 const getNavLinks = (t) => [
     { label: t('Navbar.home'), href: "/" },
     { label: t('Navbar.menu'), href: "/menu" },
     { label: t('Navbar.blog'), href: "/blog" },
-    { label: t('Navbar.order'), href: "/menu" },
     { label: t('Navbar.contact'), href: "/contact" },
     { label: t('Navbar.about'), href: "/about" },
 ];
@@ -78,6 +78,7 @@ export default function Navbar() {
     const router = useRouter();
     const pathname = usePathname();
     const pathForLocaleSwitch = getPathWithoutLocale(pathname);
+    const isLightPage = /^\/blog\/[^/]+/.test(pathname);
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [orderDropdownOpen, setOrderDropdownOpen] = useState(false);
@@ -117,7 +118,7 @@ export default function Navbar() {
     return (
         <>
             <motion.header
-                className="w-full shrink-0 bg-transparent relative z-50"
+                className={`w-full shrink-0 relative z-50 ${isLightPage ? "bg-[#EFEDE7]/95 backdrop-blur-sm" : "bg-transparent"}`}
                 initial="hidden"
                 animate="visible"
                 variants={headerVariants}
@@ -127,11 +128,11 @@ export default function Navbar() {
                     <motion.div initial="hidden" animate="visible" variants={logoVariants}>
                         <Link href="/">
                             <Image
-                                src={logo}
+                                src={isLightPage ? logoBlog : logo}
                                 alt="Naans & Curries - An Ethnic Indian Restaurant"
                                 width={180}
                                 height={50}
-                                className="h-auto w-36 object-contain mix-blend-luminosity"
+                                className={`h-auto w-36 object-contain ${isLightPage ? "" : "mix-blend-luminosity"}`}
                                 priority
                             />
                         </Link>
@@ -139,21 +140,21 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-black/70 transition-colors duration-200 hover:bg-black/85"
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-sm transition-colors duration-200 ${isLightPage ? "bg-[#1a1a1a]/80 hover:bg-[#1a1a1a] text-[#1a1a1a]" : "bg-black/70 hover:bg-black/85"}`}
                         aria-label="Open menu"
                     >
                         <span className="flex flex-col gap-1.5">
-                            <span className="h-0.5 w-5 bg-white" />
-                            <span className="h-0.5 w-5 bg-white" />
-                            <span className="h-0.5 w-5 bg-white" />
+                            <span className={`h-0.5 w-5 ${isLightPage ? "bg-[#1a1a1a]" : "bg-white"}`} />
+                            <span className={`h-0.5 w-5 ${isLightPage ? "bg-[#1a1a1a]" : "bg-white"}`} />
+                            <span className={`h-0.5 w-5 ${isLightPage ? "bg-[#1a1a1a]" : "bg-white"}`} />
                         </span>
                     </button>
                 </div>
 
-                {/* Desktop header: grid with borders */}
-                <div className="hidden md:grid w-full bg-transparent grid-cols-[1fr_auto_1fr] items-end gap-4 px-10 lg:px-14">
+                {/* Desktop header: single row, compact on blog detail */}
+                <div className={`hidden md:grid w-full bg-transparent grid-cols-[1fr_auto_1fr] gap-4 px-10 lg:px-14 ${isLightPage ? "items-center py-0  " : "items-end"}`}>
                     {/* Left nav */}
-                    <nav className="flex items-center justify-start gap-6 border-b border-white/20 pb-4 lg:gap-8">
+                    <nav className={`flex items-center justify-start gap-4 flex-nowrap min-w-0 border-b pb-4 lg:gap-6 lg:pb-4 ${isLightPage ? "border-[#1a1a1a]/20 lg:gap-6" : "border-white/20 lg:gap-8"}`}>
                         {navLinks.map((item) => {
                             const isActive = pathname === item.href;
                             return (
@@ -162,7 +163,9 @@ export default function Navbar() {
                                     href={item.href}
                                     className={`group relative text-[11px] font-medium uppercase tracking-widest transition-colors duration-200 lg:text-[12px] ${isActive
                                         ? "text-[#E89D42]"
-                                        : "text-white/95 hover:text-white"
+                                        : isLightPage
+                                            ? "text-[#1a1a1a]/90 hover:text-[#1a1a1a]"
+                                            : "text-white/95 hover:text-white"
                                         }`}
                                     style={{ fontFamily: "var(--font-futura)" }}
                                 >
@@ -170,7 +173,7 @@ export default function Navbar() {
                                     <span
                                         className={`absolute -bottom-0.5 left-0 h-px transition-all duration-300 ${isActive
                                             ? "w-full bg-[#E89D42]"
-                                            : "w-0 bg-white/80 group-hover:w-full"
+                                            : isLightPage ? "w-0 bg-[#1a1a1a]/60 group-hover:w-full" : "w-0 bg-white/80 group-hover:w-full"
                                             }`}
                                     />
                                 </Link>
@@ -187,23 +190,23 @@ export default function Navbar() {
                     >
                         <Link href="/">
                             <Image
-                                src={logo}
+                                src={isLightPage ? logoBlog : logo}
                                 alt="Naans & Curries - An Ethnic Indian Restaurant"
                                 width={260}
                                 height={72}
-                                className="h-auto w-56 object-contain mix-blend-luminosity lg:w-64"
+                                className={`h-auto w-56 object-contain lg:w-64 ${isLightPage ? "" : "mix-blend-luminosity"}`}
                                 priority
                             />
                         </Link>
                     </motion.div>
 
                     {/* Right: Reservation link + Order Online + Language + hamburger */}
-                    <div className="flex items-center justify-end gap-6 border-b border-white/20 pb-4 lg:gap-8">
+                    <div className={`flex items-center justify-end gap-6 border-b pb-4 lg:gap-8 ${isLightPage ? "border-[#1a1a1a]/20" : "border-white/20"}`}>
                         <Link
                             href="/reservation"
                             className={`group relative text-[11px] font-semibold uppercase tracking-widest transition-colors duration-200 lg:text-[12px] ${pathname === "/reservation"
                                 ? "text-[#E89D42]"
-                                : "text-white hover:opacity-80"
+                                : isLightPage ? "text-[#1a1a1a]/90 hover:opacity-80" : "text-white hover:opacity-80"
                                 }`}
                             style={{ fontFamily: "var(--font-futura)" }}
                         >
@@ -211,12 +214,12 @@ export default function Navbar() {
                             <span
                                 className={`absolute -bottom-0.5 left-0 h-px transition-all duration-300 ${pathname === "/reservation"
                                     ? "w-full bg-[#E89D42]"
-                                    : "w-0 bg-white/70 group-hover:w-full"
+                                    : isLightPage ? "w-0 bg-[#1a1a1a]/60 group-hover:w-full" : "w-0 bg-white/70 group-hover:w-full"
                                     }`}
                             />
                         </Link>
 
-                        <span className="h-4 w-px bg-white/30" />
+                        <span className={`h-4 w-px ${isLightPage ? "bg-[#1a1a1a]/30" : "bg-white/30"}`} />
 
                         <div
                             className="relative"
@@ -224,7 +227,7 @@ export default function Navbar() {
                             onMouseLeave={handleMouseLeave}
                         >
                             <button
-                                className="text-[11px] font-semibold uppercase tracking-widest text-white transition-opacity duration-200 hover:opacity-80 lg:text-[12px] flex items-center gap-1 cursor-pointer"
+                                className={`text-[11px] font-semibold uppercase tracking-widest transition-opacity duration-200 hover:opacity-80 lg:text-[12px] flex items-center gap-1 cursor-pointer ${isLightPage ? "text-[#1a1a1a]/90" : "text-white"}`}
                                 style={{ fontFamily: "var(--font-futura)" }}
                             >
                                 {t('Navbar.orderOnline')}
@@ -259,7 +262,7 @@ export default function Navbar() {
                             </AnimatePresence>
                         </div>
 
-                        <span className="h-4 w-px bg-white/30" />
+                        <span className={`h-4 w-px ${isLightPage ? "bg-[#1a1a1a]/30" : "bg-white/30"}`} />
 
                         {/* Language Dropdown */}
                         <div
@@ -268,7 +271,7 @@ export default function Navbar() {
                             onMouseLeave={handleLangMouseLeave}
                         >
                             <button
-                                className="text-[11px] font-semibold uppercase tracking-widest text-white transition-opacity duration-200 hover:opacity-80 lg:text-[12px] flex items-center gap-1 cursor-pointer"
+                                className={`text-[11px] font-semibold uppercase tracking-widest transition-opacity duration-200 hover:opacity-80 lg:text-[12px] flex items-center gap-1 cursor-pointer ${isLightPage ? "text-[#1a1a1a]/90" : "text-white"}`}
                                 style={{ fontFamily: "var(--font-futura)" }}
                             >
                                 {currentLang}
@@ -309,14 +312,14 @@ export default function Navbar() {
 
                         <button
                             type="button"
-                            className="ml-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-white/20 bg-white/5 transition-colors duration-200 hover:bg-white/10"
+                            className={`ml-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border transition-colors duration-200 ${isLightPage ? "border-[#1a1a1a]/20 bg-[#1a1a1a]/5 hover:bg-[#1a1a1a]/10" : "border-white/20 bg-white/5 hover:bg-white/10"}`}
                             aria-label="Open menu"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="flex flex-col gap-1.5 align-middle">
-                                <span className="h-px w-4 bg-white" />
-                                <span className="h-px w-4 bg-white" />
-                                <span className="h-px w-4 bg-white" />
+                                <span className={`h-px w-4 ${isLightPage ? "bg-[#1a1a1a]" : "bg-white"}`} />
+                                <span className={`h-px w-4 ${isLightPage ? "bg-[#1a1a1a]" : "bg-white"}`} />
+                                <span className={`h-px w-4 ${isLightPage ? "bg-[#1a1a1a]" : "bg-white"}`} />
                             </span>
                         </button>
                     </div>

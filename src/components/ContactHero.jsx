@@ -12,18 +12,19 @@ export default function ContactHero() {
     const common = useTranslations("Navbar");
 
     return (
-        <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 px-6 md:px-12 lg:px-24 overflow-hidden min-h-[60vh] flex items-center">
+        <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 px-6 md:px-12 lg:px-24 overflow-hidden min-h-[70vh] md:min-h-[60vh] flex items-center">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src={heroBg}
                     alt="Contact Background"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center md:object-[center_30%]"
                     priority
+                    quality={90}
                 />
                 {/* Dark overlay to make text pop and match the aesthetic */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/60 md:bg-black/45" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto w-full text-center">

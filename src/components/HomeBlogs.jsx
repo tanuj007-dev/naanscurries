@@ -5,13 +5,12 @@ import { useTranslations } from "@/src/compat/next-intl";
 import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
-import imgBlog1 from "./assets/6176b32ee97e494d40468191567022c0bf2c6e83.png";
-import imgBlog2 from "./assets/8902b192982736cc227423a7f0c1478803c911b7.png";
+
 
 const blogConfig = [
-  { image: imgBlog1, titleKey: "blog1Title", introKey: "blog1Intro", href: "/blog" },
-  { image: imgBlog2, titleKey: "blog2Title", introKey: "blog2Intro", href: "/blog" },
-  { image: imgBlog1, titleKey: "blog3Title", introKey: "blog3Intro", href: "/blog" },
+  { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142816/Gemini_Generated_Image_zebcpyzebcpyzebc-scaled_larlr6.jpg", titleKey: "blog1Title", introKey: "blog1Intro", slug: 0 },
+  { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142811/Gemini_Generated_Image_9dn69c9dn69c9dn6-1_lcdugf.jpg", titleKey: "blog2Title", introKey: "blog2Intro", slug: 1 },
+  { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142810/Gemini_Generated_Image_km9falkm9falkm9f_bbmchw.jpg", titleKey: "blog3Title", introKey: "blog3Intro", slug: 2 },
 ];
 
 export default function HomeBlogs() {
@@ -66,8 +65,7 @@ export default function HomeBlogs() {
                 <Image
                   src={post.image}
                   alt={post.alt}
-                  fill
-                  className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   quality={85}
                 />
@@ -89,12 +87,11 @@ export default function HomeBlogs() {
               </p>
 
               <Link
-                href={post.href}
+                href={`/blog/${post.slug}`}
                 className="mt-4 inline-flex items-center text-sm font-medium text-[#E89D42] transition-colors duration-200 hover:text-[#c48231]"
                 style={{ fontFamily: "var(--font-ramillas)" }}
               >
                 {t("readMore")}
-                <span className="ml-1 text-lg leading-none">â†’</span>
               </Link>
             </AnimateOnScroll>
           ))}

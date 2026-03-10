@@ -5,28 +5,30 @@ import { useTranslations } from "@/src/compat/next-intl";
 import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
-import spiritBg from "./assets/e9bd551d7f6c0e4ee8f75946f827d4dd13d04138.jpg";
+
 
 export default function TheSpirit() {
   const t = useTranslations("TheSpirit");
   return (
-    <section className="relative min-h-[450px] w-full overflow-hidden border-[8px] border-[#FFF1DF] bg-black md:min-h-[500px] lg:min-h-[550px]">
+    <section className="relative flex min-h-[450px] w-full flex-col justify-center overflow-hidden border-[8px] border-[#FFF1DF] bg-[#1a1210] md:min-h-[500px] lg:min-h-[600px]">
       {/* Background image */}
-      <div className="absolute inset-0 rounded-lg">
+      <div className="absolute inset-0">
         <Image
-          src={spiritBg}
-          alt="Indian dining â€“ traditional dishes and thali"
+          src="https://res.cloudinary.com/dpelqhchv/image/upload/v1773141054/1508320562_NaansAndCurriesSlider1_dspyfr.jpg"
+          alt="Indian dining"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center md:object-[center_30%]"
           sizes="100vw"
-          quality={80}
+          priority
+          quality={90}
         />
-        <div className="absolute inset-0 bg-linear-to-r from-[#1a1210]/95 via-[#1a1210]/60 to-transparent" aria-hidden />
-        <div className="absolute inset-0 bg-linear-to-t from-[#1a1210]/40 to-transparent" aria-hidden />
+        {/* Dynamic Overlays */}
+        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent md:from-black/70 md:via-black/20" aria-hidden />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/20" aria-hidden />
       </div>
 
-      {/* Content â€“ left-aligned */}
-      <div className="relative z-10 mx-auto flex max-w-8xl flex-col justify-center px-8 py-16 md:px-12 md:py-20 lg:px-16">
+      {/* Content wrapper */}
+      <div className="relative z-10 mx-auto w-full max-w-8xl px-6 py-12 md:px-12 md:py-20 lg:px-16">
         <AnimateOnScroll variant="slideLeft" duration={0.7}>
           <h2
             className="max-w-3xl text-3xl font-normal uppercase leading-tight text-[#FFF7ED] md:text-4xl lg:text-[72px]"

@@ -15,30 +15,29 @@ export default function ContactGallery() {
     const t = useTranslations("Contact");
 
     const images = [
-        { src: insta3, delay: 0.1, className: "col-span-2 row-span-2 relative h-[300px] md:h-auto" },
-        { src: insta2, delay: 0.2, className: "col-span-1 row-span-1 relative h-[150px] md:h-[400px]" },
-        { src: insta1, delay: 0.3, className: "col-span-1 row-span-1 relative h-[150px] md:h-[400px]" },
-        { src: insta4, delay: 0.4, className: "col-span-1 row-span-1 relative h-[150px] md:h-[400px]" },
-        { src: insta5, delay: 0.5, className: "col-span-1 row-span-1 relative h-[150px] md:h-[400px]" },
+        { src: insta3, delay: 0.1, className: "col-span-2 row-span-2 relative min-h-[280px] md:min-h-0" },
+        { src: insta2, delay: 0.2, className: "col-span-1 row-span-1 relative min-h-[140px] md:min-h-0" },
+        { src: insta1, delay: 0.3, className: "col-span-1 row-span-1 relative min-h-[140px] md:min-h-0" },
+        { src: insta4, delay: 0.4, className: "col-span-1 row-span-1 relative min-h-[140px] md:min-h-0" },
+        { src: insta5, delay: 0.5, className: "col-span-1 row-span-1 relative min-h-[140px] md:min-h-0" },
     ];
 
     return (
         <section className="bg-[#FAF7F2] pb-20 md:pb-32 px-6 md:px-12 lg:px-24">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-[1fr_1fr] gap-4 min-h-[400px] md:h-[520px] lg:h-[600px]">
                     {images.map((img, idx) => (
                         <AnimateOnScroll
                             key={idx}
                             variant="fadeUp"
                             delay={img.delay}
-                            className={img.className}
+                            className={`relative min-h-0 overflow-hidden ${img.className}`}
                         >
-                            <div className="w-full h-full overflow-hidden group">
+                            <div className="absolute inset-0 overflow-hidden group">
                                 <Image
                                     src={img.src}
                                     alt={`Gallery Image ${idx + 1}`}
-                                    fill
-                                    className="object-cover transition-transform duration-700"
+                                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                 />
                             </div>
                         </AnimateOnScroll>

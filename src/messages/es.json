@@ -137,7 +137,15 @@
     "pinaresTitle": "Naans & Curries Pinares",
     "pinaresDesc": "En Naans & Curries Pinares puede disfrutar de terraza con vista a las montañas o ambiente acogedor en el interior.",
     "lincolnTitle": "Naans & Curries Lincoln Plaza",
-    "lincolnDesc": "En Naans & Curries Lincoln Plaza disfrute del ambiente indio contemporáneo. Terraza al aire libre o interior con temática natural."
+    "lincolnDesc": "En Naans & Curries Lincoln Plaza disfrute del ambiente indio contemporáneo. Terraza al aire libre o interior con temática natural.",
+    "nunciaturaTitle": "Naans & Curries Nunciatura",
+    "nunciaturaDesc": "En Naans & Curries Nunciatura disfrute de un ambiente refinado ideal para almuerzos de negocios y ocasiones especiales en el corazón de San José.",
+    "tamarindoTitle": "Naans & Curries Tamarindo",
+    "tamarindoDesc": "En Naans & Curries Tamarindo disfrute de cocina india frente al mar con brisas del océano y un ambiente costero relajado.",
+    "cocoTitle": "Naans & Curries Playas del Coco",
+    "cocoDesc": "En Naans & Curries Playas del Coco saboree auténticos sabores a pasos de la playa en un ambiente acogedor y familiar.",
+    "jacoTitle": "Naans & Curries Jacó",
+    "jacoDesc": "En Naans & Curries Jacó disfrute de sabores indios vibrantes en un ambiente relajado de pueblo surfista, ideal para cenar después de la playa."
   },
   "Tradition": {
     "giftTaste": "Regala un Sabor",
@@ -218,7 +226,16 @@
       "type": "Tipo",
       "category": "Categoría",
       "sortBy": "Ordenar por",
-      "showing": "Mostrando {count} entradas"
+      "showing": "Mostrando {count} entradas",
+      "allTypes": "Todos",
+      "typeArticle": "Artículo",
+      "allCategories": "Todas",
+      "sortNewest": "Más recientes",
+      "sortOldest": "Más antiguos",
+      "sortTitleAZ": "Título A–Z",
+      "sortTitleZA": "Título Z–A",
+      "searchPlaceholder": "Buscar entradas…",
+      "noResults": "Ninguna entrada coincide con los filtros."
     },
     "featuredLarge": {
       "category": "RESTAURANTE",
@@ -278,7 +295,18 @@
         "date": "Marzo 09, 2025",
         "title": "Un Banquete para los Sentidos: Dining Más Allá del Sabor"
       }
-    ]
+    ],
+    "relatedTitle": "Más Artículos Relacionados",
+    "detail": {
+      "backToHome": "Inicio",
+      "share": "COMPARTIR",
+      "paragraph1": "El color no es solo algo que la gente ve: provoca reacciones. La arquitectura busca mejorar las condiciones de vida y el confort a través de los espacios. Usados con acierto, los colores se convierten en herramientas poderosas. Ofrecen una comunicación no verbal que transmite sensaciones y el uso del espacio.",
+      "paragraph2": "En Naans & Curries cada plato cuenta una historia. Nuestra cocina une tradición e innovación, con sabores que han viajado por generaciones. Del calor del tandoor al equilibrio de especias, cada plato está pensado para crear una experiencia memorable.",
+      "subheading1": "Cómo los Colores Influyen en las Emociones en el Espacio",
+      "subheading2": "Nuestra Cocina Destacada",
+      "subheading3": "Nuestra Cocina Principal",
+      "paragraph3": "La misma filosofía se aplica a nuestro espacio. El ambiente, los aromas y la presentación crean una experiencia que va más allá del sabor. Le invitamos a explorar nuestro menú y descubrir las historias detrás de cada receta."
+    }
   },
   "Contact": {
     "title": "Contacto",

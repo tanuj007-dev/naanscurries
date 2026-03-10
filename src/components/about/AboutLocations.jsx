@@ -147,9 +147,9 @@ export default function AboutLocations() {
                                 className="flex flex-col lg:flex-row gap-6 lg:gap-8 w-full"
                             >
                                 {locations.slice(index, index + visibleCount).map((loc, i) => (
-                                    <div key={loc.name + i} className="flex-1 bg-white flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div key={loc.name + i} className="flex-1 min-w-0 bg-white flex flex-col lg:flex-row shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden rounded-lg">
                                         {/* Text Content */}
-                                        <div className="flex-1 p-8 md:p-10 lg:p-12 flex flex-col">
+                                        <div className="flex-1 min-w-0 p-8 md:p-10 lg:p-12 flex flex-col">
                                             <h3 className="text-[28px] md:text-[36px] text-[#2C2C2C] mb-4 font-normal" style={{ fontFamily: "var(--font-ramillas)" }}>
                                                 {loc.name}
                                             </h3>
@@ -183,12 +183,11 @@ export default function AboutLocations() {
                                             </div>
                                         </div>
                                         {/* Image */}
-                                        <div className="relative w-full md:w-[40%] lg:w-[45%] h-[300px] md:h-auto overflow-hidden">
+                                        <div className="relative w-full md:w-[40%] lg:w-[45%] min-h-[280px] md:min-h-0 md:self-stretch shrink-0 overflow-hidden">
                                             <Image
                                                 src={loc.image}
                                                 alt={loc.name}
-                                                fill
-                                                className="object-cover transition-transform duration-700 hover:scale-110"
+                                                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                                             />
                                         </div>
                                     </div>

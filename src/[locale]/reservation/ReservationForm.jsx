@@ -303,29 +303,28 @@ export default function ReservationForm() {
             </AnimatePresence>
 
             {/* ── Hero Section ────────────────────────────────────────────────── */}
-            <section className="relative flex min-h-[42vh] w-full flex-col overflow-hidden md:min-h-[65vh]">
-                <Image
-                    src={bannerImg}
-                    alt="Reservation Hero"
-                    fill
-                    className="object-cover brightness-[0.6]"
-                    priority
-                />
-
-                <div className="h-16 md:h-32" />
-
-
-                <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 text-center">
+            <section className="relative min-h-[50vh] w-full overflow-hidden md:min-h-[60vh]">
+                {/* Background image – fills section */}
+                <div className="absolute inset-0">
+                    <Image
+                        src={bannerImg}
+                        alt="Reserved table at Naans & Curries"
+                        priority
+                        className="h-full w-full object-cover object-center brightness-[0.7]"
+                    />
+                </div>
+                {/* Dark gradient overlay for readability */}
+                <div className="absolute inset-0 bg-linear-to-t from-[#111111] via-[#111111]/40 to-transparent" />
+                {/* Bottom strip: solid dark background with title */}
+                <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center justify-center px-4 py-12 md:py-16 text-center">
                     <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#FFF7ED]" style={{ fontFamily: "var(--font-futura)" }}>
                         {t("reserveATable")}
                     </p>
                     <GoldDivider />
-                    <h1 className="mt-2 text-5xl font-normal text-[#FFF7ED] md:text-7xl lg:text-8xl" style={{ fontFamily: "var(--font-ramillas)" }}>
+                    <h1 className="mt-2 text-4xl font-normal text-[#FFF7ED] md:text-7xl lg:text-8xl" style={{ fontFamily: "var(--font-ramillas)" }}>
                         {t("reservationForm")}
                     </h1>
                 </div>
-                {/* Scroll hint line */}
-
             </section>
 
             {/* ── Form Section ────────────────────────────────────────────────── */}

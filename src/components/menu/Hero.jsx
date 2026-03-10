@@ -14,7 +14,7 @@ export default function MenuHero() {
     const common = useTranslations("Navbar");
 
     return (
-        <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 px-6 md:px-12 lg:px-24 overflow-hidden min-h-[60vh] flex items-center justify-center text-center">
+        <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 px-6 md:px-12 lg:px-24 overflow-hidden min-h-[70vh] md:min-h-[60vh] flex items-center justify-center text-center">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -22,10 +22,11 @@ export default function MenuHero() {
                     alt="Menu Background"
                     fill
                     priority
-                    className="object-cover"
+                    quality={90}
+                    className="object-cover object-center md:object-[center_30%]"
                 />
                 {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/60 z-10" />
+                <div className="absolute inset-0 bg-black/65 md:bg-black/45 z-10" />
             </div>
 
             <div className="relative z-20 max-w-4xl mx-auto">
@@ -39,7 +40,6 @@ export default function MenuHero() {
                         >
                             {common("home")}
                         </Link>
-                        <span className="text-white/30">â€”</span>
                         <span
                             className="text-[12px] md:text-[14px] font-medium uppercase tracking-[0.2em] text-white"
                             style={{ fontFamily: "var(--font-futura)" }}

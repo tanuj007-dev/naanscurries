@@ -3,7 +3,7 @@
 import Image from "@/src/compat/next-image";
 import { useTranslations } from "@/src/compat/next-intl";
 import AnimateOnScroll from "./AnimateOnScroll";
-import rootedBg from "./assets/35fc7f6b329a49530e87b98caae919b3dc83dba8.jpg";
+
 
 export default function Rooted() {
   const t = useTranslations("Rooted");
@@ -12,12 +12,10 @@ export default function Rooted() {
       <div className="relative mx-auto h-[500px] w-full max-w-[1440px] overflow-hidden rounded-xl md:h-[650px] lg:h-[750px]">
         {/* 1. Full-width background image */}
         <Image
-          src={rootedBg}
+          src="https://res.cloudinary.com/dpelqhchv/image/upload/v1773142673/ab6d8cf19a48562a27d613537135937d8e7431a6_qkh3wv.webp"
           alt="Rooted in Experience - Naans & Curries"
-          fill
           priority
-          className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, 100vw"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
 
         {/* 3. Overlay & Styling */}
