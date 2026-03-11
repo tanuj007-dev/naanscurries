@@ -13,10 +13,20 @@
     "rights": "Todos los derechos reservados",
     "home": "Inicio",
     "aboutUs": "Nosotros",
+    "about": "Nosotros",
+    "contact": "Contacto",
     "menu": "Menú",
     "bookATable": "Reservar Mesa",
     "blog": "Blog",
-    "order": "Pedido"
+    "order": "Pedido",
+    "quickLinks": "Enlaces Rápidos",
+    "followUs": "Síguenos",
+    "contactUs": "Contáctenos",
+    "newsletterTitle": "Únete a Nuestro Viaje",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tripadvisor": "TripAdvisor",
+    "whatsapp": "WhatsApp"
   },
   "Home": {
     "flavors": "Sabores Que",

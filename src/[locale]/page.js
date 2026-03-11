@@ -69,10 +69,12 @@ export default function Home() {
       <Catering />
       <Tradition />
       <Rooted />
+      
       <div className="bg-[#F8F5EF]">
         <HomeBlogs />
       </div>
       <OurLocations />
+      
     </>
   );
 }

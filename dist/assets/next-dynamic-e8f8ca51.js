@@ -1,1 +1,0 @@
-import{r as s,j as n}from"./index-148f1cb5.js";const l=(r,a)=>{const c=s.lazy(r),e=(a==null?void 0:a.loading)||(()=>null);return t=>n.jsx(s.Suspense,{fallback:n.jsx(e,{}),children:n.jsx(c,{...t})})},d=l;export{d};

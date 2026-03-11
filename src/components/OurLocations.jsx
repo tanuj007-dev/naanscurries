@@ -80,7 +80,7 @@ export default function OurLocations() {
 
   if (!mounted) {
     return (
-      <section className="w-full bg-[#FFF7ED] border-t border-[#2a2a2a]/10">
+      <section className="w-full bg-[#FFF7ED]">
         <div className="mx-auto grid max-w-8xl grid-cols-1 lg:grid-cols-[1fr_1.2fr]">
           <div className="h-[450px] lg:h-[600px] bg-[#E5DDD0]/50 animate-pulse" />
           <div className="p-10">Loading Locations...</div>
@@ -90,7 +90,7 @@ export default function OurLocations() {
   }
 
   return (
-    <section className="w-full bg-[#FFF7ED] border-t border-[#2a2a2a]/10">
+    <section className="w-full bg-[#FFF7ED]">
       <div className="mx-auto grid max-w-8xl grid-cols-1 lg:grid-cols-[1fr_1.2fr]">
         {/* Left column â€“ Leaflet Map */}
         <AnimateOnScroll

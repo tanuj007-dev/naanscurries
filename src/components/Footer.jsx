@@ -17,23 +17,24 @@ const footerNavConfig = [
       { href: "/menu", labelKey: "menu" },
       { href: "/reservation", labelKey: "bookATable" },
       { href: "/blog", labelKey: "blog" },
-    ]
-  },
-  {
-    titleKey: "experience",
-    links: [
-      { href: "/menu", labelKey: "order" },
-      { href: "/reservation", labelKey: "dining" },
-      { href: "/blog", labelKey: "gallery" },
+      { href: "/about", labelKey: "about" },
+      { href: "/contact", labelKey: "contact" },
     ]
   }
+];
+
+const socialLinks = [
+  { href: "https://www.facebook.com/NaansCurries", ariaLabel: "Facebook", labelKey: "facebook", icon: FaFacebookF },
+  { href: "https://www.instagram.com/naanslindora", ariaLabel: "Instagram", labelKey: "instagram", icon: FaInstagram },
+  { href: "https://www.tripadvisor.com", ariaLabel: "TripAdvisor", labelKey: "tripadvisor", icon: LiaTripadvisor },
+  { href: "https://wa.me/50622035555", ariaLabel: "WhatsApp", labelKey: "whatsapp", icon: FaWhatsapp },
 ];
 
 export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="relative w-full bg-[#0a0a0a] pt-24 pb-12 overflow-hidden text-[#e5e5e5]">
+    <footer className="relative z-20  w-full bg-[#0a0a0a] pt-32 pb-12 overflow-x-hidden overflow-y-visible text-[#e5e5e5]">
       {/* ─── Background Jaali Pattern ────────────────────────────────────────── */}
       <div className="absolute inset-0 z-0 opacity-[0.035] pointer-events-none"
         style={{
@@ -42,14 +43,40 @@ export default function Footer() {
         }}
       />
 
-      {/* ─── Top Ornamental Border (Arch) ────────────────────────────────────── */}
-      <div className="absolute top-0 left-0 w-full h-32 z-10">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full preserve-3d">
-          <path d="M0 120C240 120 480 0 720 0C960 0 1200 120 1440 120V0H0V120Z" fill="#FCF9F3" className="hidden md:block" />
-          <path d="M0 120C240 120 480 20 720 20C960 20 1200 120 1440 120" stroke="#DCB464" strokeWidth="2" fill="transparent" />
-          {/* Ornamental Centerpiece */}
-          <circle cx="720" cy="20" r="25" fill="#0a0a0a" stroke="#DCB464" strokeWidth="2" />
-          <path d="M710 20 L720 10 L730 20 L720 30 Z" fill="#DCB464" />
+      {/* ─── Top Ornamental Border (Arch) – overlaps content above ────────────── */}
+      <div className="absolute -top-4 left-0 w-full h-44 z-10 overflow-visible pointer-events-none">
+        <svg viewBox="0 -45 1440 165" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_4px_24px_rgba(0,0,0,0.15)]" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="arch-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#B8954A" />
+              <stop offset="50%" stopColor="#E8C97A" />
+              <stop offset="100%" stopColor="#B8954A" />
+            </linearGradient>
+            <linearGradient id="arch-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#FFFBF7" />
+              <stop offset="100%" stopColor="#FCF9F3" />
+            </linearGradient>
+            <filter id="arch-glow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="2" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          {/* Soft arch fill */}
+          <path d="M0 120C240 120 480 0 720 0C960 0 1200 120 1440 120V0H0V120Z" fill="url(#arch-fill)" className="hidden md:block" />
+          {/* Premium gold arch stroke with glow */}
+          <path d="M0 120C240 120 480 20 720 20C960 20 1200 120 1440 120" stroke="url(#arch-gold)" strokeWidth="3" fill="none" strokeLinecap="round" filter="url(#arch-glow)" />
+          <path d="M0 120C240 120 480 20 720 20C960 20 1200 120 1440 120" stroke="url(#arch-gold)" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.85" />
+          {/* Center medallion */}
+          <g filter="url(#arch-glow)">
+            <circle cx="720" cy="20" r="34" fill="#ffffff" stroke="url(#arch-gold)" strokeWidth="3" />
+            <circle cx="720" cy="20" r="28" fill="none" stroke="url(#arch-gold)" strokeWidth="1.5" opacity="0.5" />
+            <circle cx="720" cy="20" r="20" fill="none" stroke="url(#arch-gold)" strokeWidth="0.75" opacity="0.25" />
+            <path d="M706 20 L720 4 L734 20 L720 36 Z" fill="url(#arch-gold)" />
+            <circle r="4" fill="#E8C97A" opacity="0.6" cx="720" cy="14" />
+          </g>
         </svg>
       </div>
 
@@ -65,15 +92,13 @@ export default function Footer() {
               height={100}
               className="w-full h-auto object-contain brightness-110"
             />
-            <div className="mt-2 text-center text-[10px] uppercase tracking-[0.5em] text-[#DCB464]/80 font-medium">
-              Ethnic Indian Restaurant
-            </div>
+            
           </div>
         </div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
 
-          {/* ─── Column 1 & 2: Navigation Links ────────────────────────────────── */}
+          {/* ─── Column 1: Quick Links ────────────────────────────────────────── */}
           {footerNavConfig.map((group) => (
             <div key={group.titleKey} className="flex flex-col">
               <h3 className="text-[#DCB464] text-lg uppercase tracking-widest font-normal mb-1 flex flex-col" style={{ fontFamily: "var(--font-ramillas)" }}>
@@ -95,6 +120,21 @@ export default function Footer() {
             </div>
           ))}
 
+          {/* ─── Column 2: Social Media Links ──────────────────────────────────── */}
+          <div className="flex flex-col">
+            <h3 className="text-[#DCB464] text-lg uppercase tracking-widest font-normal mb-1 flex flex-col" style={{ fontFamily: "var(--font-ramillas)" }}>
+              {t("followUs")}
+              <span className="w-12 h-px bg-[#DCB464]/40 mt-2"></span>
+            </h3>
+            <div className="mt-6 flex flex-col gap-3">
+              {socialLinks.map(({ href, ariaLabel, labelKey, icon: Icon }) => (
+                <SocialLinkWithLabel key={ariaLabel} href={href} ariaLabel={ariaLabel} label={t(labelKey)}>
+                  <Icon className="w-4 h-4 shrink-0" />
+                </SocialLinkWithLabel>
+              ))}
+            </div>
+          </div>
+
           {/* ─── Column 3: Contact Details ────────────────────────────────────── */}
           <div className="flex flex-col">
             <h3 className="text-[#DCB464] text-lg uppercase tracking-widest font-normal mb-1 flex flex-col" style={{ fontFamily: "var(--font-ramillas)" }}>
@@ -110,20 +150,7 @@ export default function Footer() {
                 <span className="text-[10px] uppercase tracking-widest text-[#DCB464]/60">Email</span>
                 <span className="text-sm group-hover:text-[#DCB464] transition-colors">reserve@naans.cr</span>
               </a>
-              <div className="flex gap-4 mt-2">
-                <SocialLink href="https://www.facebook.com/NaansCurries" ariaLabel="Facebook">
-                  <FaFacebookF className="w-4 h-4" />
-                </SocialLink>
-                <SocialLink href="https://www.instagram.com/naanslindora" ariaLabel="Instagram">
-                  <FaInstagram className="w-4 h-4" />
-                </SocialLink>
-                <SocialLink href="https://www.tripadvisor.com" ariaLabel="TripAdvisor">
-                  <LiaTripadvisor className="w-5 h-5" />
-                </SocialLink>
-                <SocialLink href="https://wa.me/50622035555" ariaLabel="WhatsApp">
-                  <FaWhatsapp className="w-4 h-4" />
-                </SocialLink>
-              </div>
+              
             </div>
           </div>
 
@@ -174,6 +201,24 @@ function SocialLink({ href, ariaLabel, children }) {
       className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 text-[#e5e5e5]/60 border border-white/10 transition-all duration-300 hover:bg-[#DCB464] hover:text-[#0a0a0a] hover:border-[#DCB464] hover:scale-110"
     >
       {children}
+    </a>
+  );
+}
+
+function SocialLinkWithLabel({ href, ariaLabel, label, children }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className="group flex items-center gap-3 rounded-full  pr-4 pl-2  text-[#e5e5e5]/70   transition-all duration-300 hover:bg-[#DCB464] hover:text-[#0a0a0a] hover:border-[#DCB464] w-fit"
+      style={{ fontFamily: "var(--font-futura)" }}
+    >
+      <span className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 text-[#e5e5e5]/60 border border-white/10 shrink-0 transition-colors duration-300 group-hover:bg-[#DCB464] group-hover:text-[#0a0a0a] group-hover:border-[#DCB464]">
+        {children}
+      </span>
+      <span className="text-sm font-medium">{label}</span>
     </a>
   );
 }

@@ -39,6 +39,14 @@ export default function LeafletMap({ locationData, activeCoords, zoom, onLocatio
                 }
                 .leaflet-container {
                     background: #f0f0f0 !important;
+                    border: none !important;
+                    outline: none !important;
+                }
+                .leaflet-control-attribution {
+                    border: none !important;
+                    background: transparent !important;
+                    font-size: 8px !important;
+                    opacity: 0.4 !important;
                 }
                 /* Style zoom controls */
                 .leaflet-bar a {

@@ -13,10 +13,20 @@
     "rights": "All Rights Reserved",
     "home": "Home",
     "aboutUs": "About Us",
+    "about": "About Us",
+    "contact": "Contact",
     "menu": "Menu",
     "bookATable": "Book A Table",
     "blog": "Blog",
-    "order": "Order"
+    "order": "Order",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "contactUs": "Contact Us",
+    "newsletterTitle": "Join Our Journey",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tripadvisor": "TripAdvisor",
+    "whatsapp": "WhatsApp"
   },
   "Home": {
     "flavors": "Flavors",
