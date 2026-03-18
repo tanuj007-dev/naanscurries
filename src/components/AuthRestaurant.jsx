@@ -6,10 +6,27 @@ import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 import restaurantImg from "./assets/dcf85e625eb89d680ed6ba526ad66fd03bc8c633.jpg";
-import tripadvisorBadges from "./assets/Frame 43 (1).png";
+import certificate2020 from "./assets/certificates/2020.webp";
+import certificate2021 from "./assets/certificates/2021.webp";
+import certificate2022 from "./assets/certificates/2022.webp";
+import certificate1 from "./assets/certificates/certificate1.png";
+import certificate2 from "./assets/certificates/certificate2.png";
+import certificate3 from "./assets/certificates/certificate3.png";
+import certificate4 from "./assets/certificates/certificate4.png";
+import certificate5 from "./assets/certificates/certificate5.png";
 
 export default function AuthRestaurant() {
   const t = useTranslations("AuthRestaurant");
+  const certificates = [
+    { src: certificate2020, alt: "Certificate 2020" },
+    { src: certificate2021, alt: "Certificate 2021" },
+    { src: certificate2022, alt: "Certificate 2022" },
+    { src: certificate1, alt: "Certificate 1" },
+    { src: certificate2, alt: "Certificate 2" },
+    { src: certificate3, alt: "Certificate 3" },
+    { src: certificate4, alt: "Certificate 4" },
+    { src: certificate5, alt: "Certificate 5" },
+  ];
   return (
     <section className="grid w-full grid-cols-1 bg-[#FDF4E7] lg:grid-cols-2">
       {/* Left column â€“ text, button, Tripadvisor badges */}
@@ -61,14 +78,22 @@ export default function AuthRestaurant() {
         </div>
 
         <div className="mt-12">
-          <Image
-            src={tripadvisorBadges}
-            alt="Tripadvisor Travellers' Choice and Certificate of Excellence awards"
-            width={640}
-            height={120}
-            className="h-auto w-full object-contain object-left md:w-auto md:max-w-[80%]"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+          <div className="flex flex-wrap items-center gap-4 md:gap-5">
+            {certificates.map((c) => (
+              <div
+                key={c.alt}
+                className="relative h-[72px] w-[72px] overflow-hidden rounded-md bg-white/40 ring-1 ring-black/5 md:h-[62px] md:w-[62px] md:bg-transparent md:ring-0"
+              >
+                <Image
+                  src={c.src}
+                  alt={c.alt}
+                  fill
+                  className="object-contain p-2"
+                  sizes="(max-width: 768px) 72px, 84px"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </AnimateOnScroll>
 
@@ -78,7 +103,7 @@ export default function AuthRestaurant() {
         duration={0.7}
         className="flex items-center justify-center p-6 md:p-10 lg:p-14"
       >
-        <div className="relative aspect-square w-full overflow-hidden rounded-[32px] md:aspect-[4/3] lg:h-full lg:w-full">
+        <div className="relative aspect-square w-full overflow-hidden rounded-[32px] md:aspect-4/3 lg:h-full lg:w-full">
           <Image
             src={restaurantImg}
             alt="Naans & Curries restaurant interior â€“ dining table and elegant setting"

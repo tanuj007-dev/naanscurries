@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Naans & Curries – Restaurant website (React + Vite).
 
 ## Getting Started
 
@@ -14,9 +14,21 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Connect WordPress for blog posts
+
+You can manage blog posts in WordPress and have them appear on this site.
+
+1. **Set up WordPress** (e.g. on your hosting or a subdomain like `blog.yoursite.com`).
+2. **Enable the REST API** – it’s on by default; ensure posts are public.
+3. **Add this to your project’s `.env`** (create it in the project root if needed):
+   ```env
+   VITE_WORDPRESS_API_URL=https://your-wordpress-site.com
+   ```
+   Use your WordPress URL **without** a trailing slash (e.g. `https://blog.naansandcurries.com`).
+4. **Restart the dev server** after changing `.env`.
+5. **Publish posts in WordPress** – they will show on the Blog page, Blog detail (by slug), featured section, and home blog strip. Use **Featured Image** for post thumbnails and assign **Categories** if you use filters.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

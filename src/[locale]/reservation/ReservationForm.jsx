@@ -11,6 +11,7 @@ import { Search, ChevronDown, Check } from "lucide-react";
 
 // Assets
 import bannerImg from "@/src/components/assets/banner-image-3.jpg";
+import { submitReservation } from "@/src/api/client";
 
 
 // ─── Constants ───────────────────────────────────────────────────────────────
@@ -272,6 +273,8 @@ export default function ReservationForm() {
     const uid = (name) => `${id}-${name}`;
     const [form, setForm] = useState({ location: locations[0], name: "", email: "", phone: "", guests: "", date: "", time: "", message: "" });
     const [submitted, setSubmitted] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState(null);
     const [showCustomGuests, setShowCustomGuests] = useState(false);
 
     const today = new Date().toISOString().split("T")[0];
@@ -285,15 +288,41 @@ export default function ReservationForm() {
             setForm({ ...form, [e.target.name]: e.target.value });
         }
     };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
-        setForm({ location: locations[0], name: "", email: "", phone: "", guests: "", date: "", time: "", message: "" });
-        setShowCustomGuests(false);
+    const getFormValue = (formEl, name) => {
+        const el = formEl.querySelector(`[name="${name}"]`);
+        return (el?.value ?? "").trim();
+    };
 
-        setTimeout(() => {
-            router.push("/");
-        }, 4000);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formEl = e.currentTarget;
+        const rawDate = getFormValue(formEl, "date");
+        const dateNorm = rawDate ? rawDate.split("T")[0] : "";
+        const payload = {
+            location: getFormValue(formEl, "location") || form.location || (locations && locations[0]) || "",
+            name: getFormValue(formEl, "name"),
+            email: getFormValue(formEl, "email"),
+            phone: getFormValue(formEl, "phone") || form.phone || "",
+            guests: getFormValue(formEl, "guests") || "",
+            date: dateNorm,
+            time: getFormValue(formEl, "time") || "",
+            message: getFormValue(formEl, "message") || "",
+        };
+        setSubmitting(true);
+        setSubmitError(null);
+        try {
+            await submitReservation(payload);
+            setSubmitted(true);
+            setForm({ location: locations[0], name: "", email: "", phone: "", guests: "", date: "", time: "", message: "" });
+            setShowCustomGuests(false);
+            setTimeout(() => {
+                router.push("/");
+            }, 4000);
+        } catch (err) {
+            setSubmitError(err.message || t("errorSubmit") || "Failed to submit. Please try again.");
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (
@@ -432,15 +461,22 @@ export default function ReservationForm() {
                             <textarea name="message" value={form.message} onChange={handleChange} placeholder={t("specialRequest")} rows={4} className={`${inputClasses} resize-none`} />
                         </FieldWrapper>
 
+                        {submitError && (
+                            <p className="text-sm text-red-700 bg-red-50 border border-red-200 rounded px-4 py-2" style={{ fontFamily: "var(--font-futura)" }}>
+                                {submitError}
+                            </p>
+                        )}
+
                         <div className="flex flex-col items-center pt-8">
                             <div className="border border-[#2C2C2C] rounded-sm p-1.5 flex transition-transform duration-300 hover:scale-[1.02]">
                                 <motion.button
                                     whileTap={{ scale: 0.98 }}
                                     type="submit"
-                                    className="rounded-sm bg-[#2d2d2d] px-14 py-4 text-[12px] font-bold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#1A1A1A] cursor-pointer"
+                                    disabled={submitting}
+                                    className="rounded-sm bg-[#2d2d2d] px-14 py-4 text-[12px] font-bold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#1A1A1A] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                                     style={{ fontFamily: "var(--font-futura)" }}
                                 >
-                                    {t("reserveTable")}
+                                    {submitting ? (t("submitting") || "Sending…") : t("reserveTable")}
                                 </motion.button>
                             </div>
                         </div>

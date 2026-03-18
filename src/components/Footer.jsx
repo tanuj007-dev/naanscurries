@@ -146,9 +146,9 @@ export default function Footer() {
                 <span className="text-[10px] uppercase tracking-widest text-[#DCB464]/60">Call Us</span>
                 <span className="text-sm group-hover:text-[#DCB464] transition-colors">+506 2203 5555</span>
               </a>
-              <a href="mailto:reserve@naans.cr" className="group flex flex-col gap-1">
+              <a href="mailto:Info@Naans.cr" className="group flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-widest text-[#DCB464]/60">Email</span>
-                <span className="text-sm group-hover:text-[#DCB464] transition-colors">reserve@naans.cr</span>
+                <span className="text-sm group-hover:text-[#DCB464] transition-colors">Info@Naans.cr</span>
               </a>
               
             </div>

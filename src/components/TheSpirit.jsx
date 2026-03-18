@@ -14,7 +14,7 @@ export default function TheSpirit() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://res.cloudinary.com/dpelqhchv/image/upload/v1773141054/1508320562_NaansAndCurriesSlider1_dspyfr.jpg"
+          src="https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225703/1508320562_NaansAndCurriesSlider1_mpawt1.jpg"
           alt="Indian dining"
           fill
           className="object-cover object-center md:object-[center_30%]"

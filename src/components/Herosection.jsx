@@ -81,7 +81,7 @@ export default function Herosection() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="https://res.cloudinary.com/dpelqhchv/video/upload/v1773140439/Naans_Curries_Best_Indian_Restaurant_In_San_Jose_Costa_Rica_Orde_iw1zeo.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/djcwt7f6d/video/upload/v1773225710/Naans_Curries_Best_Indian_Restaurant_in_San_Jose_Costa_Rica_Orde_ehxhvo.mp4" type="video/mp4" />
         </video>
         {/* Dark warm overlay: Darker on desktop for better text contrast */}
         <div className="absolute inset-0 bg-black/60 md:bg-black/45" aria-hidden />

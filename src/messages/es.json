@@ -109,6 +109,29 @@
     "ctaDescription": "Únete a nosotros para una comida que se siente como en casa, con sabores que te llevan a otros lugares.",
     "bookATable": "Reservar mesa"
   },
+  "OurStory": {
+    "title": "Nuestra Historia",
+    "aboutUs": "Nosotros",
+    "home": "Inicio",
+    "subtitle": "Desde el principio",
+    "heading": "Nuestra Historia",
+    "intro": "De un solo sueño a la mesa frente a ti — este es el camino de Naans & Curries. Cada plato que servimos lleva el peso de la tradición y la chispa de algo nuevo.",
+    "beginningLabel": "EL COMIENZO",
+    "beginningTitle": "La historia de nuestro primer restaurante",
+    "beginningDesc": "Nuestro primer restaurante se construyó con pasión, compromiso y la creencia de que la comida extraordinaria puede cambiar la forma en que la gente se reúne. Empezó con un pequeño grupo de amantes de la comida que sabían que las mejores comidas son las que unen a las personas.",
+    "beginningDesc2": "Abrimos nuestras puertas con una idea simple: tratar a cada comensal como familia y cada plato como una oportunidad de contar una historia. Esa idea sigue guiando todo lo que hacemos hoy.",
+    "quote": "No solo servimos comida — damos vida al sabor.",
+    "passionLabel": "LA PASIÓN",
+    "passionTitle": "Donde las especias se encuentran con la calidez",
+    "passionDesc": "Más que un restaurante, Naans & Curries es un lugar donde la tradición se encuentra con el cuidado. Nuestra cocina es donde los ingredientes honestos y los sabores audaces se unen, y donde cada comida se elabora para hacerte sentir como en casa. Creemos en el poder de una mesa compartida y la magia de la hospitalidad india.",
+    "kitchenLabel": "LA COCINA",
+    "kitchenTitle": "Hecho con cuidado",
+    "kitchenDesc": "Nuestros chefs llevan generaciones de recetas y amor por la innovación a cada plato. Desde el primer bocado hasta el último, nuestro objetivo es crear momentos que se queden contigo — y que te hagan volver por más.",
+    "todayLabel": "HOY",
+    "todayTitle": "Únete a nuestra historia",
+    "todayDesc": "Hemos crecido, pero nuestro corazón sigue igual: sabores auténticos, servicio cálido y una mesa lista para ti. Ven a vivir la diferencia.",
+    "bookTable": "RESERVAR MESA"
+  },
   "TheSpirit": {
     "title1": "El Espíritu de",
     "title2": "Comida India",
@@ -217,6 +240,8 @@
     "persons": "Personas",
     "other": "Otro",
     "reserveTable": "Reservar Mesa",
+    "submitting": "Enviando…",
+    "errorSubmit": "No se pudo enviar la reservación. Intenta de nuevo.",
     "thankYou": "¡Gracias!",
     "successMessage": "Su mesa ha sido solicitada. ¡Nos pondremos en contacto pronto!",
     "locationLabel": "Ubicación",
@@ -245,7 +270,9 @@
       "sortTitleAZ": "Título A–Z",
       "sortTitleZA": "Título Z–A",
       "searchPlaceholder": "Buscar entradas…",
-      "noResults": "Ninguna entrada coincide con los filtros."
+      "noResults": "Ninguna entrada coincide con los filtros.",
+      "loading": "Cargando entradas…",
+      "wpNotConfigured": "El blog no está configurado. Configure VITE_WORDPRESS_API_URL en .env para cargar entradas desde WordPress."
     },
     "featuredLarge": {
       "category": "RESTAURANTE",
@@ -307,8 +334,11 @@
       }
     ],
     "relatedTitle": "Más Artículos Relacionados",
+    "noRelated": "No hay entradas relacionadas.",
     "detail": {
-      "backToHome": "Inicio",
+      "backToHome": "Volver al blog",
+      "loading": "Cargando…",
+      "noContent": "No hay contenido disponible.",
       "share": "COMPARTIR",
       "paragraph1": "El color no es solo algo que la gente ve: provoca reacciones. La arquitectura busca mejorar las condiciones de vida y el confort a través de los espacios. Usados con acierto, los colores se convierten en herramientas poderosas. Ofrecen una comunicación no verbal que transmite sensaciones y el uso del espacio.",
       "paragraph2": "En Naans & Curries cada plato cuenta una historia. Nuestra cocina une tradición e innovación, con sabores que han viajado por generaciones. Del calor del tandoor al equilibrio de especias, cada plato está pensado para crear una experiencia memorable.",
@@ -330,43 +360,49 @@
     "emailPlaceholder": "Su correo electrónico",
     "messagePlaceholder": "Su mensaje",
     "sendButton": "ENVIAR MENSAJE",
+    "sending": "Enviando…",
+    "thankYou": "¡Gracias!",
+    "successMessage": "¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.",
+    "redirecting": "Redirigiendo al inicio…",
+    "errorRequired": "Nombre y correo son obligatorios.",
+    "errorSend": "No se pudo enviar el mensaje. Intenta de nuevo.",
     "officeLocation": "UBICACIÓN DE OFICINAS",
     "getDirections": "CÓMO LLEGAR",
     "locations": [
       {
         "name": "MOMENTUM, LINDORA, SANTA ANA, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0001, +506 2282 5470",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "LINCOLN PLAZA, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0002",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "PINARES, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0003",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "ESCAZU, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0004",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "ALAJUELA, COSTA RICA",
         "phone": "+506 2282 0005",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "HEREDIA, COSTA RICA",
         "phone": "+506 2282 0006",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "CARTAGO, COSTA RICA",
         "phone": "+506 2282 0007",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       }
     ]
   },

@@ -26,7 +26,7 @@ export default function VisionMission() {
       <div className="mx-auto max-w-5xl">
         <h2
           id="vision-heading"
-          className={`mb-12 text-center text-3xl font-semibold tracking-tight md:text-4xl ${baseTransition} ${visible} will-change-[transform,opacity]`}
+          className={`mb-12 text-center text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight ${baseTransition} ${visible} will-change-[transform,opacity]`}
         >
           {t("visionMission")}
         </h2>
@@ -39,7 +39,7 @@ export default function VisionMission() {
                 transitionDelay: isInView ? `${100 + i * 100}ms` : "0ms",
               }}
             >
-              <h3 className="mb-3 text-xl font-semibold">{t(card.titleKey)}</h3>
+              <h3 className="mb-3 text-lg sm:text-xl font-semibold">{t(card.titleKey)}</h3>
               <p className="text-foreground/85 leading-relaxed">{t(card.descKey)}</p>
             </div>
           ))}

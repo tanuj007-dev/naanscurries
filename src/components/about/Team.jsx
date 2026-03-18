@@ -36,7 +36,7 @@ export default function Team() {
                 <div className="mb-20">
                     <AnimateOnScroll variant="fadeUp" duration={0.8}>
                         <h2
-                            className="text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-[#1A1A1A] mb-12 max-w-3xl font-medium"
+                            className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] leading-[1.1] text-[#1A1A1A] mb-12 max-w-3xl font-medium"
                             style={{ fontFamily: "var(--font-ramillas)" }}
                         >
                             {t("teamHeading")}
@@ -86,7 +86,7 @@ export default function Team() {
                                 <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="flex items-center justify-between gap-4">
                                         <div>
-                                            <h3 className="text-white text-xl font-medium leading-none mb-1" style={{ fontFamily: "var(--font-ramillas)" }}>
+                                            <h3 className="text-white text-lg sm:text-xl font-medium leading-none mb-1" style={{ fontFamily: "var(--font-ramillas)" }}>
                                                 {member.name}
                                             </h3>
                                             <p className="text-white/70 text-sm uppercase tracking-wider" style={{ fontFamily: "var(--font-futura)" }}>
@@ -100,7 +100,7 @@ export default function Team() {
                                 {/* Persistent text for middle one as per screenshot */}
                                 {(member.showSocial || index === 1) && (
                                     <div className="absolute bottom-10 left-8 md:left-10 group-hover:opacity-0 transition-opacity duration-300">
-                                        <h3 className="text-white text-xl font-medium leading-none mb-1" style={{ fontFamily: "var(--font-ramillas)" }}>
+                                        <h3 className="text-white text-lg sm:text-xl font-medium leading-none mb-1" style={{ fontFamily: "var(--font-ramillas)" }}>
                                             {member.name}
                                         </h3>
                                         <p className="text-white/70 text-sm uppercase tracking-wider" style={{ fontFamily: "var(--font-futura)" }}>

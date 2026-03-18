@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "Naans & Curries API",
+    "description": "Contact and Reservation form APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:4000" }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/health",
+        "description": "Check if the server is running."
+      }
+    },
+    {
+      "name": "Contact - Submit",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"+506 12345678\",\n  \"message\": \"Hello, I would like to know more about your catering options.\"\n}"
+        },
+        "url": "{{baseUrl}}/api/contact",
+        "description": "Submit contact form. Required: name, email. Optional: phone, message."
+      }
+    },
+    {
+      "name": "Reservation - Submit",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"location\": \"Naans & Curries, Lindora Plaza\",\n  \"name\": \"Jane Smith\",\n  \"email\": \"jane@example.com\",\n  \"phone\": \"+506 87654321\",\n  \"guests\": \"2 Persons\",\n  \"date\": \"2026-03-20\",\n  \"time\": \"07:00 pm\",\n  \"message\": \"Window table if possible.\"\n}"
+        },
+        "url": "{{baseUrl}}/api/reservation",
+        "description": "Submit reservation. Required: name, email, date, time. Include location and guests (number of guests) for full details."
+      }
+    }
+  ]
+}

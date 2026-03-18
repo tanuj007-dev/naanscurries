@@ -57,7 +57,7 @@ export default function AboutSection() {
           <AnimateOnScroll variant="slideRight" delay={0.2} className="flex flex-col items-start text-left">
             <SectionLabel text={t("storyLabel")} />
             <h2
-              className="text-[40px] md:text-[52px] lg:text-[64px] leading-[1.1] text-[#2C2C2C] mb-8 font-normal"
+              className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[60px] leading-[1.1] text-[#2C2C2C] mb-8 font-normal"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
               {t("storyTitle")}
@@ -68,7 +68,7 @@ export default function AboutSection() {
             >
               {t("storyDesc")}
             </p>
-            <DoubleBorderButton href="/about">
+            <DoubleBorderButton href="/our-story">
               {t("readStory")}
             </DoubleBorderButton>
           </AnimateOnScroll>
@@ -79,7 +79,7 @@ export default function AboutSection() {
           <AnimateOnScroll variant="slideLeft" className="flex flex-col items-start text-left order-2 lg:order-1">
             <SectionLabel text={t("serviceLabel")} />
             <h2
-              className="text-[40px] md:text-[52px] lg:text-[64px] leading-[1.1] text-[#2C2C2C] mb-8 font-normal"
+              className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[60px] leading-[1.1] text-[#2C2C2C] mb-8 font-normal"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
               {t("serviceTitle")}

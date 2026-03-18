@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Image from "@/src/compat/next-image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "@/src/compat/next-intl";
+import { useRouter } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 import ReactCountryFlag from "react-country-flag";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Check } from "lucide-react";
 import chefImg from "./assets/6814ab7c116be14a9b9f6e80_5e203041ac405c8fe66abe099ac1f5b1_single-img-13.avif";
+import { submitContact } from "@/src/api/client";
 
 const phoneCountries = [
     { name: "Costa Rica", code: "+506", iso: "CR" },
@@ -52,6 +54,63 @@ function GoldDivider() {
 
 const inputClasses =
     "w-full rounded-none border border-[#2C2C2C]/30 bg-[#FAF7F2] px-4 py-3 text-[14px] text-[#2C2C2C] outline-none transition-all duration-300 font-futura placeholder:text-[#2C2C2C]/40 focus:border-[#2C2C2C]";
+
+function ContactSuccessOverlay({ t }) {
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-200 flex items-center justify-center bg-[#E5DDD0]/95 backdrop-blur-md"
+        >
+            <div className="text-center px-6">
+                <motion.div
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.2 }}
+                    className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-[#2C2C2C] text-[#E89D42]"
+                >
+                    <Check size={48} strokeWidth={3} />
+                </motion.div>
+                <motion.h2
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="mb-4 text-4xl md:text-6xl font-normal text-[#2C2C2C]"
+                    style={{ fontFamily: "var(--font-ramillas)" }}
+                >
+                    {t("thankYou")}
+                </motion.h2>
+                <motion.p
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    className="mb-8 text-lg text-[#2C2C2C]/70"
+                    style={{ fontFamily: "var(--font-futura)" }}
+                >
+                    {t("successMessage")}
+                </motion.p>
+                <div className="mx-auto h-0.5 max-w-[200px] overflow-hidden bg-[#2C2C2C]/10">
+                    <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: "100%" }}
+                        transition={{ duration: 3.5, ease: "linear", delay: 0.8 }}
+                        className="h-full bg-[#E89D42]"
+                    />
+                </div>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                    className="mt-4 text-[10px] uppercase tracking-widest text-[#2C2C2C]/40"
+                    style={{ fontFamily: "var(--font-futura)" }}
+                >
+                    {t("redirecting")}
+                </motion.p>
+            </div>
+        </motion.div>
+    );
+}
 
 function ContactPhoneInput({ placeholder }) {
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -117,9 +176,42 @@ function ContactPhoneInput({ placeholder }) {
 // Main Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function ContactForm() {
     const t = useTranslations("Contact");
+    const router = useRouter();
+    const [submitting, setSubmitting] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(null);
+        setSuccess(false);
+        const form = e.target;
+        const name = (form.querySelector('input[name="name"]')?.value || "").trim();
+        const email = (form.querySelector('input[name="email"]')?.value || "").trim();
+        const phone = (form.querySelector('input[name="phone"]')?.value || "").trim();
+        const message = (form.querySelector('textarea[name="message"]')?.value || "").trim();
+        if (!name || !email) {
+            setError(t("errorRequired") || "Name and email are required.");
+            return;
+        }
+        setSubmitting(true);
+        try {
+            await submitContact({ name, email, phone: phone || undefined, message: message || undefined });
+            setSuccess(true);
+            form.reset();
+            setTimeout(() => router.push("/"), 4000);
+        } catch (err) {
+            setError(err.message || t("errorSend") || "Failed to send. Try again.");
+        } finally {
+            setSubmitting(false);
+        }
+    };
 
     return (
-        <section className="bg-[#E5DDD0] py-20 md:py-32 px-6 md:px-12 lg:px-24">
+        <section className="bg-[#E5DDD0] py-20 md:py-32 px-6 md:px-12 lg:px-24 relative">
+            <AnimatePresence>
+                {success && <ContactSuccessOverlay t={t} />}
+            </AnimatePresence>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-stretch">
 
@@ -149,13 +241,21 @@ export default function ContactForm() {
                                 </h2>
                             </div>
 
-                            <form className="space-y-6">
+                            <form className="space-y-6" onSubmit={handleSubmit}>
+                                {error && (
+                                    <p className="text-sm text-red-700 bg-red-50 border border-red-200 rounded px-4 py-2" style={{ fontFamily: "var(--font-futura)" }}>
+                                        {error}
+                                    </p>
+                                )}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <FieldWrapper label={t("namePlaceholder")}>
                                         <input
                                             type="text"
+                                            name="name"
                                             placeholder={t("namePlaceholder")}
                                             className={inputClasses}
+                                            required
+                                            disabled={submitting}
                                         />
                                     </FieldWrapper>
                                     <FieldWrapper label={t("phonePlaceholder")}>
@@ -166,16 +266,21 @@ export default function ContactForm() {
                                 <FieldWrapper label={t("emailPlaceholder")}>
                                     <input
                                         type="email"
+                                        name="email"
                                         placeholder={t("emailPlaceholder")}
                                         className={inputClasses}
+                                        required
+                                        disabled={submitting}
                                     />
                                 </FieldWrapper>
 
                                 <FieldWrapper label={t("messagePlaceholder")}>
                                     <textarea
+                                        name="message"
                                         placeholder={t("messagePlaceholder")}
                                         rows={4}
                                         className={`${inputClasses} resize-none`}
+                                        disabled={submitting}
                                     />
                                 </FieldWrapper>
 
@@ -184,10 +289,11 @@ export default function ContactForm() {
                                         <motion.button
                                             whileTap={{ scale: 0.98 }}
                                             type="submit"
-                                            className="rounded-sm bg-[#2C2C2C] px-14 py-4 text-[12px] font-bold uppercase tracking-[0.3em] cursor-pointer"
+                                            disabled={submitting}
+                                            className="rounded-sm bg-[#2C2C2C] px-14 py-4 text-[12px] font-bold uppercase tracking-[0.3em] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                                             style={{ fontFamily: "var(--font-futura)" }}
                                         >
-                                            {t("sendButton")}
+                                            {submitting ? (t("sending") || "Sending…") : t("sendButton")}
                                         </motion.button>
                                     </div>
                                 </div>

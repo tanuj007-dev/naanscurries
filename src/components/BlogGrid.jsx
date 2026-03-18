@@ -5,21 +5,10 @@ import Image from "@/src/compat/next-image";
 import { useTranslations } from "@/src/compat/next-intl";
 import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
-
-// Import all blog images
-import img1 from "./assets/blogsimg/69314f8f2a074f849ba0c0b6_Rectangle 1530-p-1600.png";
-import img2 from "./assets/blogsimg/69355cd071a7628e5798398c_Rectangle 1531 (1)-p-1600.png";
-import img3 from "./assets/blogsimg/6931512625107e42cd2ce9ba_Rectangle 1528 (1)-p-1600.png";
-import img4 from "./assets/blogsimg/693151b368e87df00632c496_Rectangle 1527 (1)-p-1600.png";
-import img5 from "./assets/blogsimg/693151e81644662eb19e4211_Rectangle 1526 (1)-p-1600.png";
-import img6 from "./assets/blogsimg/6931542bffbc709a3f5dfa27_Rectangle 1525-p-1600.png";
-import img7 from "./assets/blogsimg/69315691a712f43d6372db89_Rectangle 1524 (1)-p-1600.png";
-import img8 from "./assets/blogsimg/693157b135d4f2884f23ef1d_Rectangle 1523-p-1600.png";
-import img9 from "./assets/blogsimg/693158675d8fb5575ebc88e8_Rectangle 1522 (1)-p-1600.png";
-
+import { isWordPressEnabled, getWordPressPosts } from "@/src/api/wordpress";
 import { Filter, ChevronDown, Search } from "lucide-react";
 
-const gridImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const PLACEHOLDER_IMAGE = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80";
 
 const SORT_OPTIONS = [
     { value: "date-desc", labelKey: "toolbar.sortNewest" },
@@ -43,18 +32,28 @@ export default function BlogGrid() {
     const [openDropdown, setOpenDropdown] = useState(null);
     const dropdownRef = useRef(null);
 
-    const gridItems = useMemo(() => {
-        const raw = t.raw("gridItems");
-        return Array.isArray(raw) ? raw.slice(0, 9) : [];
-    }, [t]);
+    const [wpPosts, setWpPosts] = useState([]);
+    const [wpLoading, setWpLoading] = useState(false);
+    const [wpError, setWpError] = useState(null);
+    const useWordPress = isWordPressEnabled();
+
+    useEffect(() => {
+        if (!useWordPress) return;
+        setWpLoading(true);
+        setWpError(null);
+        getWordPressPosts(50)
+            .then(setWpPosts)
+            .catch((err) => setWpError(err.message || "Failed to load posts"))
+            .finally(() => setWpLoading(false));
+    }, [useWordPress]);
 
     const categories = useMemo(() => {
-        const set = new Set(gridItems.map((item) => item?.category).filter(Boolean));
+        const set = new Set(wpPosts.map((item) => item?.category).filter(Boolean));
         return ["all", ...Array.from(set)];
-    }, [gridItems]);
+    }, [wpPosts]);
 
     const filteredAndSorted = useMemo(() => {
-        let list = gridItems.map((item, idx) => ({ ...item, index: idx }));
+        let list = wpPosts.map((item) => ({ ...item }));
         if (categoryFilter && categoryFilter !== "all") {
             list = list.filter((item) => (item.category || "").toLowerCase() === categoryFilter.toLowerCase());
         }
@@ -62,7 +61,7 @@ export default function BlogGrid() {
             const q = searchQuery.trim().toLowerCase();
             list = list.filter((item) => (item.title || "").toLowerCase().includes(q) || (item.category || "").toLowerCase().includes(q));
         }
-        const sorted = [...list].sort((a, b) => {
+        return [...list].sort((a, b) => {
             switch (sortBy) {
                 case "date-desc":
                     return parseDate(b.date) - parseDate(a.date);
@@ -76,8 +75,7 @@ export default function BlogGrid() {
                     return 0;
             }
         });
-        return sorted;
-    }, [gridItems, categoryFilter, searchQuery, sortBy]);
+    }, [wpPosts, categoryFilter, searchQuery, sortBy]);
 
     useEffect(() => {
         function handleClickOutside(e) {
@@ -87,9 +85,22 @@ export default function BlogGrid() {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
+    if (!useWordPress) {
+        return (
+            <section className="bg-[#EFEDE7] pb-16 md:pb-24">
+                <div className="px-6 md:px-12 lg:px-24">
+                    <div className="max-w-7xl mx-auto py-20 text-center">
+                        <p className="text-[#1a1a1a]/70 text-lg" style={{ fontFamily: "var(--font-futura)" }}>
+                            {t("toolbar.wpNotConfigured") || "Blog is not configured. Set VITE_WORDPRESS_API_URL in .env to load posts from WordPress."}
+                        </p>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
     return (
         <section className="bg-[#EFEDE7] pb-16 md:pb-24">
-            {/* Filtering Toolbar */}
             <AnimateOnScroll variant="fadeIn" delay={0.1}>
                 <div className="border-b border-black/10 px-6 md:px-12 lg:px-24 mb-12 md:mb-16">
                     <div className="max-w-7xl mx-auto py-6 md:py-8 flex flex-wrap items-center justify-between gap-6" ref={dropdownRef}>
@@ -97,7 +108,6 @@ export default function BlogGrid() {
                             <Filter className="w-5 h-5 text-[#1a1a1a]/80 shrink-0" aria-hidden />
 
                             <div className="flex items-center gap-6 md:gap-10 flex-wrap">
-                                {/* Type dropdown (all / article – no filter applied, UI only) */}
                                 <div className="relative">
                                     <button
                                         type="button"
@@ -116,7 +126,6 @@ export default function BlogGrid() {
                                     )}
                                 </div>
 
-                                {/* Category dropdown */}
                                 <div className="relative">
                                     <button
                                         type="button"
@@ -147,7 +156,6 @@ export default function BlogGrid() {
                                     )}
                                 </div>
 
-                                {/* Sort By dropdown */}
                                 <div className="relative">
                                     <button
                                         type="button"
@@ -202,58 +210,55 @@ export default function BlogGrid() {
 
             <div className="px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-16">
-                    {filteredAndSorted.length === 0 ? (
+                    {wpLoading ? (
+                        <div className="col-span-full flex items-center justify-center py-20">
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="h-10 w-10 rounded-full border-2 border-[#1a1a1a]/20 border-t-[#1a1a1a] animate-spin" aria-label="Loading" />
+                                <p className="text-[#1a1a1a]/60 text-sm" style={{ fontFamily: "var(--font-futura)" }}>
+                                    {t("toolbar.loading") || "Loading posts…"}
+                                </p>
+                            </div>
+                        </div>
+                    ) : wpError ? (
+                        <p className="col-span-full text-center text-red-600/90 py-12" style={{ fontFamily: "var(--font-futura)" }}>
+                            {wpError}
+                        </p>
+                    ) : filteredAndSorted.length === 0 ? (
                         <p className="col-span-full text-center text-[#1a1a1a]/60 py-12" style={{ fontFamily: "var(--font-futura)" }}>
                             {t("toolbar.noResults")}
                         </p>
                     ) : (
-                        filteredAndSorted.map((item, listIdx) => {
-                            const idx = item.index;
-                            return (
+                        filteredAndSorted.map((item, listIdx) => (
                             <AnimateOnScroll
-                                key={`${idx}-${listIdx}`}
+                                key={item.slug}
                                 variant="fadeUp"
                                 delay={(listIdx % 3) * 0.1}
                                 className="group"
                             >
-                                <Link href={`/blog/${idx}`} className="block cursor-pointer">
-                                {/* Image Container */}
-                                <div className="relative aspect-4/5 w-full overflow-hidden rounded-lg mb-6">
-                                    <Image
-                                        src={gridImages[idx]}
-                                        alt={item?.title || "Blog Image"}
-                                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                </div>
-
-                                {/* Meta Info */}
-                                <div className="flex items-center gap-2 mb-3">
-                                    <span
-                                        className="text-[#1a1a1a] font-bold text-[12px] md:text-[13px] tracking-wide uppercase"
-                                        style={{ fontFamily: "var(--font-futura)" }}
-                                    >
-                                        ({item?.category || "RESTAURANT"})
-                                    </span>
-                                    <span className="text-[#1a1a1a]/30">â€¢</span>
-                                    <span
-                                        className="text-[#1a1a1a]/60 text-[12px] md:text-[13px] font-medium"
-                                        style={{ fontFamily: "var(--font-futura)" }}
-                                    >
-                                        {item?.date || "March 09, 2025"}
-                                    </span>
-                                </div>
-
-                                {/* Title */}
-                                <h3
-                                    className="text-[20px] md:text-[24px] lg:text-[26px] leading-[1.3] text-[#1a1a1a] font-normal transition-colors  "
-                                    style={{ fontFamily: "var(--font-ramillas)" }}
-                                >
-                                    {item?.title || ""}
-                                </h3>
+                                <Link href={`/blog/${item.slug}`} className="block cursor-pointer">
+                                    <div className="relative aspect-4/5 w-full overflow-hidden rounded-lg mb-6">
+                                        <Image
+                                            src={item.featuredImageUrl || PLACEHOLDER_IMAGE}
+                                            alt={item?.title || "Blog"}
+                                            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                        />
+                                    </div>
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="text-[#1a1a1a] font-bold text-[12px] md:text-[13px] tracking-wide uppercase" style={{ fontFamily: "var(--font-futura)" }}>
+                                            ({item?.category || "Blog"})
+                                        </span>
+                                        <span className="text-[#1a1a1a]/30">•</span>
+                                        <span className="text-[#1a1a1a]/60 text-[12px] md:text-[13px] font-medium" style={{ fontFamily: "var(--font-futura)" }}>
+                                            {item?.dateFormatted || ""}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-[20px] md:text-[24px] lg:text-[26px] leading-[1.3] text-[#1a1a1a] font-normal transition-colors" style={{ fontFamily: "var(--font-ramillas)" }}>
+                                        {item?.title || ""}
+                                    </h3>
                                 </Link>
                             </AnimateOnScroll>
-                            );
-                        })
+                        ))
                     )}
                 </div>
             </div>

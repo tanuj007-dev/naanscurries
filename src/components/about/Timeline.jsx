@@ -27,7 +27,7 @@ export default function Timeline() {
       <div className="mx-auto max-w-2xl">
         <h2
           id="timeline-heading"
-          className="mb-14 text-center text-3xl font-semibold tracking-tight md:text-4xl"
+          className="mb-14 text-center text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight"
         >
           {t("timelineTitle")}
         </h2>
@@ -53,7 +53,7 @@ export default function Timeline() {
                 />
                 <div className="pt-0.5">
                   <span className="text-sm font-medium text-foreground/70">{item.year}</span>
-                  <h3 className="mt-1 text-lg font-semibold">{t(item.titleKey)}</h3>
+                  <h3 className="mt-1 text-base sm:text-lg font-semibold">{t(item.titleKey)}</h3>
                   <p className="mt-1 text-foreground/85">{t(item.descKey)}</p>
                 </div>
               </div>

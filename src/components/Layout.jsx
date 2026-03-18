@@ -19,6 +19,11 @@ const Layout = () => {
         }
     }, [locale, i18n, navigate, location.pathname]);
 
+    // Scroll to top when route changes (e.g. footer link click)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <div className="antialiased min-h-screen flex flex-col">
             <div className="absolute top-0 left-0 w-full z-50">

@@ -109,6 +109,29 @@
     "ctaDescription": "Join us for a meal that feels like home, with flavors that take you places.",
     "bookATable": "Book a table"
   },
+  "OurStory": {
+    "title": "Our Story",
+    "aboutUs": "About Us",
+    "home": "Home",
+    "subtitle": "Since the beginning",
+    "heading": "Our Story",
+    "intro": "From a single dream to the table in front of you — this is the journey of Naans & Curries. Every dish we serve carries the weight of tradition and the spark of something new.",
+    "beginningLabel": "THE BEGINNING",
+    "beginningTitle": "The Tale of Our First Eatery",
+    "beginningDesc": "Our first restaurant was built on passion, commitment, and a shared belief that extraordinary food could change the way people gather. It started with a small group of food lovers who knew that the best meals are the ones that bring people together.",
+    "beginningDesc2": "We opened our doors with a simple idea: treat every guest like family and every plate like a chance to tell a story. That idea still drives everything we do today.",
+    "quote": "We don't just serve food — we bring flavor to life.",
+    "passionLabel": "THE PASSION",
+    "passionTitle": "Where Spices Meet Warmth",
+    "passionDesc": "More than a restaurant, Naans & Curries is a place where tradition meets care. Our kitchen is where honest ingredients and bold flavors come together, and where every meal is crafted to make you feel at home. We believe in the power of a shared table and the magic of Indian hospitality.",
+    "kitchenLabel": "THE KITCHEN",
+    "kitchenTitle": "Crafted With Care",
+    "kitchenDesc": "Our chefs bring generations of recipes and a love for innovation to every dish. From the first bite to the last, we aim to create moments that stay with you — and keep you coming back for more.",
+    "todayLabel": "TODAY",
+    "todayTitle": "Join Our Story",
+    "todayDesc": "We've grown, but our heart remains the same: authentic flavors, warm service, and a table ready for you. Come experience the difference.",
+    "bookTable": "BOOK A TABLE"
+  },
   "TheSpirit": {
     "title1": "The Spirit of",
     "title2": "Indian Dining",
@@ -218,6 +241,8 @@
     "persons": "Persons",
     "other": "Other",
     "reserveTable": "Reserve Table",
+    "submitting": "Sending…",
+    "errorSubmit": "Failed to submit reservation. Please try again.",
     "thankYou": "Thank You!",
     "successMessage": "Your table has been requested. We'll be in touch soon!",
     "locationLabel": "Location",
@@ -246,7 +271,9 @@
       "sortTitleAZ": "Title A–Z",
       "sortTitleZA": "Title Z–A",
       "searchPlaceholder": "Search posts…",
-      "noResults": "No posts match your filters."
+      "noResults": "No posts match your filters.",
+      "loading": "Loading posts…",
+      "wpNotConfigured": "Blog is not configured. Set VITE_WORDPRESS_API_URL in .env to load posts from WordPress."
     },
     "featuredLarge": {
       "category": "RESTAURANT",
@@ -308,8 +335,11 @@
       }
     ],
     "relatedTitle": "More Related Insights",
+    "noRelated": "No related posts.",
     "detail": {
-      "backToHome": "Home",
+      "backToHome": "Back to blog",
+      "loading": "Loading…",
+      "noContent": "No content available.",
       "share": "SHARE",
       "paragraph1": "Color isn't just something people see — it invokes reactions in people. The key duty in architecture is to improve living conditions and comfort through spaces. When used effectively, colors can become powerful tools at an architect's disposal. They offer a form of non-verbal communication that tells people in a space how to feel and conveys something about what the space is used for.",
       "paragraph2": "At Naans & Curries, we believe every dish tells a story. Our kitchen blends tradition with innovation, bringing you flavors that have traveled across generations. From the warmth of our tandoor to the careful balance of spices, each plate is crafted to create a memorable experience.",
@@ -331,43 +361,49 @@
     "emailPlaceholder": "Your email address",
     "messagePlaceholder": "Your message",
     "sendButton": "SEND MESSAGE",
+    "sending": "Sending…",
+    "thankYou": "Thank You!",
+    "successMessage": "Thank you! Your message has been sent. We'll get back to you soon.",
+    "redirecting": "Redirecting to home…",
+    "errorRequired": "Name and email are required.",
+    "errorSend": "Failed to send message. Please try again.",
     "officeLocation": "Our Locations",
     "getDirections": "GET DIRECTIONS",
     "locations": [
       {
         "name": "MOMENTUM, LINDORA, SANTA ANA, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0001, +506 2282 5470",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "LINCOLN PLAZA, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0002",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "PINARES, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0003",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "ESCAZU, SAN JOSE, COSTA RICA",
         "phone": "+506 2282 0004",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "ALAJUELA, COSTA RICA",
         "phone": "+506 2282 0005",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "HEREDIA, COSTA RICA",
         "phone": "+506 2282 0006",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       },
       {
         "name": "CARTAGO, COSTA RICA",
         "phone": "+506 2282 0007",
-        "email": "info@naansandcurries.com"
+        "email": "Info@Naans.cr"
       }
     ]
   },

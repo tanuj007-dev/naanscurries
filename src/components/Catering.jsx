@@ -18,13 +18,13 @@ export default function Catering() {
   const t = useTranslations("Catering");
 
   const locations = [
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142397/1_1_xdr4cy.webp", alt: t("lindoraTitle"), title: t("lindoraTitle"), description: t("lindoraDesc") },
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142397/5_vestpb.webp", alt: t("pinaresTitle"), title: t("pinaresTitle"), description: t("pinaresDesc") },
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142398/3_bydekl.webp", alt: t("lincolnTitle"), title: t("lincolnTitle"), description: t("lincolnDesc") },
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142398/4_iuumjq.webp", alt: t("nunciaturaTitle"), title: t("nunciaturaTitle"), description: t("nunciaturaDesc") },
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142398/7_ajja0a.webp", alt: t("tamarindoTitle"), title: t("tamarindoTitle"), description: t("tamarindoDesc") },
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142398/2_x8agcv.webp", alt: t("cocoTitle"), title: t("cocoTitle"), description: t("cocoDesc") },
-    { image: "https://res.cloudinary.com/dpelqhchv/image/upload/v1773142510/8_ofdrk1.webp", alt: t("jacoTitle"), title: t("jacoTitle"), description: t("jacoDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225704/2_ism4xh.webp", alt: t("lindoraTitle"), title: t("lindoraTitle"), description: t("lindoraDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225704/1_1_mbqizi.webp", alt: t("pinaresTitle"), title: t("pinaresTitle"), description: t("pinaresDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225704/4_gjdqbi.webp", alt: t("lincolnTitle"), title: t("lincolnTitle"), description: t("lincolnDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225704/3_x7ejpc.webp", alt: t("nunciaturaTitle"), title: t("nunciaturaTitle"), description: t("nunciaturaDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225703/5_adtntc.webp", alt: t("tamarindoTitle"), title: t("tamarindoTitle"), description: t("tamarindoDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225703/7_hfdxhj.webp", alt: t("cocoTitle"), title: t("cocoTitle"), description: t("cocoDesc") },
+    { image: "https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225702/8_hwvukx.webp", alt: t("jacoTitle"), title: t("jacoTitle"), description: t("jacoDesc") },
   ];
 
   return (

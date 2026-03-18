@@ -61,7 +61,7 @@ export default function Hero() {
 
             {/* Main Single Line Heading */}
             <h1
-              className="text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] leading-tight text-[#FFF7ED] font-normal uppercase whitespace-nowrap"
+              className="text-[32px] sm:text-[52px] md:text-[72px] lg:text-[90px] xl:text-[110px] leading-tight text-[#FFF7ED] font-normal uppercase"
               style={{ fontFamily: "var(--font-ramillas)" }}
             >
               Our Story

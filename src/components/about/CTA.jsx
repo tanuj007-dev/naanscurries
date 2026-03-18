@@ -24,7 +24,7 @@ export default function CTA() {
       <div className="relative mx-auto max-w-2xl text-center">
         <h2
           id="cta-heading"
-          className={`mb-4 text-3xl font-semibold tracking-tight md:text-4xl ${transition} ${visible}`}
+          className={`mb-4 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight ${transition} ${visible}`}
         >
           {t("ctaHeading")}
         </h2>

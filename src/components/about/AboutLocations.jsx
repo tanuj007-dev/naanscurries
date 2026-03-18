@@ -22,7 +22,7 @@ const getLocations = (t) => [
         name: t("locationMomentum"),
         desc: t("locationMomentumDesc"),
         phone: "+506 2282 0001, +506 2282 5470",
-        email: "lindora@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "MOMENTUM, LINDORA, SANTA ANA, SAN JOSE, COSTA RICA",
         image: img1,
     },
@@ -30,7 +30,7 @@ const getLocations = (t) => [
         name: t("locationLincoln"),
         desc: t("locationLincolnDesc"),
         phone: "+506 2282 0002",
-        email: "lincoln@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "LINCOLN PLAZA, SAN JOSE, COSTA RICA",
         image: img2,
     },
@@ -38,7 +38,7 @@ const getLocations = (t) => [
         name: t("locationPinares"),
         desc: t("locationPinaresDesc"),
         phone: "+506 2282 0003",
-        email: "pinares@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "PINARES, SAN JOSE, COSTA RICA",
         image: img3,
     },
@@ -46,7 +46,7 @@ const getLocations = (t) => [
         name: t("locationEscazu"),
         desc: t("locationEscazuDesc"),
         phone: "+506 2282 0004",
-        email: "escazu@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "ESCAZU, SAN JOSE, COSTA RICA",
         image: img4,
     },
@@ -54,7 +54,7 @@ const getLocations = (t) => [
         name: t("locationAlajuela"),
         desc: t("locationAlajuelaDesc"),
         phone: "+506 2282 0005",
-        email: "alajuela@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "ALAJUELA, COSTA RICA",
         image: img5,
     },
@@ -62,7 +62,7 @@ const getLocations = (t) => [
         name: t("locationHeredia"),
         desc: t("locationHerediaDesc"),
         phone: "+506 2282 0006",
-        email: "heredia@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "HEREDIA, COSTA RICA",
         image: img6,
     },
@@ -70,7 +70,7 @@ const getLocations = (t) => [
         name: t("locationCartago"),
         desc: t("locationCartagoDesc"),
         phone: "+506 2282 0007",
-        email: "cartago@naanscurries.com",
+        email: "Info@Naans.cr",
         address: "CARTAGO, COSTA RICA",
         image: img7,
     },
@@ -111,7 +111,7 @@ export default function AboutLocations() {
                 <div className="text-center mb-16">
                     <AnimateOnScroll variant="fadeUp">
                         <h2
-                            className="text-[42px] md:text-[56px] lg:text-[72px] leading-[1.1] text-[#2C2C2C] mb-6 font-normal max-w-6xl mx-auto"
+                            className="text-[26px] sm:text-[34px] md:text-[48px] lg:text-[60px] xl:text-[72px] leading-[1.1] text-[#2C2C2C] mb-6 font-normal max-w-6xl mx-auto"
                             style={{ fontFamily: "var(--font-ramillas)" }}
                         >
                             {t("locationsSliderTitle")}
@@ -150,7 +150,7 @@ export default function AboutLocations() {
                                     <div key={loc.name + i} className="flex-1 min-w-0 bg-white flex flex-col lg:flex-row shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden rounded-lg">
                                         {/* Text Content */}
                                         <div className="flex-1 min-w-0 p-8 md:p-10 lg:p-12 flex flex-col">
-                                            <h3 className="text-[28px] md:text-[36px] text-[#2C2C2C] mb-4 font-normal" style={{ fontFamily: "var(--font-ramillas)" }}>
+                                            <h3 className="text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] text-[#2C2C2C] mb-4 font-normal" style={{ fontFamily: "var(--font-ramillas)" }}>
                                                 {loc.name}
                                             </h3>
                                             <p className="text-[14px] md:text-[16px] text-[#2C2C2C]/60 mb-8 leading-relaxed font-medium" style={{ fontFamily: "var(--font-futura)" }}>

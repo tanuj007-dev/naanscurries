@@ -12,7 +12,7 @@ export default function Rooted() {
       <div className="relative mx-auto h-[500px] w-full max-w-[1440px] overflow-hidden rounded-xl md:h-[650px] lg:h-[750px]">
         {/* 1. Full-width background image */}
         <Image
-          src="https://res.cloudinary.com/dpelqhchv/image/upload/v1773142673/ab6d8cf19a48562a27d613537135937d8e7431a6_qkh3wv.webp"
+          src="https://res.cloudinary.com/djcwt7f6d/image/upload/v1773225702/ab6d8cf19a48562a27d613537135937d8e7431a6_xmqkeo.webp"
           alt="Rooted in Experience - Naans & Curries"
           priority
           className="absolute inset-0 h-full w-full object-cover object-center"
