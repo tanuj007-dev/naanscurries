@@ -71,6 +71,7 @@ export default function BlogDetailPage() {
                 <meta name="description" content={item.title} />
             </Helmet>
 
+
             <main className="min-h-screen bg-[#EFEDE7]">
                 <section className="px-6 md:px-12 lg:px-24 pt-24 md:pt-32 pb-8 md:pb-12">
                     <div className="max-w-7xl mx-auto">

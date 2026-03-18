@@ -1,0 +1,1 @@
+const s="/assets/6236ff282f52f61a6b0b4eee_dinesh-ramaswamy--b7ZwWYUUEA-unsplash-a5c3f183.avif",a="/assets/665fc45f8858be3714c7c9ee_Photo 2-p-800-47ddbef6.jpg",e="/assets/666002fc5dcc333c0946b9f7_Chef 10-p-500-2a5fd7cc.jpg";export{e as a,s as h,a as i};
