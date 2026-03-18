@@ -3,7 +3,7 @@
 import Image from "@/src/compat/next-image";
 import { useTranslations } from "@/src/compat/next-intl";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "@/src/components/AnimateOnScroll";
 
 // Import Menu Hero Image

@@ -3,7 +3,7 @@
 import Image from "@/src/compat/next-image";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/src/compat/next-intl";
-import Link from "next/link";
+import { Link } from "@/src/compat/navigation";
 import AnimateOnScroll from "./AnimateOnScroll";
 import heroBg from "./assets/665d311e86f37eac6b33e24c_Photo 1-p-2000.jpg";
 
